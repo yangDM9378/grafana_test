@@ -1,0 +1,67 @@
+"use strict";(self.webpackChunkgrafana=self.webpackChunkgrafana||[]).push([[1337],{87204:(e,n,s)=>{s.r(n),s.d(n,{ServiceAccountsListPageUnconnected:()=>Z,default:()=>_,getStyles:()=>U});var t,a=s(52423),i=s(64681),c=s.n(i),o=s(68404),r=s(36635),l=s(16755),d=s(2843),u=s(21888),h=s(99500),m=s(39106),g=s(37625),p=s(8006),x=s(2024),b=s(75442),v=s(37417),f=s(71031),y=s(68374),j=s(64850),k=s(27862),A=s(54761),C=s(23734),w=s(41455),S=s(74408),T=s(45916);const $=e=>`Edit service account's ${e} details`,I=(0,o.memo)((e=>{let{serviceAccount:n,onRoleChange:s,roleOptions:i,onRemoveButtonClick:c,onDisable:o,onEnable:r,onAddTokenClick:d}=e;const u=`org/serviceaccounts/${n.id}`,m=(0,l.wW)(D),g=y.Vt.hasPermissionInMetadata(j.bW.ServiceAccountsWrite,n),x=y.Vt.hasPermission(j.bW.ActionRolesList)&&y.Vt.hasPermission(j.bW.ActionUserRolesList);return(0,T.jsxs)("tr",{className:(0,a.cx)({[m.disabled]:n.isDisabled}),children:[(0,T.jsx)("td",{className:"width-4 text-center link-td",children:(0,T.jsx)("a",{href:u,"aria-label":$(n.name),children:(0,T.jsx)("img",{className:"filter-table__avatar",src:n.avatarUrl,alt:`Avatar for user ${n.name}`})})}),(0,T.jsx)("td",{className:"link-td max-width-10",children:(0,T.jsx)("a",{className:"ellipsis",href:u,title:n.name,"aria-label":$(n.name),children:n.name})}),(0,T.jsx)("td",{className:"link-td max-width-10",children:(0,T.jsx)("a",{className:m.accountId,href:u,title:n.login,"aria-label":$(n.name),children:n.login})}),y.Vt.licensedAccessControlEnabled()?(0,T.jsx)("td",{children:x&&(0,T.jsx)(w.R,{userId:n.id,orgId:n.orgId,basicRole:n.role,onBasicRoleChange:e=>s(e,n),roleOptions:i,basicRoleDisabled:!g,disabled:n.isDisabled})}):(0,T.jsx)("td",{children:(0,T.jsx)(S.A,{"aria-label":"Role",value:n.role,disabled:!g||n.isDisabled,onChange:e=>s(e,n)})}),(0,T.jsx)("td",{className:"link-td max-width-10",children:(0,T.jsx)("a",{className:"ellipsis",href:u,title:"Tokens","aria-label":$(n.name),children:(0,T.jsxs)("div",{className:(0,a.cx)(m.tokensInfo,{[m.tokensInfoSecondary]:!n.tokens}),children:[t||(t=(0,T.jsx)("span",{children:(0,T.jsx)(h.J,{name:"key-skeleton-alt"})})),n.tokens||"No tokens"]})})}),(0,T.jsx)("td",{children:(0,T.jsxs)(A.Lh,{justify:"flex-end",children:[y.Vt.hasPermission(j.bW.ServiceAccountsWrite)&&!n.tokens&&(0,T.jsx)(p.zx,{onClick:()=>d(n),disabled:n.isDisabled,children:"Add token"}),y.Vt.hasPermissionInMetadata(j.bW.ServiceAccountsWrite,n)&&(n.isDisabled?(0,T.jsx)(p.zx,{variant:"primary",onClick:()=>r(n),children:"Enable"}):(0,T.jsx)(p.zx,{variant:"secondary",onClick:()=>o(n),children:"Disable"})),y.Vt.hasPermissionInMetadata(j.bW.ServiceAccountsDelete,n)&&(0,T.jsx)(C.h,{className:m.deleteButton,name:"trash-alt",size:"md",onClick:()=>c(n),"aria-label":`Delete service account ${n.name}`})]})})]},n.id)}));I.displayName="ServiceAccountListItem";const D=e=>({iconRow:a.css`
+      svg {
+        margin-left: ${e.spacing(.5)};
+      }
+    `,accountId:(0,a.cx)("ellipsis",a.css`
+        color: ${e.colors.text.secondary};
+      `),deleteButton:a.css`
+      color: ${e.colors.text.secondary};
+    `,tokensInfo:a.css`
+      span {
+        margin-right: ${e.spacing(1)};
+      }
+    `,tokensInfoSecondary:a.css`
+      color: ${e.colors.text.secondary};
+    `,disabled:a.css`
+      td a {
+        color: ${e.colors.text.secondary};
+      }
+    `}),N=I;var W,R,L,O,P,E,V,M,B,F,K,z=s(84665);const q={changeQuery:z.R5,fetchACOptions:z.bX,fetchServiceAccounts:z.Xd,deleteServiceAccount:z.yN,updateServiceAccount:z.TL,changeStateFilter:z.XE,createServiceAccountToken:z.fT,getApiKeysMigrationStatus:z.hv,getApiKeysMigrationInfo:z.xi,closeApiKeysMigrationInfo:z.f3},X=(0,r.connect)((function(e){return Object.assign({},e.serviceAccounts)}),q),Z=e=>{let{serviceAccounts:n,isLoading:s,roleOptions:t,query:i,serviceAccountStateFilter:r,apiKeysMigrated:A,showApiKeysMigrationInfo:C,changeQuery:w,fetchACOptions:S,fetchServiceAccounts:$,deleteServiceAccount:I,updateServiceAccount:D,changeStateFilter:z,createServiceAccountToken:q,getApiKeysMigrationStatus:X,getApiKeysMigrationInfo:Z,closeApiKeysMigrationInfo:_}=e;const H=(0,l.wW)(U),[Q,G]=(0,o.useState)(!1),[J,Y]=(0,o.useState)(!1),[ee,ne]=(0,o.useState)(!1),[se,te]=(0,o.useState)(""),[ae,ie]=(0,o.useState)(null);(0,o.useEffect)((()=>{$({withLoadingIndicator:!0}),X(),Z(),y.Vt.licensedAccessControlEnabled()&&S()}),[S,$,X,Z]);const ce=0===n.length&&r===j.Wc.All&&!i,oe=async(e,n)=>{const s=Object.assign({},n,{role:e});D(s),y.Vt.licensedAccessControlEnabled()&&S()},re=e=>{ie(e),Y(!0)},le=e=>{ie(e),ne(!0)},de=e=>{D(Object.assign({},e,{isDisabled:!1}))},ue=e=>{ie(e),G(!0)},he=()=>{Y(!1),ie(null)},me=()=>{ne(!1),ie(null)},ge=W||(W=(0,T.jsx)("a",{className:"external-link",href:"https://grafana.com/docs/grafana/latest/administration/service-accounts/",target:"_blank",rel:"noopener noreferrer",children:"here."})),pe=(0,T.jsxs)("span",{children:["Service accounts and their tokens can be used to authenticate against the Grafana API. Find out more ",ge]});return(0,T.jsx)(v.T,{navId:"serviceaccounts",subTitle:pe,children:(0,T.jsxs)(v.T.Contents,{children:[A&&C&&(0,T.jsx)(d.b,{title:"API keys migrated to Service accounts. Your keys are now called tokens and live inside respective service accounts. Learn more.",severity:"success",onRemove:()=>{_()}}),(0,T.jsx)(v.T.OldNavOnly,{children:(0,T.jsxs)("div",{className:H.pageHeader,children:[R||(R=(0,T.jsx)("h2",{children:"Service accounts"})),(0,T.jsxs)("div",{className:H.apiKeyInfoLabel,children:[(0,T.jsx)(u.u,{placement:"bottom",interactive:!0,content:(0,T.jsxs)(T.Fragment,{children:["API keys are now service accounts with tokens. Find out more ",ge]}),children:L||(L=(0,T.jsx)(h.J,{name:"question-circle"}))}),O||(O=(0,T.jsx)("span",{children:"Looking for API keys?"}))]})]})}),(0,T.jsxs)("div",{className:"page-action-bar",children:[(0,T.jsx)("div",{className:"gf-form gf-form--grow",children:(0,T.jsx)(m.H,{placeholder:"Search service account by name",value:i,onChange:e=>{w(e)},width:50})}),(0,T.jsx)(g.S,{options:[{label:"All",value:j.Wc.All},{label:"With expired tokens",value:j.Wc.WithExpiredTokens},{label:"Disabled",value:j.Wc.Disabled}],onChange:e=>{z(e)},value:r,className:H.filter}),!ce&&y.Vt.hasPermission(j.bW.ServiceAccountsCreate)&&(P||(P=(0,T.jsx)(p.Qj,{href:"org/serviceaccounts/create",variant:"primary",children:"Add service account"})))]}),s&&(E||(E=(0,T.jsx)(f.Z,{}))),!s&&ce&&(0,T.jsx)(T.Fragment,{children:(0,T.jsx)(b.Z,{title:"You haven't created any service accounts yet.",buttonIcon:"key-skeleton-alt",buttonLink:"org/serviceaccounts/create",buttonTitle:"Add service account",buttonDisabled:!y.Vt.hasPermission(j.bW.ServiceAccountsCreate),proTip:"Remember, you can provide specific permissions for API access to other applications.",proTipLink:"",proTipLinkTitle:"",proTipTarget:"_blank"})}),!s&&0!==n.length&&(0,T.jsx)(T.Fragment,{children:(0,T.jsx)("div",{className:(0,a.cx)(H.table,"admin-list-table"),children:(0,T.jsxs)("table",{className:"filter-table filter-table--hover",children:[(0,T.jsx)("thead",{children:(0,T.jsxs)("tr",{children:[V||(V=(0,T.jsx)("th",{})),M||(M=(0,T.jsx)("th",{children:"Account"})),B||(B=(0,T.jsx)("th",{children:"ID"})),F||(F=(0,T.jsx)("th",{children:"Roles"})),K||(K=(0,T.jsx)("th",{children:"Tokens"})),(0,T.jsx)("th",{style:{width:"34px"}})]})}),(0,T.jsx)("tbody",{children:n.map((e=>(0,T.jsx)(N,{serviceAccount:e,roleOptions:t,onRoleChange:oe,onRemoveButtonClick:re,onDisable:le,onEnable:de,onAddTokenClick:ue},e.id)))})]})})}),ae&&(0,T.jsxs)(T.Fragment,{children:[(0,T.jsx)(x.s,{isOpen:J,body:`Are you sure you want to delete '${ae.name}'${ae.tokens?` and ${ae.tokens} accompanying ${c()("token",ae.tokens)}`:""}?`,confirmText:"Delete",title:"Delete service account",onConfirm:async()=>{ae&&I(ae.id),he()},onDismiss:he}),(0,T.jsx)(x.s,{isOpen:ee,title:"Disable service account",body:`Are you sure you want to disable '${ae.name}'?`,confirmText:"Disable service account",onConfirm:()=>{ae&&D(Object.assign({},ae,{isDisabled:!0})),me()},onDismiss:me}),(0,T.jsx)(k.m,{isOpen:Q,token:se,serviceAccountLogin:ae.login,onCreateToken:async e=>{ae&&q(ae.id,e,te)},onClose:()=>{G(!1),ie(null),te("")}})]})]})})},U=e=>({table:a.css`
+      margin-top: ${e.spacing(3)};
+    `,filter:a.css`
+      margin: 0 ${e.spacing(1)};
+    `,row:a.css`
+      display: flex;
+      align-items: center;
+      height: 100% !important;
+
+      a {
+        padding: ${e.spacing(.5)} 0 !important;
+      }
+    `,unitTooltip:a.css`
+      display: flex;
+      flex-direction: column;
+    `,unitItem:a.css`
+      cursor: pointer;
+      padding: ${e.spacing(.5)} 0;
+      margin-right: ${e.spacing(1)};
+    `,disabled:a.css`
+      color: ${e.colors.text.disabled};
+    `,link:a.css`
+      color: inherit;
+      cursor: pointer;
+      text-decoration: underline;
+    `,pageHeader:a.css`
+      display: flex;
+      margin-bottom: ${e.spacing(2)};
+    `,apiKeyInfoLabel:a.css`
+      margin-left: ${e.spacing(1)};
+      line-height: 2.2;
+      flex-grow: 1;
+      color: ${e.colors.text.secondary};
+
+      span {
+        padding: ${e.spacing(.5)};
+      }
+    `,filterDelimiter:a.css`
+      flex-grow: 1;
+    `}),_=X(Z)},27862:(e,n,s)=>{s.d(n,{m:()=>x});var t=s(52423),a=s(68404),i=s(44288),c=s(16755),o=s(78941),r=s(65678),l=s(4645),d=s(37625),u=s(65932),h=s(8006),m=s(11818),g=s(45916);const p=[{label:"No expiration",value:!1},{label:"Set expiration date",value:!0}],x=e=>{let{isOpen:n,token:s,serviceAccountLogin:t,onCreateToken:x,onClose:f}=e,y=new Date;y.setDate(y.getDate()+1);const[j,k]=(0,a.useState)(""),[A,C]=(0,a.useState)(""),[w,S]=(0,a.useState)(!1),[T,$]=(0,a.useState)(y),[I,D]=(0,a.useState)(""!==T),N=(0,c.wW)(v);(0,a.useEffect)((()=>{n&&k(`${t}-${(0,i.Z)()}`)}),[t,n]);const W=()=>{C(""),k(""),S(!1),$(y),D(""!==T),f()},R=s?"Service account token created":"Add service account token";return(0,g.jsx)(o.u,{isOpen:n,title:R,onDismiss:W,className:N.modal,contentClassName:N.modalContent,children:s?(0,g.jsxs)(g.Fragment,{children:[(0,g.jsx)(r.g,{label:"Token",description:"Copy the token now as you will not be able to see it again. Loosing a token requires creating a new one.",children:(0,g.jsxs)("div",{className:N.modalTokenRow,children:[(0,g.jsx)(l.I,{name:"tokenValue",value:s,readOnly:!0}),(0,g.jsx)(m.m,{className:N.modalCopyToClipboardButton,variant:"primary",size:"md",icon:"copy",getText:()=>s,children:"Copy clipboard"})]})}),(0,g.jsxs)(o.u.ButtonRow,{children:[(0,g.jsx)(m.m,{variant:"primary",getText:()=>s,onClipboardCopy:W,children:"Copy to clipboard and close"}),(0,g.jsx)(h.zx,{variant:"secondary",onClick:W,children:"Close"})]})]}):(0,g.jsxs)("div",{children:[(0,g.jsx)(r.g,{label:"Display name",description:"Name to easily identify the token",required:!0,children:(0,g.jsx)(l.I,{name:"tokenName",value:A,placeholder:j,onChange:e=>{C(e.currentTarget.value)}})}),(0,g.jsx)(r.g,{label:"Expiration",children:(0,g.jsx)(d.S,{options:p,value:w,onChange:S,size:"md"})}),w&&(0,g.jsx)(r.g,{label:"Expiration date",children:(0,g.jsx)(u.d,{onChange:e=>{D(""!==e),$(e)},value:T,placeholder:"",minDate:y})}),(0,g.jsx)(o.u.ButtonRow,{children:(0,g.jsx)(h.zx,{onClick:()=>{x({name:A||j,secondsToLive:w?b(T):void 0})},disabled:w&&!I,children:"Generate token"})})]})})},b=e=>{const n=new Date(e),s=new Date;return Math.ceil((n.getTime()-s.getTime())/1e3)},v=e=>({modal:t.css`
+      width: 550px;
+    `,modalContent:t.css`
+      overflow: visible;
+    `,modalTokenRow:t.css`
+      display: flex;
+    `,modalCopyToClipboardButton:t.css`
+      margin-left: ${e.spacing(.5)};
+    `})},39670:(e,n,s)=>{s.d(n,{t:()=>t});const t="grafana.serviceaccounts.showApiKeysMigrationInfo"},84665:(e,n,s)=>{s.d(n,{R5:()=>y,TL:()=>x,XE:()=>j,Xd:()=>g,bX:()=>h,f3:()=>A,fT:()=>v,hv:()=>m,xi:()=>k,yN:()=>b});var t=s(82897),a=s(93570),i=s(97928),c=s(59196),o=s(78130),r=s(64850),l=s(39670),d=s(98669);const u="/api/serviceaccounts";function h(){return async e=>{try{if(c.Vt.licensedAccessControlEnabled()&&c.Vt.hasPermission(r.bW.ActionRolesList)){const n=await(0,i.ul)();e((0,d.Dn)(n))}}catch(e){console.error(e)}}}function m(){return async e=>{if(c.Vt.hasPermission(r.bW.ServiceAccountsRead)){const n=await(0,a.i)().get("/api/serviceaccounts/migrationstatus");e((0,d.cB)(!(null==n||!n.migrated)))}}}function g(){let{withLoadingIndicator:e}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{withLoadingIndicator:!1};return async(n,s)=>{try{if(c.Vt.hasPermission(r.bW.ServiceAccountsRead)){e&&n((0,d.pN)());const{perPage:t,page:i,query:c,serviceAccountStateFilter:o}=s().serviceAccounts,r=await(0,a.i)().get(`/api/serviceaccounts/search?perpage=${t}&page=${i}&query=${c}${f(o)}&accesscontrol=true`);n((0,d.Ub)(r))}}catch(e){console.error(e)}finally{n((0,d.dt)())}}}const p=(0,t.debounce)((e=>e(g())),500,{leading:!0});function x(e){return async n=>{await(0,a.i)().patch(`${u}/${e.id}?accesscontrol=true`,Object.assign({},e)),n(g())}}function b(e){return async n=>{await(0,a.i)().delete(`${u}/${e}`),n(g())}}function v(e,n,s){return async t=>{const i=await(0,a.i)().post(`${u}/${e}/tokens`,n);s(i.key),t(g())}}const f=e=>{switch(e){case r.Wc.WithExpiredTokens:return"&expiredTokens=true";case r.Wc.Disabled:return"&disabled=true";default:return""}};function y(e){return async n=>{n((0,d.aj)(e)),p(n)}}function j(e){return async n=>{n((0,d.M4)(e)),n(g())}}function k(){return async e=>{const n=o.Z.getBool(l.t,!1);e((0,d.gl)(n))}}function A(){return async e=>{o.Z.set(l.t,!1),e(k())}}}}]);
+//# sourceMappingURL=ServiceAccountsPage.bc416555a3fccfe4de65.js.map

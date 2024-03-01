@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgrafana=self.webpackChunkgrafana||[]).push([[2093],{42519:(e,n,r)=>{r.r(n),r.d(n,{default:()=>t});r(68404);var a,s=r(37417),i=r(45916);function t(){return a||(a=(0,i.jsx)(s.T,{navId:"correlations",children:(0,i.jsxs)(s.T.Contents,{children:[(0,i.jsx)("h1",{children:"Correlations are disabled"}),"To enable Correlations, add it in the Grafana config:",(0,i.jsx)("div",{children:(0,i.jsx)("pre",{children:"[feature_toggles]\ncorrelations = true\n"})})]})}))}}}]);
+//# sourceMappingURL=CorrelationsFeatureToggle.fb533a971b08d09ea91d.js.map
