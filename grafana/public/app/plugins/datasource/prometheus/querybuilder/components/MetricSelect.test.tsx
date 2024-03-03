@@ -7,7 +7,12 @@ import { DataSourceInstanceSettings, MetricFindValue } from '@grafana/data/src';
 import { PrometheusDatasource } from '../../datasource';
 import { PromOptions } from '../../types';
 
-import { formatPrometheusLabelFilters, formatPrometheusLabelFiltersToString, MetricSelect } from './MetricSelect';
+import {
+  formatPrometheusLabelFilters,
+  formatPrometheusLabelFiltersToString,
+  MetricSelect,
+  Props,
+} from './MetricSelect';
 
 const instanceSettings = {
   url: 'proxied',
@@ -44,7 +49,7 @@ dataSourceMock.metricFindQuery = jest.fn((query: string) => {
   );
 });
 
-const props = {
+const props: Props = {
   labelsFilters: [],
   datasource: dataSourceMock,
   query: {
@@ -54,6 +59,7 @@ const props = {
   },
   onChange: jest.fn(),
   onGetMetrics: jest.fn().mockResolvedValue(mockValues),
+  metricLookupDisabled: false,
 };
 
 describe('MetricSelect', () => {

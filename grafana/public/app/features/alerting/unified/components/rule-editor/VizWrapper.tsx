@@ -1,5 +1,5 @@
 import { css } from '@emotion/css';
-import React, { FC, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 
 import { FieldConfigSource, GrafanaTheme2, PanelData, ThresholdsConfig } from '@grafana/data';
@@ -7,7 +7,7 @@ import { PanelRenderer } from '@grafana/runtime';
 import { GraphFieldConfig, GraphTresholdsStyleMode } from '@grafana/schema';
 import { PanelContext, PanelContextProvider, useStyles2 } from '@grafana/ui';
 import appEvents from 'app/core/app_events';
-import { PanelOptions } from 'app/plugins/panel/table/models.gen';
+import { PanelOptions } from 'app/plugins/panel/table/panelcfg.gen';
 
 import { useVizHeight } from '../../hooks/useVizHeight';
 import { SupportedPanelPlugins, PanelPluginsButtonGroup } from '../PanelPluginsButtonGroup';
@@ -16,20 +16,20 @@ interface Props {
   data: PanelData;
   currentPanel: SupportedPanelPlugins;
   changePanel: (panel: SupportedPanelPlugins) => void;
-  thresholds: ThresholdsConfig;
+  thresholds?: ThresholdsConfig;
   thresholdsType?: GraphTresholdsStyleMode;
   onThresholdsChange?: (thresholds: ThresholdsConfig) => void;
 }
 
 type PanelFieldConfig = FieldConfigSource<GraphFieldConfig>;
 
-export const VizWrapper: FC<Props> = ({
+export const VizWrapper = ({
   data,
   currentPanel,
   changePanel,
   thresholds,
   thresholdsType = GraphTresholdsStyleMode.Line,
-}) => {
+}: Props) => {
   const [options, setOptions] = useState<PanelOptions>({
     frameIndex: 0,
     showHeader: true,
@@ -37,7 +37,7 @@ export const VizWrapper: FC<Props> = ({
   const vizHeight = useVizHeight(data, currentPanel, options.frameIndex);
   const styles = useStyles2(getStyles(vizHeight));
 
-  const [fieldConfig, setFieldConfig] = useState<PanelFieldConfig>(defaultFieldConfig(thresholds, data));
+  const [fieldConfig, setFieldConfig] = useState<PanelFieldConfig>(defaultFieldConfig(data, thresholds));
 
   useEffect(() => {
     setFieldConfig((fieldConfig) => ({
@@ -116,7 +116,7 @@ function defaultUnit(data: PanelData): string | undefined {
   return data.series[0]?.fields.find((field) => field.type === 'number')?.config.unit;
 }
 
-function defaultFieldConfig(thresholds: ThresholdsConfig, data: PanelData): PanelFieldConfig {
+function defaultFieldConfig(data: PanelData, thresholds?: ThresholdsConfig): PanelFieldConfig {
   if (!thresholds) {
     return { defaults: {}, overrides: [] };
   }

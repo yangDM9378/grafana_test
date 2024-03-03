@@ -1,550 +1,269 @@
-logger=settings t=2024-03-01T15:05:57.6544437+09:00 level=info msg="Starting Grafana" version=9.3.15 commit=8f0a89e818 branch=HEAD compiled=2023-05-22T22:47:20+09:00
-logger=settings t=2024-03-01T15:05:57.6554461+09:00 level=info msg="Config loaded from" file=C:\Users\user\Desktop\grafana_test\grafana/conf/defaults.ini
-logger=settings t=2024-03-01T15:05:57.6554461+09:00 level=info msg="Path Home" path=C:\Users\user\Desktop\grafana_test\grafana
-logger=settings t=2024-03-01T15:05:57.6554461+09:00 level=info msg="Path Data" path=C:\Users\user\Desktop\grafana_test\grafana\data
-logger=settings t=2024-03-01T15:05:57.6554461+09:00 level=info msg="Path Logs" path=C:\Users\user\Desktop\grafana_test\grafana\data\log
-logger=settings t=2024-03-01T15:05:57.6564455+09:00 level=info msg="Path Plugins" path=C:\Users\user\Desktop\grafana_test\grafana\data\plugins
-logger=settings t=2024-03-01T15:05:57.6586309+09:00 level=info msg="Path Provisioning" path=C:\Users\user\Desktop\grafana_test\grafana\conf\provisioning
-logger=settings t=2024-03-01T15:05:57.6586309+09:00 level=info msg="App mode production"
-logger=sqlstore t=2024-03-01T15:05:57.6586309+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
-logger=sqlstore t=2024-03-01T15:05:57.6596381+09:00 level=info msg="Creating SQLite database file" path=C:\Users\user\Desktop\grafana_test\grafana\data\grafana.db
-logger=migrator t=2024-03-01T15:05:57.6646386+09:00 level=info msg="Starting DB migrations"
-logger=migrator t=2024-03-01T15:05:57.6646386+09:00 level=info msg="Executing migration" id="create migration_log table"
-logger=migrator t=2024-03-01T15:05:57.6694399+09:00 level=info msg="Executing migration" id="create user table"
-logger=migrator t=2024-03-01T15:05:57.6726746+09:00 level=info msg="Executing migration" id="add unique index user.login"
-logger=migrator t=2024-03-01T15:05:57.6787168+09:00 level=info msg="Executing migration" id="add unique index user.email"
-logger=migrator t=2024-03-01T15:05:57.682158+09:00 level=info msg="Executing migration" id="drop index UQE_user_login - v1"
-logger=migrator t=2024-03-01T15:05:57.6869774+09:00 level=info msg="Executing migration" id="drop index UQE_user_email - v1"
-logger=migrator t=2024-03-01T15:05:57.6910764+09:00 level=info msg="Executing migration" id="Rename table user to user_v1 - v1"
-logger=migrator t=2024-03-01T15:05:57.6948645+09:00 level=info msg="Executing migration" id="create user table v2"
-logger=migrator t=2024-03-01T15:05:57.6981715+09:00 level=info msg="Executing migration" id="create index UQE_user_login - v2"
-logger=migrator t=2024-03-01T15:05:57.7024156+09:00 level=info msg="Executing migration" id="create index UQE_user_email - v2"
-logger=migrator t=2024-03-01T15:05:57.7086168+09:00 level=info msg="Executing migration" id="copy data_source v1 to v2"
-logger=migrator t=2024-03-01T15:05:57.7118226+09:00 level=info msg="Executing migration" id="Drop old table user_v1"
-logger=migrator t=2024-03-01T15:05:57.7158341+09:00 level=info msg="Executing migration" id="Add column help_flags1 to user table"
-logger=migrator t=2024-03-01T15:05:57.7218159+09:00 level=info msg="Executing migration" id="Update user table charset"
-logger=migrator t=2024-03-01T15:05:57.7254887+09:00 level=info msg="Executing migration" id="Add last_seen_at column to user"
-logger=migrator t=2024-03-01T15:05:57.7292431+09:00 level=info msg="Executing migration" id="Add missing user data"
-logger=migrator t=2024-03-01T15:05:57.7329549+09:00 level=info msg="Executing migration" id="Add is_disabled column to user"
-logger=migrator t=2024-03-01T15:05:57.7374043+09:00 level=info msg="Executing migration" id="Add index user.login/user.email"
-logger=migrator t=2024-03-01T15:05:57.7419111+09:00 level=info msg="Executing migration" id="Add is_service_account column to user"
-logger=migrator t=2024-03-01T15:05:57.7456822+09:00 level=info msg="Executing migration" id="Update is_service_account column to nullable"
-logger=migrator t=2024-03-01T15:05:57.7502094+09:00 level=info msg="Executing migration" id="create temp user table v1-7"
-logger=migrator t=2024-03-01T15:05:57.7548896+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_email - v1-7"
-logger=migrator t=2024-03-01T15:05:57.7585633+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v1-7"
-logger=migrator t=2024-03-01T15:05:57.7620483+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_code - v1-7"
-logger=migrator t=2024-03-01T15:05:57.7657526+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_status - v1-7"
-logger=migrator t=2024-03-01T15:05:57.77098+09:00 level=info msg="Executing migration" id="Update temp_user table charset"
-logger=migrator t=2024-03-01T15:05:57.7746361+09:00 level=info msg="Executing migration" id="drop index IDX_temp_user_email - v1"
-logger=migrator t=2024-03-01T15:05:57.7784929+09:00 level=info msg="Executing migration" id="drop index IDX_temp_user_org_id - v1"
-logger=migrator t=2024-03-01T15:05:57.7820619+09:00 level=info msg="Executing migration" id="drop index IDX_temp_user_code - v1"
-logger=migrator t=2024-03-01T15:05:57.7865022+09:00 level=info msg="Executing migration" id="drop index IDX_temp_user_status - v1"
-logger=migrator t=2024-03-01T15:05:57.7917559+09:00 level=info msg="Executing migration" id="Rename table temp_user to temp_user_tmp_qwerty - v1"
-logger=migrator t=2024-03-01T15:05:57.7976561+09:00 level=info msg="Executing migration" id="create temp_user v2"
-logger=migrator t=2024-03-01T15:05:57.8011713+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_email - v2"
-logger=migrator t=2024-03-01T15:05:57.8054123+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v2"
-logger=migrator t=2024-03-01T15:05:57.8092057+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_code - v2"
-logger=migrator t=2024-03-01T15:05:57.8133589+09:00 level=info msg="Executing migration" id="create index IDX_temp_user_status - v2"
-logger=migrator t=2024-03-01T15:05:57.818696+09:00 level=info msg="Executing migration" id="copy temp_user v1 to v2"
-logger=migrator t=2024-03-01T15:05:57.8226424+09:00 level=info msg="Executing migration" id="drop temp_user_tmp_qwerty"
-logger=migrator t=2024-03-01T15:05:57.8260374+09:00 level=info msg="Executing migration" id="Set created for temp users that will otherwise prematurely expire"
-logger=migrator t=2024-03-01T15:05:57.8306097+09:00 level=info msg="Executing migration" id="create star table"
-logger=migrator t=2024-03-01T15:05:57.8343092+09:00 level=info msg="Executing migration" id="add unique index star.user_id_dashboard_id"
-logger=migrator t=2024-03-01T15:05:57.8388876+09:00 level=info msg="Executing migration" id="create org table v1"
-logger=migrator t=2024-03-01T15:05:57.8424208+09:00 level=info msg="Executing migration" id="create index UQE_org_name - v1"
-logger=migrator t=2024-03-01T15:05:57.8463143+09:00 level=info msg="Executing migration" id="create org_user table v1"
-logger=migrator t=2024-03-01T15:05:57.8510281+09:00 level=info msg="Executing migration" id="create index IDX_org_user_org_id - v1"
-logger=migrator t=2024-03-01T15:05:57.8552386+09:00 level=info msg="Executing migration" id="create index UQE_org_user_org_id_user_id - v1"
-logger=migrator t=2024-03-01T15:05:57.8590876+09:00 level=info msg="Executing migration" id="create index IDX_org_user_user_id - v1"
-logger=migrator t=2024-03-01T15:05:57.8629309+09:00 level=info msg="Executing migration" id="Update org table charset"
-logger=migrator t=2024-03-01T15:05:57.8658347+09:00 level=info msg="Executing migration" id="Update org_user table charset"
-logger=migrator t=2024-03-01T15:05:57.8693376+09:00 level=info msg="Executing migration" id="Migrate all Read Only Viewers to Viewers"
-logger=migrator t=2024-03-01T15:05:57.8727796+09:00 level=info msg="Executing migration" id="create dashboard table"
-logger=migrator t=2024-03-01T15:05:57.8766538+09:00 level=info msg="Executing migration" id="add index dashboard.account_id"
-logger=migrator t=2024-03-01T15:05:57.8801794+09:00 level=info msg="Executing migration" id="add unique index dashboard_account_id_slug"
-logger=migrator t=2024-03-01T15:05:57.884149+09:00 level=info msg="Executing migration" id="create dashboard_tag table"
-logger=migrator t=2024-03-01T15:05:57.8890424+09:00 level=info msg="Executing migration" id="add unique index dashboard_tag.dasboard_id_term"
-logger=migrator t=2024-03-01T15:05:57.893912+09:00 level=info msg="Executing migration" id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
-logger=migrator t=2024-03-01T15:05:57.898166+09:00 level=info msg="Executing migration" id="Rename table dashboard to dashboard_v1 - v1"
-logger=migrator t=2024-03-01T15:05:57.9055335+09:00 level=info msg="Executing migration" id="create dashboard v2"
-logger=migrator t=2024-03-01T15:05:57.9101293+09:00 level=info msg="Executing migration" id="create index IDX_dashboard_org_id - v2"
-logger=migrator t=2024-03-01T15:05:57.9136434+09:00 level=info msg="Executing migration" id="create index UQE_dashboard_org_id_slug - v2"
-logger=migrator t=2024-03-01T15:05:57.9213472+09:00 level=info msg="Executing migration" id="copy dashboard v1 to v2"
-logger=migrator t=2024-03-01T15:05:57.9258323+09:00 level=info msg="Executing migration" id="drop table dashboard_v1"
-logger=migrator t=2024-03-01T15:05:57.9304674+09:00 level=info msg="Executing migration" id="alter dashboard.data to mediumtext v1"
-logger=migrator t=2024-03-01T15:05:57.93528+09:00 level=info msg="Executing migration" id="Add column updated_by in dashboard - v2"
-logger=migrator t=2024-03-01T15:05:57.9399968+09:00 level=info msg="Executing migration" id="Add column created_by in dashboard - v2"
-logger=migrator t=2024-03-01T15:05:57.9447546+09:00 level=info msg="Executing migration" id="Add column gnetId in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9498363+09:00 level=info msg="Executing migration" id="Add index for gnetId in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9545944+09:00 level=info msg="Executing migration" id="Add column plugin_id in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9588807+09:00 level=info msg="Executing migration" id="Add index for plugin_id in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9638733+09:00 level=info msg="Executing migration" id="Add index for dashboard_id in dashboard_tag"
-logger=migrator t=2024-03-01T15:05:57.9681858+09:00 level=info msg="Executing migration" id="Update dashboard table charset"
-logger=migrator t=2024-03-01T15:05:57.9720801+09:00 level=info msg="Executing migration" id="Update dashboard_tag table charset"
-logger=migrator t=2024-03-01T15:05:57.9752929+09:00 level=info msg="Executing migration" id="Add column folder_id in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9798739+09:00 level=info msg="Executing migration" id="Add column isFolder in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9843+09:00 level=info msg="Executing migration" id="Add column has_acl in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9885636+09:00 level=info msg="Executing migration" id="Add column uid in dashboard"
-logger=migrator t=2024-03-01T15:05:57.993033+09:00 level=info msg="Executing migration" id="Update uid column values in dashboard"
-logger=migrator t=2024-03-01T15:05:57.9967567+09:00 level=info msg="Executing migration" id="Add unique index dashboard_org_id_uid"
-logger=migrator t=2024-03-01T15:05:58.0008627+09:00 level=info msg="Executing migration" id="Remove unique index org_id_slug"
-logger=migrator t=2024-03-01T15:05:58.0054215+09:00 level=info msg="Executing migration" id="Update dashboard title length"
-logger=migrator t=2024-03-01T15:05:58.00838+09:00 level=info msg="Executing migration" id="Add unique index for dashboard_org_id_title_folder_id"
-logger=migrator t=2024-03-01T15:05:58.0126065+09:00 level=info msg="Executing migration" id="create dashboard_provisioning"
-logger=migrator t=2024-03-01T15:05:58.0170446+09:00 level=info msg="Executing migration" id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
-logger=migrator t=2024-03-01T15:05:58.0221614+09:00 level=info msg="Executing migration" id="create dashboard_provisioning v2"
-logger=migrator t=2024-03-01T15:05:58.0258175+09:00 level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id - v2"
-logger=migrator t=2024-03-01T15:05:58.0300178+09:00 level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
-logger=migrator t=2024-03-01T15:05:58.0343258+09:00 level=info msg="Executing migration" id="copy dashboard_provisioning v1 to v2"
-logger=migrator t=2024-03-01T15:05:58.0386447+09:00 level=info msg="Executing migration" id="drop dashboard_provisioning_tmp_qwerty"
-logger=migrator t=2024-03-01T15:05:58.042395+09:00 level=info msg="Executing migration" id="Add check_sum column"
-logger=migrator t=2024-03-01T15:05:58.0469066+09:00 level=info msg="Executing migration" id="Add index for dashboard_title"
-logger=migrator t=2024-03-01T15:05:58.0508084+09:00 level=info msg="Executing migration" id="delete tags for deleted dashboards"
-logger=migrator t=2024-03-01T15:05:58.0546868+09:00 level=info msg="Executing migration" id="delete stars for deleted dashboards"
-logger=migrator t=2024-03-01T15:05:58.0577937+09:00 level=info msg="Executing migration" id="Add index for dashboard_is_folder"
-logger=migrator t=2024-03-01T15:05:58.0615951+09:00 level=info msg="Executing migration" id="Add isPublic for dashboard"
-logger=migrator t=2024-03-01T15:05:58.0653111+09:00 level=info msg="Executing migration" id="create data_source table"
-logger=migrator t=2024-03-01T15:05:58.0708803+09:00 level=info msg="Executing migration" id="add index data_source.account_id"
-logger=migrator t=2024-03-01T15:05:58.0746062+09:00 level=info msg="Executing migration" id="add unique index data_source.account_id_name"
-logger=migrator t=2024-03-01T15:05:58.0777998+09:00 level=info msg="Executing migration" id="drop index IDX_data_source_account_id - v1"
-logger=migrator t=2024-03-01T15:05:58.08115+09:00 level=info msg="Executing migration" id="drop index UQE_data_source_account_id_name - v1"
-logger=migrator t=2024-03-01T15:05:58.0855555+09:00 level=info msg="Executing migration" id="Rename table data_source to data_source_v1 - v1"
-logger=migrator t=2024-03-01T15:05:58.0908782+09:00 level=info msg="Executing migration" id="create data_source table v2"
-logger=migrator t=2024-03-01T15:05:58.0940735+09:00 level=info msg="Executing migration" id="create index IDX_data_source_org_id - v2"
-logger=migrator t=2024-03-01T15:05:58.0974866+09:00 level=info msg="Executing migration" id="create index UQE_data_source_org_id_name - v2"
-logger=migrator t=2024-03-01T15:05:58.1015043+09:00 level=info msg="Executing migration" id="Drop old table data_source_v1 #2"
-logger=migrator t=2024-03-01T15:05:58.1049931+09:00 level=info msg="Executing migration" id="Add column with_credentials"
-logger=migrator t=2024-03-01T15:05:58.1087338+09:00 level=info msg="Executing migration" id="Add secure json data column"
-logger=migrator t=2024-03-01T15:05:58.112524+09:00 level=info msg="Executing migration" id="Update data_source table charset"
-logger=migrator t=2024-03-01T15:05:58.1156708+09:00 level=info msg="Executing migration" id="Update initial version to 1"
-logger=migrator t=2024-03-01T15:05:58.119425+09:00 level=info msg="Executing migration" id="Add read_only data column"
-logger=migrator t=2024-03-01T15:05:58.1239274+09:00 level=info msg="Executing migration" id="Migrate logging ds to loki ds"
-logger=migrator t=2024-03-01T15:05:58.1272385+09:00 level=info msg="Executing migration" id="Update json_data with nulls"
-logger=migrator t=2024-03-01T15:05:58.130332+09:00 level=info msg="Executing migration" id="Add uid column"
-logger=migrator t=2024-03-01T15:05:58.1347141+09:00 level=info msg="Executing migration" id="Update uid value"
-logger=migrator t=2024-03-01T15:05:58.1386978+09:00 level=info msg="Executing migration" id="Add unique index datasource_org_id_uid"
-logger=migrator t=2024-03-01T15:05:58.1425319+09:00 level=info msg="Executing migration" id="add unique index datasource_org_id_is_default"
-logger=migrator t=2024-03-01T15:05:58.1457579+09:00 level=info msg="Executing migration" id="create api_key table"
-logger=migrator t=2024-03-01T15:05:58.149792+09:00 level=info msg="Executing migration" id="add index api_key.account_id"
-logger=migrator t=2024-03-01T15:05:58.1535209+09:00 level=info msg="Executing migration" id="add index api_key.key"
-logger=migrator t=2024-03-01T15:05:58.157485+09:00 level=info msg="Executing migration" id="add index api_key.account_id_name"
-logger=migrator t=2024-03-01T15:05:58.1611488+09:00 level=info msg="Executing migration" id="drop index IDX_api_key_account_id - v1"
-logger=migrator t=2024-03-01T15:05:58.1664955+09:00 level=info msg="Executing migration" id="drop index UQE_api_key_key - v1"
-logger=migrator t=2024-03-01T15:05:58.170823+09:00 level=info msg="Executing migration" id="drop index UQE_api_key_account_id_name - v1"
-logger=migrator t=2024-03-01T15:05:58.1747909+09:00 level=info msg="Executing migration" id="Rename table api_key to api_key_v1 - v1"
-logger=migrator t=2024-03-01T15:05:58.1796589+09:00 level=info msg="Executing migration" id="create api_key table v2"
-logger=migrator t=2024-03-01T15:05:58.1828132+09:00 level=info msg="Executing migration" id="create index IDX_api_key_org_id - v2"
-logger=migrator t=2024-03-01T15:05:58.1863661+09:00 level=info msg="Executing migration" id="create index UQE_api_key_key - v2"
-logger=migrator t=2024-03-01T15:05:58.1911358+09:00 level=info msg="Executing migration" id="create index UQE_api_key_org_id_name - v2"
-logger=migrator t=2024-03-01T15:05:58.195164+09:00 level=info msg="Executing migration" id="copy api_key v1 to v2"
-logger=migrator t=2024-03-01T15:05:58.1982199+09:00 level=info msg="Executing migration" id="Drop old table api_key_v1"
-logger=migrator t=2024-03-01T15:05:58.2017455+09:00 level=info msg="Executing migration" id="Update api_key table charset"
-logger=migrator t=2024-03-01T15:05:58.2069737+09:00 level=info msg="Executing migration" id="Add expires to api_key table"
-logger=migrator t=2024-03-01T15:05:58.2107781+09:00 level=info msg="Executing migration" id="Add service account foreign key"
-logger=migrator t=2024-03-01T15:05:58.215066+09:00 level=info msg="Executing migration" id="set service account foreign key to nil if 0"
-logger=migrator t=2024-03-01T15:05:58.2199014+09:00 level=info msg="Executing migration" id="Add last_used_at to api_key table"
-logger=migrator t=2024-03-01T15:05:58.2242291+09:00 level=info msg="Executing migration" id="Add is_revoked column to api_key table"
-logger=migrator t=2024-03-01T15:05:58.228041+09:00 level=info msg="Executing migration" id="create dashboard_snapshot table v4"
-logger=migrator t=2024-03-01T15:05:58.231794+09:00 level=info msg="Executing migration" id="drop table dashboard_snapshot_v4 #1"
-logger=migrator t=2024-03-01T15:05:58.2364594+09:00 level=info msg="Executing migration" id="create dashboard_snapshot table v5 #2"
-logger=migrator t=2024-03-01T15:05:58.2402038+09:00 level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_key - v5"
-logger=migrator t=2024-03-01T15:05:58.2437099+09:00 level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_delete_key - v5"
-logger=migrator t=2024-03-01T15:05:58.2474764+09:00 level=info msg="Executing migration" id="create index IDX_dashboard_snapshot_user_id - v5"
-logger=migrator t=2024-03-01T15:05:58.2528072+09:00 level=info msg="Executing migration" id="alter dashboard_snapshot to mediumtext v2"
-logger=migrator t=2024-03-01T15:05:58.2564387+09:00 level=info msg="Executing migration" id="Update dashboard_snapshot table charset"
-logger=migrator t=2024-03-01T15:05:58.2602692+09:00 level=info msg="Executing migration" id="Add column external_delete_url to dashboard_snapshots table"
-logger=migrator t=2024-03-01T15:05:58.2648881+09:00 level=info msg="Executing migration" id="Add encrypted dashboard json column"
-logger=migrator t=2024-03-01T15:05:58.2698347+09:00 level=info msg="Executing migration" id="Change dashboard_encrypted column to MEDIUMBLOB"
-logger=migrator t=2024-03-01T15:05:58.2730782+09:00 level=info msg="Executing migration" id="create quota table v1"
-logger=migrator t=2024-03-01T15:05:58.2769153+09:00 level=info msg="Executing migration" id="create index UQE_quota_org_id_user_id_target - v1"
-logger=migrator t=2024-03-01T15:05:58.2808758+09:00 level=info msg="Executing migration" id="Update quota table charset"
-logger=migrator t=2024-03-01T15:05:58.2844652+09:00 level=info msg="Executing migration" id="create plugin_setting table"
-logger=migrator t=2024-03-01T15:05:58.2881912+09:00 level=info msg="Executing migration" id="create index UQE_plugin_setting_org_id_plugin_id - v1"
-logger=migrator t=2024-03-01T15:05:58.2919013+09:00 level=info msg="Executing migration" id="Add column plugin_version to plugin_settings"
-logger=migrator t=2024-03-01T15:05:58.2961563+09:00 level=info msg="Executing migration" id="Update plugin_setting table charset"
-logger=migrator t=2024-03-01T15:05:58.3004674+09:00 level=info msg="Executing migration" id="create session table"
-logger=migrator t=2024-03-01T15:05:58.3052775+09:00 level=info msg="Executing migration" id="Drop old table playlist table"
-logger=migrator t=2024-03-01T15:05:58.3092445+09:00 level=info msg="Executing migration" id="Drop old table playlist_item table"
-logger=migrator t=2024-03-01T15:05:58.3136405+09:00 level=info msg="Executing migration" id="create playlist table v2"
-logger=migrator t=2024-03-01T15:05:58.3181565+09:00 level=info msg="Executing migration" id="create playlist item table v2"
-logger=migrator t=2024-03-01T15:05:58.3218481+09:00 level=info msg="Executing migration" id="Update playlist table charset"
-logger=migrator t=2024-03-01T15:05:58.3257029+09:00 level=info msg="Executing migration" id="Update playlist_item table charset"
-logger=migrator t=2024-03-01T15:05:58.3284194+09:00 level=info msg="Executing migration" id="drop preferences table v2"
-logger=migrator t=2024-03-01T15:05:58.3315928+09:00 level=info msg="Executing migration" id="drop preferences table v3"
-logger=migrator t=2024-03-01T15:05:58.3359587+09:00 level=info msg="Executing migration" id="create preferences table v3"
-logger=migrator t=2024-03-01T15:05:58.3392851+09:00 level=info msg="Executing migration" id="Update preferences table charset"
-logger=migrator t=2024-03-01T15:05:58.3424913+09:00 level=info msg="Executing migration" id="Add column team_id in preferences"
-logger=migrator t=2024-03-01T15:05:58.3462157+09:00 level=info msg="Executing migration" id="Update team_id column values in preferences"
-logger=migrator t=2024-03-01T15:05:58.3494071+09:00 level=info msg="Executing migration" id="Add column week_start in preferences"
-logger=migrator t=2024-03-01T15:05:58.3543139+09:00 level=info msg="Executing migration" id="Add column preferences.json_data"
-logger=migrator t=2024-03-01T15:05:58.3585777+09:00 level=info msg="Executing migration" id="alter preferences.json_data to mediumtext v1"
-logger=migrator t=2024-03-01T15:05:58.3618485+09:00 level=info msg="Executing migration" id="Add preferences index org_id"
-logger=migrator t=2024-03-01T15:05:58.3650973+09:00 level=info msg="Executing migration" id="Add preferences index user_id"
-logger=migrator t=2024-03-01T15:05:58.3692388+09:00 level=info msg="Executing migration" id="create alert table v1"
-logger=migrator t=2024-03-01T15:05:58.3732404+09:00 level=info msg="Executing migration" id="add index alert org_id & id "
-logger=migrator t=2024-03-01T15:05:58.3772787+09:00 level=info msg="Executing migration" id="add index alert state"
-logger=migrator t=2024-03-01T15:05:58.3803606+09:00 level=info msg="Executing migration" id="add index alert dashboard_id"
-logger=migrator t=2024-03-01T15:05:58.3843383+09:00 level=info msg="Executing migration" id="Create alert_rule_tag table v1"
-logger=migrator t=2024-03-01T15:05:58.3889143+09:00 level=info msg="Executing migration" id="Add unique index alert_rule_tag.alert_id_tag_id"
-logger=migrator t=2024-03-01T15:05:58.3920669+09:00 level=info msg="Executing migration" id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
-logger=migrator t=2024-03-01T15:05:58.3957106+09:00 level=info msg="Executing migration" id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
-logger=migrator t=2024-03-01T15:05:58.4022079+09:00 level=info msg="Executing migration" id="Create alert_rule_tag table v2"
-logger=migrator t=2024-03-01T15:05:58.4058575+09:00 level=info msg="Executing migration" id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
-logger=migrator t=2024-03-01T15:05:58.4092715+09:00 level=info msg="Executing migration" id="copy alert_rule_tag v1 to v2"
-logger=migrator t=2024-03-01T15:05:58.4124543+09:00 level=info msg="Executing migration" id="drop table alert_rule_tag_v1"
-logger=migrator t=2024-03-01T15:05:58.4165663+09:00 level=info msg="Executing migration" id="create alert_notification table v1"
-logger=migrator t=2024-03-01T15:05:58.4203753+09:00 level=info msg="Executing migration" id="Add column is_default"
-logger=migrator t=2024-03-01T15:05:58.4240913+09:00 level=info msg="Executing migration" id="Add column frequency"
-logger=migrator t=2024-03-01T15:05:58.4289155+09:00 level=info msg="Executing migration" id="Add column send_reminder"
-logger=migrator t=2024-03-01T15:05:58.4342362+09:00 level=info msg="Executing migration" id="Add column disable_resolve_message"
-logger=migrator t=2024-03-01T15:05:58.437906+09:00 level=info msg="Executing migration" id="add index alert_notification org_id & name"
-logger=migrator t=2024-03-01T15:05:58.4409918+09:00 level=info msg="Executing migration" id="Update alert table charset"
-logger=migrator t=2024-03-01T15:05:58.4455058+09:00 level=info msg="Executing migration" id="Update alert_notification table charset"
-logger=migrator t=2024-03-01T15:05:58.4485244+09:00 level=info msg="Executing migration" id="create notification_journal table v1"
-logger=migrator t=2024-03-01T15:05:58.4530057+09:00 level=info msg="Executing migration" id="add index notification_journal org_id & alert_id & notifier_id"
-logger=migrator t=2024-03-01T15:05:58.4571797+09:00 level=info msg="Executing migration" id="drop alert_notification_journal"
-logger=migrator t=2024-03-01T15:05:58.4616827+09:00 level=info msg="Executing migration" id="create alert_notification_state table v1"
-logger=migrator t=2024-03-01T15:05:58.4653531+09:00 level=info msg="Executing migration" id="add index alert_notification_state org_id & alert_id & notifier_id"
-logger=migrator t=2024-03-01T15:05:58.4690587+09:00 level=info msg="Executing migration" id="Add for to alert table"
-logger=migrator t=2024-03-01T15:05:58.4732509+09:00 level=info msg="Executing migration" id="Add column uid in alert_notification"
-logger=migrator t=2024-03-01T15:05:58.4781855+09:00 level=info msg="Executing migration" id="Update uid column values in alert_notification"
-logger=migrator t=2024-03-01T15:05:58.4807541+09:00 level=info msg="Executing migration" id="Add unique index alert_notification_org_id_uid"
-logger=migrator t=2024-03-01T15:05:58.4849546+09:00 level=info msg="Executing migration" id="Remove unique index org_id_name"
-logger=migrator t=2024-03-01T15:05:58.4889858+09:00 level=info msg="Executing migration" id="Add column secure_settings in alert_notification"
-logger=migrator t=2024-03-01T15:05:58.4935471+09:00 level=info msg="Executing migration" id="alter alert.settings to mediumtext"
-logger=migrator t=2024-03-01T15:05:58.4970941+09:00 level=info msg="Executing migration" id="Add non-unique index alert_notification_state_alert_id"
-logger=migrator t=2024-03-01T15:05:58.5006502+09:00 level=info msg="Executing migration" id="Add non-unique index alert_rule_tag_alert_id"
-logger=migrator t=2024-03-01T15:05:58.5059703+09:00 level=info msg="Executing migration" id="Drop old annotation table v4"
-logger=migrator t=2024-03-01T15:05:58.5090886+09:00 level=info msg="Executing migration" id="create annotation table v5"
-logger=migrator t=2024-03-01T15:05:58.5128826+09:00 level=info msg="Executing migration" id="add index annotation 0 v3"
-logger=migrator t=2024-03-01T15:05:58.5165247+09:00 level=info msg="Executing migration" id="add index annotation 1 v3"
-logger=migrator t=2024-03-01T15:05:58.5208209+09:00 level=info msg="Executing migration" id="add index annotation 2 v3"
-logger=migrator t=2024-03-01T15:05:58.5250736+09:00 level=info msg="Executing migration" id="add index annotation 3 v3"
-logger=migrator t=2024-03-01T15:05:58.5288701+09:00 level=info msg="Executing migration" id="add index annotation 4 v3"
-logger=migrator t=2024-03-01T15:05:58.5319891+09:00 level=info msg="Executing migration" id="Update annotation table charset"
-logger=migrator t=2024-03-01T15:05:58.5361294+09:00 level=info msg="Executing migration" id="Add column region_id to annotation table"
-logger=migrator t=2024-03-01T15:05:58.5406768+09:00 level=info msg="Executing migration" id="Drop category_id index"
-logger=migrator t=2024-03-01T15:05:58.5450193+09:00 level=info msg="Executing migration" id="Add column tags to annotation table"
-logger=migrator t=2024-03-01T15:05:58.5498+09:00 level=info msg="Executing migration" id="Create annotation_tag table v2"
-logger=migrator t=2024-03-01T15:05:58.5544726+09:00 level=info msg="Executing migration" id="Add unique index annotation_tag.annotation_id_tag_id"
-logger=migrator t=2024-03-01T15:05:58.5576713+09:00 level=info msg="Executing migration" id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
-logger=migrator t=2024-03-01T15:05:58.561933+09:00 level=info msg="Executing migration" id="Rename table annotation_tag to annotation_tag_v2 - v2"
-logger=migrator t=2024-03-01T15:05:58.5685234+09:00 level=info msg="Executing migration" id="Create annotation_tag table v3"
-logger=migrator t=2024-03-01T15:05:58.5722219+09:00 level=info msg="Executing migration" id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
-logger=migrator t=2024-03-01T15:05:58.5759209+09:00 level=info msg="Executing migration" id="copy annotation_tag v2 to v3"
-logger=migrator t=2024-03-01T15:05:58.5790102+09:00 level=info msg="Executing migration" id="drop table annotation_tag_v2"
-logger=migrator t=2024-03-01T15:05:58.5829647+09:00 level=info msg="Executing migration" id="Update alert annotations and set TEXT to empty"
-logger=migrator t=2024-03-01T15:05:58.5865237+09:00 level=info msg="Executing migration" id="Add created time to annotation table"
-logger=migrator t=2024-03-01T15:05:58.5910721+09:00 level=info msg="Executing migration" id="Add updated time to annotation table"
-logger=migrator t=2024-03-01T15:05:58.5962731+09:00 level=info msg="Executing migration" id="Add index for created in annotation table"
-logger=migrator t=2024-03-01T15:05:58.599925+09:00 level=info msg="Executing migration" id="Add index for updated in annotation table"
-logger=migrator t=2024-03-01T15:05:58.6036093+09:00 level=info msg="Executing migration" id="Convert existing annotations from seconds to milliseconds"
-logger=migrator t=2024-03-01T15:05:58.6067063+09:00 level=info msg="Executing migration" id="Add epoch_end column"
-logger=migrator t=2024-03-01T15:05:58.6115873+09:00 level=info msg="Executing migration" id="Add index for epoch_end"
-logger=migrator t=2024-03-01T15:05:58.6153805+09:00 level=info msg="Executing migration" id="Make epoch_end the same as epoch"
-logger=migrator t=2024-03-01T15:05:58.619057+09:00 level=info msg="Executing migration" id="Move region to single row"
-logger=migrator t=2024-03-01T15:05:58.6227178+09:00 level=info msg="Executing migration" id="Remove index org_id_epoch from annotation table"
-logger=migrator t=2024-03-01T15:05:58.6258343+09:00 level=info msg="Executing migration" id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
-logger=migrator t=2024-03-01T15:05:58.6302909+09:00 level=info msg="Executing migration" id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
-logger=migrator t=2024-03-01T15:05:58.633299+09:00 level=info msg="Executing migration" id="Add index for org_id_epoch_end_epoch on annotation table"
-logger=migrator t=2024-03-01T15:05:58.6368845+09:00 level=info msg="Executing migration" id="Remove index org_id_epoch_epoch_end from annotation table"
-logger=migrator t=2024-03-01T15:05:58.641773+09:00 level=info msg="Executing migration" id="Add index for alert_id on annotation table"
-logger=migrator t=2024-03-01T15:05:58.6454635+09:00 level=info msg="Executing migration" id="Increase tags column to length 4096"
-logger=migrator t=2024-03-01T15:05:58.6487162+09:00 level=info msg="Executing migration" id="create test_data table"
-logger=migrator t=2024-03-01T15:05:58.6530149+09:00 level=info msg="Executing migration" id="create dashboard_version table v1"
-logger=migrator t=2024-03-01T15:05:58.6564701+09:00 level=info msg="Executing migration" id="add index dashboard_version.dashboard_id"
-logger=migrator t=2024-03-01T15:05:58.6600982+09:00 level=info msg="Executing migration" id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
-logger=migrator t=2024-03-01T15:05:58.6632678+09:00 level=info msg="Executing migration" id="Set dashboard version to 1 where 0"
-logger=migrator t=2024-03-01T15:05:58.667506+09:00 level=info msg="Executing migration" id="save existing dashboard data in dashboard_version table v1"
-logger=migrator t=2024-03-01T15:05:58.6712111+09:00 level=info msg="Executing migration" id="alter dashboard_version.data to mediumtext v1"
-logger=migrator t=2024-03-01T15:05:58.6747286+09:00 level=info msg="Executing migration" id="create team table"
-logger=migrator t=2024-03-01T15:05:58.6789699+09:00 level=info msg="Executing migration" id="add index team.org_id"
-logger=migrator t=2024-03-01T15:05:58.6827029+09:00 level=info msg="Executing migration" id="add unique index team_org_id_name"
-logger=migrator t=2024-03-01T15:05:58.686561+09:00 level=info msg="Executing migration" id="create team member table"
-logger=migrator t=2024-03-01T15:05:58.689285+09:00 level=info msg="Executing migration" id="add index team_member.org_id"
-logger=migrator t=2024-03-01T15:05:58.6930292+09:00 level=info msg="Executing migration" id="add unique index team_member_org_id_team_id_user_id"
-logger=migrator t=2024-03-01T15:05:58.6962278+09:00 level=info msg="Executing migration" id="add index team_member.team_id"
-logger=migrator t=2024-03-01T15:05:58.7013862+09:00 level=info msg="Executing migration" id="Add column email to team table"
-logger=migrator t=2024-03-01T15:05:58.7060696+09:00 level=info msg="Executing migration" id="Add column external to team_member table"
-logger=migrator t=2024-03-01T15:05:58.7105881+09:00 level=info msg="Executing migration" id="Add column permission to team_member table"
-logger=migrator t=2024-03-01T15:05:58.7155494+09:00 level=info msg="Executing migration" id="create dashboard acl table"
-logger=migrator t=2024-03-01T15:05:58.7197316+09:00 level=info msg="Executing migration" id="add index dashboard_acl_dashboard_id"
-logger=migrator t=2024-03-01T15:05:58.7241921+09:00 level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_user_id"
-logger=migrator t=2024-03-01T15:05:58.7286612+09:00 level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_team_id"
-logger=migrator t=2024-03-01T15:05:58.7333379+09:00 level=info msg="Executing migration" id="add index dashboard_acl_user_id"
-logger=migrator t=2024-03-01T15:05:58.7381436+09:00 level=info msg="Executing migration" id="add index dashboard_acl_team_id"
-logger=migrator t=2024-03-01T15:05:58.7423166+09:00 level=info msg="Executing migration" id="add index dashboard_acl_org_id_role"
-logger=migrator t=2024-03-01T15:05:58.746632+09:00 level=info msg="Executing migration" id="add index dashboard_permission"
-logger=migrator t=2024-03-01T15:05:58.7510639+09:00 level=info msg="Executing migration" id="save default acl rules in dashboard_acl table"
-logger=migrator t=2024-03-01T15:05:58.7586376+09:00 level=info msg="Executing migration" id="delete acl rules for deleted dashboards and folders"
-logger=migrator t=2024-03-01T15:05:58.7624522+09:00 level=info msg="Executing migration" id="create tag table"
-logger=migrator t=2024-03-01T15:05:58.7671306+09:00 level=info msg="Executing migration" id="add index tag.key_value"
-logger=migrator t=2024-03-01T15:05:58.7707659+09:00 level=info msg="Executing migration" id="create login attempt table"
-logger=migrator t=2024-03-01T15:05:58.7745497+09:00 level=info msg="Executing migration" id="add index login_attempt.username"
-logger=migrator t=2024-03-01T15:05:58.7784598+09:00 level=info msg="Executing migration" id="drop index IDX_login_attempt_username - v1"
-logger=migrator t=2024-03-01T15:05:58.7827132+09:00 level=info msg="Executing migration" id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
-logger=migrator t=2024-03-01T15:05:58.7895641+09:00 level=info msg="Executing migration" id="create login_attempt v2"
-logger=migrator t=2024-03-01T15:05:58.7936516+09:00 level=info msg="Executing migration" id="create index IDX_login_attempt_username - v2"
-logger=migrator t=2024-03-01T15:05:58.7974141+09:00 level=info msg="Executing migration" id="copy login_attempt v1 to v2"
-logger=migrator t=2024-03-01T15:05:58.8016799+09:00 level=info msg="Executing migration" id="drop login_attempt_tmp_qwerty"
-logger=migrator t=2024-03-01T15:05:58.8059196+09:00 level=info msg="Executing migration" id="create user auth table"
-logger=migrator t=2024-03-01T15:05:58.8112253+09:00 level=info msg="Executing migration" id="create index IDX_user_auth_auth_module_auth_id - v1"
-logger=migrator t=2024-03-01T15:05:58.8172206+09:00 level=info msg="Executing migration" id="alter user_auth.auth_id to length 190"
-logger=migrator t=2024-03-01T15:05:58.8216296+09:00 level=info msg="Executing migration" id="Add OAuth access token to user_auth"
-logger=migrator t=2024-03-01T15:05:58.8318439+09:00 level=info msg="Executing migration" id="Add OAuth refresh token to user_auth"
-logger=migrator t=2024-03-01T15:05:58.83778+09:00 level=info msg="Executing migration" id="Add OAuth token type to user_auth"
-logger=migrator t=2024-03-01T15:05:58.842054+09:00 level=info msg="Executing migration" id="Add OAuth expiry to user_auth"
-logger=migrator t=2024-03-01T15:05:58.8463359+09:00 level=info msg="Executing migration" id="Add index to user_id column in user_auth"
-logger=migrator t=2024-03-01T15:05:58.8510834+09:00 level=info msg="Executing migration" id="Add OAuth ID token to user_auth"
-logger=migrator t=2024-03-01T15:05:58.8556371+09:00 level=info msg="Executing migration" id="create server_lock table"
-logger=migrator t=2024-03-01T15:05:58.8593622+09:00 level=info msg="Executing migration" id="add index server_lock.operation_uid"
-logger=migrator t=2024-03-01T15:05:58.8630758+09:00 level=info msg="Executing migration" id="create user auth token table"
-logger=migrator t=2024-03-01T15:05:58.8670922+09:00 level=info msg="Executing migration" id="add unique index user_auth_token.auth_token"
-logger=migrator t=2024-03-01T15:05:58.8725733+09:00 level=info msg="Executing migration" id="add unique index user_auth_token.prev_auth_token"
-logger=migrator t=2024-03-01T15:05:58.8769261+09:00 level=info msg="Executing migration" id="add index user_auth_token.user_id"
-logger=migrator t=2024-03-01T15:05:58.8807274+09:00 level=info msg="Executing migration" id="Add revoked_at to the user auth token"
-logger=migrator t=2024-03-01T15:05:58.8872923+09:00 level=info msg="Executing migration" id="create cache_data table"
-logger=migrator t=2024-03-01T15:05:58.8909457+09:00 level=info msg="Executing migration" id="add unique index cache_data.cache_key"
-logger=migrator t=2024-03-01T15:05:58.8946344+09:00 level=info msg="Executing migration" id="create short_url table v1"
-logger=migrator t=2024-03-01T15:05:58.9003694+09:00 level=info msg="Executing migration" id="add index short_url.org_id-uid"
-logger=migrator t=2024-03-01T15:05:58.9040445+09:00 level=info msg="Executing migration" id="alter table short_url alter column created_by type to bigint"
-logger=migrator t=2024-03-01T15:05:58.9072724+09:00 level=info msg="Executing migration" id="delete alert_definition table"
-logger=migrator t=2024-03-01T15:05:58.9099207+09:00 level=info msg="Executing migration" id="recreate alert_definition table"
-logger=migrator t=2024-03-01T15:05:58.9125388+09:00 level=info msg="Executing migration" id="add index in alert_definition on org_id and title columns"
-logger=migrator t=2024-03-01T15:05:58.9175343+09:00 level=info msg="Executing migration" id="add index in alert_definition on org_id and uid columns"
-logger=migrator t=2024-03-01T15:05:58.9213464+09:00 level=info msg="Executing migration" id="alter alert_definition table data column to mediumtext in mysql"
-logger=migrator t=2024-03-01T15:05:58.924557+09:00 level=info msg="Executing migration" id="drop index in alert_definition on org_id and title columns"
-logger=migrator t=2024-03-01T15:05:58.9289248+09:00 level=info msg="Executing migration" id="drop index in alert_definition on org_id and uid columns"
-logger=migrator t=2024-03-01T15:05:58.9347277+09:00 level=info msg="Executing migration" id="add unique index in alert_definition on org_id and title columns"
-logger=migrator t=2024-03-01T15:05:58.9390061+09:00 level=info msg="Executing migration" id="add unique index in alert_definition on org_id and uid columns"
-logger=migrator t=2024-03-01T15:05:58.9422627+09:00 level=info msg="Executing migration" id="Add column paused in alert_definition"
-logger=migrator t=2024-03-01T15:05:58.9470009+09:00 level=info msg="Executing migration" id="drop alert_definition table"
-logger=migrator t=2024-03-01T15:05:58.9512623+09:00 level=info msg="Executing migration" id="delete alert_definition_version table"
-logger=migrator t=2024-03-01T15:05:58.9544132+09:00 level=info msg="Executing migration" id="recreate alert_definition_version table"
-logger=migrator t=2024-03-01T15:05:58.9578041+09:00 level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_id and version columns"
-logger=migrator t=2024-03-01T15:05:58.9618702+09:00 level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_uid and version columns"
-logger=migrator t=2024-03-01T15:05:58.9661283+09:00 level=info msg="Executing migration" id="alter alert_definition_version table data column to mediumtext in mysql"
-logger=migrator t=2024-03-01T15:05:58.9698119+09:00 level=info msg="Executing migration" id="drop alert_definition_version table"
-logger=migrator t=2024-03-01T15:05:58.9729827+09:00 level=info msg="Executing migration" id="create alert_instance table"
-logger=migrator t=2024-03-01T15:05:58.9768044+09:00 level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, def_uid and current_state columns"
-logger=migrator t=2024-03-01T15:05:58.9804833+09:00 level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, current_state columns"
-logger=migrator t=2024-03-01T15:05:58.9841923+09:00 level=info msg="Executing migration" id="add column current_state_end to alert_instance"
-logger=migrator t=2024-03-01T15:05:58.9880572+09:00 level=info msg="Executing migration" id="remove index def_org_id, def_uid, current_state on alert_instance"
-logger=migrator t=2024-03-01T15:05:58.9916081+09:00 level=info msg="Executing migration" id="remove index def_org_id, current_state on alert_instance"
-logger=migrator t=2024-03-01T15:05:58.9953017+09:00 level=info msg="Executing migration" id="rename def_org_id to rule_org_id in alert_instance"
-logger=migrator t=2024-03-01T15:05:59.0059766+09:00 level=info msg="Executing migration" id="rename def_uid to rule_uid in alert_instance"
-logger=migrator t=2024-03-01T15:05:59.0171163+09:00 level=info msg="Executing migration" id="add index rule_org_id, rule_uid, current_state on alert_instance"
-logger=migrator t=2024-03-01T15:05:59.0210726+09:00 level=info msg="Executing migration" id="add index rule_org_id, current_state on alert_instance"
-logger=migrator t=2024-03-01T15:05:59.024243+09:00 level=info msg="Executing migration" id="add current_reason column related to current_state"
-logger=migrator t=2024-03-01T15:05:59.0284987+09:00 level=info msg="Executing migration" id="create alert_rule table"
-logger=migrator t=2024-03-01T15:05:59.0316136+09:00 level=info msg="Executing migration" id="add index in alert_rule on org_id and title columns"
-logger=migrator t=2024-03-01T15:05:59.0366469+09:00 level=info msg="Executing migration" id="add index in alert_rule on org_id and uid columns"
-logger=migrator t=2024-03-01T15:05:59.0410509+09:00 level=info msg="Executing migration" id="add index in alert_rule on org_id, namespace_uid, group_uid columns"
-logger=migrator t=2024-03-01T15:05:59.0448005+09:00 level=info msg="Executing migration" id="alter alert_rule table data column to mediumtext in mysql"
-logger=migrator t=2024-03-01T15:05:59.047467+09:00 level=info msg="Executing migration" id="add column for to alert_rule"
-logger=migrator t=2024-03-01T15:05:59.0533337+09:00 level=info msg="Executing migration" id="add column annotations to alert_rule"
-logger=migrator t=2024-03-01T15:05:59.057001+09:00 level=info msg="Executing migration" id="add column labels to alert_rule"
-logger=migrator t=2024-03-01T15:05:59.0614927+09:00 level=info msg="Executing migration" id="remove unique index from alert_rule on org_id, title columns"
-logger=migrator t=2024-03-01T15:05:59.0655523+09:00 level=info msg="Executing migration" id="add index in alert_rule on org_id, namespase_uid and title columns"
-logger=migrator t=2024-03-01T15:05:59.0705073+09:00 level=info msg="Executing migration" id="add dashboard_uid column to alert_rule"
-logger=migrator t=2024-03-01T15:05:59.0754235+09:00 level=info msg="Executing migration" id="add panel_id column to alert_rule"
-logger=migrator t=2024-03-01T15:05:59.0799441+09:00 level=info msg="Executing migration" id="add index in alert_rule on org_id, dashboard_uid and panel_id columns"
-logger=migrator t=2024-03-01T15:05:59.0854382+09:00 level=info msg="Executing migration" id="add rule_group_idx column to alert_rule"
-logger=migrator t=2024-03-01T15:05:59.0902553+09:00 level=info msg="Executing migration" id="create alert_rule_version table"
-logger=migrator t=2024-03-01T15:05:59.094935+09:00 level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_uid and version columns"
-logger=migrator t=2024-03-01T15:05:59.0994137+09:00 level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_namespace_uid and rule_group columns"
-logger=migrator t=2024-03-01T15:05:59.103119+09:00 level=info msg="Executing migration" id="alter alert_rule_version table data column to mediumtext in mysql"
-logger=migrator t=2024-03-01T15:05:59.1057408+09:00 level=info msg="Executing migration" id="add column for to alert_rule_version"
-logger=migrator t=2024-03-01T15:05:59.1103064+09:00 level=info msg="Executing migration" id="add column annotations to alert_rule_version"
-logger=migrator t=2024-03-01T15:05:59.1145239+09:00 level=info msg="Executing migration" id="add column labels to alert_rule_version"
-logger=migrator t=2024-03-01T15:05:59.1192713+09:00 level=info msg="Executing migration" id="add rule_group_idx column to alert_rule_version"
-logger=migrator t=2024-03-01T15:05:59.1228917+09:00 level=info msg="Executing migration" id=create_alert_configuration_table
-logger=migrator t=2024-03-01T15:05:59.1262972+09:00 level=info msg="Executing migration" id="Add column default in alert_configuration"
-logger=migrator t=2024-03-01T15:05:59.1299498+09:00 level=info msg="Executing migration" id="alert alert_configuration alertmanager_configuration column from TEXT to MEDIUMTEXT if mysql"
-logger=migrator t=2024-03-01T15:05:59.133866+09:00 level=info msg="Executing migration" id="add column org_id in alert_configuration"
-logger=migrator t=2024-03-01T15:05:59.1383064+09:00 level=info msg="Executing migration" id="add index in alert_configuration table on org_id column"
-logger=migrator t=2024-03-01T15:05:59.1426639+09:00 level=info msg="Executing migration" id="add configuration_hash column to alert_configuration"
-logger=migrator t=2024-03-01T15:05:59.1471326+09:00 level=info msg="Executing migration" id=create_ngalert_configuration_table
-logger=migrator t=2024-03-01T15:05:59.151745+09:00 level=info msg="Executing migration" id="add index in ngalert_configuration on org_id column"
-logger=migrator t=2024-03-01T15:05:59.1543896+09:00 level=info msg="Executing migration" id="add column send_alerts_to in ngalert_configuration"
-logger=migrator t=2024-03-01T15:05:59.1594237+09:00 level=info msg="Executing migration" id="create provenance_type table"
-logger=migrator t=2024-03-01T15:05:59.1631165+09:00 level=info msg="Executing migration" id="add index to uniquify (record_key, record_type, org_id) columns"
-logger=migrator t=2024-03-01T15:05:59.1675923+09:00 level=info msg="Executing migration" id="create alert_image table"
-logger=migrator t=2024-03-01T15:05:59.1709312+09:00 level=info msg="Executing migration" id="add unique index on token to alert_image table"
-logger=migrator t=2024-03-01T15:05:59.1742+09:00 level=info msg="Executing migration" id="support longer URLs in alert_image table"
-logger=migrator t=2024-03-01T15:05:59.1773515+09:00 level=info msg="Executing migration" id="clear migration entry \"remove unified alerting data\""
-logger=migrator t=2024-03-01T15:05:59.1778784+09:00 level=info msg="Executing migration" id="move dashboard alerts to unified alerting"
-logger=migrator t=2024-03-01T15:05:59.1783918+09:00 level=info msg="alerts found to migrate" alerts=0
-logger=migrator t=2024-03-01T15:05:59.1810337+09:00 level=info msg="Executing migration" id="create library_element table v1"
-logger=migrator t=2024-03-01T15:05:59.1847275+09:00 level=info msg="Executing migration" id="add index library_element org_id-folder_id-name-kind"
-logger=migrator t=2024-03-01T15:05:59.1887648+09:00 level=info msg="Executing migration" id="create library_element_connection table v1"
-logger=migrator t=2024-03-01T15:05:59.1921516+09:00 level=info msg="Executing migration" id="add index library_element_connection element_id-kind-connection_id"
-logger=migrator t=2024-03-01T15:05:59.195299+09:00 level=info msg="Executing migration" id="add unique index library_element org_id_uid"
-logger=migrator t=2024-03-01T15:05:59.1985155+09:00 level=info msg="Executing migration" id="increase max description length to 2048"
-logger=migrator t=2024-03-01T15:05:59.2025288+09:00 level=info msg="Executing migration" id="clone move dashboard alerts to unified alerting"
-logger=migrator t=2024-03-01T15:05:59.2057158+09:00 level=info msg="Executing migration" id="create data_keys table"
-logger=migrator t=2024-03-01T15:05:59.2094634+09:00 level=info msg="Executing migration" id="create secrets table"
-logger=migrator t=2024-03-01T15:05:59.2126563+09:00 level=info msg="Executing migration" id="rename data_keys name column to id"
-logger=migrator t=2024-03-01T15:05:59.2247447+09:00 level=info msg="Executing migration" id="add name column into data_keys"
-logger=migrator t=2024-03-01T15:05:59.2291089+09:00 level=info msg="Executing migration" id="copy data_keys id column values into name"
-logger=migrator t=2024-03-01T15:05:59.2351085+09:00 level=info msg="Executing migration" id="rename data_keys name column to label"
-logger=migrator t=2024-03-01T15:05:59.2502625+09:00 level=info msg="Executing migration" id="rename data_keys id column back to name"
-logger=migrator t=2024-03-01T15:05:59.2643037+09:00 level=info msg="Executing migration" id="create kv_store table v1"
-logger=migrator t=2024-03-01T15:05:59.2684914+09:00 level=info msg="Executing migration" id="add index kv_store.org_id-namespace-key"
-logger=migrator t=2024-03-01T15:05:59.2715598+09:00 level=info msg="Executing migration" id="update dashboard_uid and panel_id from existing annotations"
-logger=migrator t=2024-03-01T15:05:59.274923+09:00 level=info msg="Executing migration" id="create permission table"
-logger=migrator t=2024-03-01T15:05:59.2788948+09:00 level=info msg="Executing migration" id="add unique index permission.role_id"
-logger=migrator t=2024-03-01T15:05:59.2839476+09:00 level=info msg="Executing migration" id="add unique index role_id_action_scope"
-logger=migrator t=2024-03-01T15:05:59.2879726+09:00 level=info msg="Executing migration" id="create role table"
-logger=migrator t=2024-03-01T15:05:59.2927777+09:00 level=info msg="Executing migration" id="add column display_name"
-logger=migrator t=2024-03-01T15:05:59.2984486+09:00 level=info msg="Executing migration" id="add column group_name"
-logger=migrator t=2024-03-01T15:05:59.3032699+09:00 level=info msg="Executing migration" id="add index role.org_id"
-logger=migrator t=2024-03-01T15:05:59.3069233+09:00 level=info msg="Executing migration" id="add unique index role_org_id_name"
-logger=migrator t=2024-03-01T15:05:59.3107754+09:00 level=info msg="Executing migration" id="add index role_org_id_uid"
-logger=migrator t=2024-03-01T15:05:59.3149098+09:00 level=info msg="Executing migration" id="create team role table"
-logger=migrator t=2024-03-01T15:05:59.3191762+09:00 level=info msg="Executing migration" id="add index team_role.org_id"
-logger=migrator t=2024-03-01T15:05:59.3230251+09:00 level=info msg="Executing migration" id="add unique index team_role_org_id_team_id_role_id"
-logger=migrator t=2024-03-01T15:05:59.3267598+09:00 level=info msg="Executing migration" id="add index team_role.team_id"
-logger=migrator t=2024-03-01T15:05:59.3300391+09:00 level=info msg="Executing migration" id="create user role table"
-logger=migrator t=2024-03-01T15:05:59.3341451+09:00 level=info msg="Executing migration" id="add index user_role.org_id"
-logger=migrator t=2024-03-01T15:05:59.3381553+09:00 level=info msg="Executing migration" id="add unique index user_role_org_id_user_id_role_id"
-logger=migrator t=2024-03-01T15:05:59.3415586+09:00 level=info msg="Executing migration" id="add index user_role.user_id"
-logger=migrator t=2024-03-01T15:05:59.3449138+09:00 level=info msg="Executing migration" id="create builtin role table"
-logger=migrator t=2024-03-01T15:05:59.3480435+09:00 level=info msg="Executing migration" id="add index builtin_role.role_id"
-logger=migrator t=2024-03-01T15:05:59.3519911+09:00 level=info msg="Executing migration" id="add index builtin_role.name"
-logger=migrator t=2024-03-01T15:05:59.3552402+09:00 level=info msg="Executing migration" id="Add column org_id to builtin_role table"
-logger=migrator t=2024-03-01T15:05:59.3596071+09:00 level=info msg="Executing migration" id="add index builtin_role.org_id"
-logger=migrator t=2024-03-01T15:05:59.3628574+09:00 level=info msg="Executing migration" id="add unique index builtin_role_org_id_role_id_role"
-logger=migrator t=2024-03-01T15:05:59.3674447+09:00 level=info msg="Executing migration" id="Remove unique index role_org_id_uid"
-logger=migrator t=2024-03-01T15:05:59.3708444+09:00 level=info msg="Executing migration" id="add unique index role.uid"
-logger=migrator t=2024-03-01T15:05:59.3740863+09:00 level=info msg="Executing migration" id="create seed assignment table"
-logger=migrator t=2024-03-01T15:05:59.3779337+09:00 level=info msg="Executing migration" id="add unique index builtin_role_role_name"
-logger=migrator t=2024-03-01T15:05:59.381677+09:00 level=info msg="Executing migration" id="add column hidden to role table"
-logger=migrator t=2024-03-01T15:05:59.3870744+09:00 level=info msg="Executing migration" id="create query_history table v1"
-logger=migrator t=2024-03-01T15:05:59.3913614+09:00 level=info msg="Executing migration" id="add index query_history.org_id-created_by-datasource_uid"
-logger=migrator t=2024-03-01T15:05:59.3961032+09:00 level=info msg="Executing migration" id="alter table query_history alter column created_by type to bigint"
-logger=migrator t=2024-03-01T15:05:59.4001879+09:00 level=info msg="Executing migration" id="teams permissions migration"
-logger=migrator t=2024-03-01T15:05:59.4033193+09:00 level=info msg="Executing migration" id="dashboard permissions"
-logger=migrator t=2024-03-01T15:05:59.4075082+09:00 level=info msg="Executing migration" id="dashboard permissions uid scopes"
-logger=migrator t=2024-03-01T15:05:59.4117883+09:00 level=info msg="Executing migration" id="drop managed folder create actions"
-logger=migrator t=2024-03-01T15:05:59.4166893+09:00 level=info msg="Executing migration" id="alerting notification permissions"
-logger=migrator t=2024-03-01T15:05:59.419841+09:00 level=info msg="Executing migration" id="create query_history_star table v1"
-logger=migrator t=2024-03-01T15:05:59.4234802+09:00 level=info msg="Executing migration" id="add index query_history.user_id-query_uid"
-logger=migrator t=2024-03-01T15:05:59.4270236+09:00 level=info msg="Executing migration" id="add column org_id in query_history_star"
-logger=migrator t=2024-03-01T15:05:59.4322584+09:00 level=info msg="Executing migration" id="alter table query_history_star_mig column user_id type to bigint"
-logger=migrator t=2024-03-01T15:05:59.4359186+09:00 level=info msg="Executing migration" id="create correlation table v1"
-logger=migrator t=2024-03-01T15:05:59.4395533+09:00 level=info msg="Executing migration" id="add index correlations.uid"
-logger=migrator t=2024-03-01T15:05:59.443447+09:00 level=info msg="Executing migration" id="add index correlations.source_uid"
-logger=migrator t=2024-03-01T15:05:59.4470759+09:00 level=info msg="Executing migration" id="add correlation config column"
-logger=migrator t=2024-03-01T15:05:59.4530964+09:00 level=info msg="Executing migration" id="create entity_events table"
-logger=migrator t=2024-03-01T15:05:59.4574223+09:00 level=info msg="Executing migration" id="create dashboard public config v1"
-logger=migrator t=2024-03-01T15:05:59.4612152+09:00 level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v1"
-logger=migrator t=2024-03-01T15:05:59.4612152+09:00 level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index UQE_dashboard_public_config_uid - v1"
-logger=migrator t=2024-03-01T15:05:59.4639118+09:00 level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
-logger=migrator t=2024-03-01T15:05:59.4644242+09:00 level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
-logger=migrator t=2024-03-01T15:05:59.4675863+09:00 level=info msg="Executing migration" id="Drop old dashboard public config table"
-logger=migrator t=2024-03-01T15:05:59.4708764+09:00 level=info msg="Executing migration" id="recreate dashboard public config v1"
-logger=migrator t=2024-03-01T15:05:59.4736828+09:00 level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v1"
-logger=migrator t=2024-03-01T15:05:59.4774134+09:00 level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
-logger=migrator t=2024-03-01T15:05:59.4806297+09:00 level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v2"
-logger=migrator t=2024-03-01T15:05:59.4837954+09:00 level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
-logger=migrator t=2024-03-01T15:05:59.4877867+09:00 level=info msg="Executing migration" id="Drop public config table"
-logger=migrator t=2024-03-01T15:05:59.4909892+09:00 level=info msg="Executing migration" id="Recreate dashboard public config v2"
-logger=migrator t=2024-03-01T15:05:59.4941457+09:00 level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v2"
-logger=migrator t=2024-03-01T15:05:59.496758+09:00 level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
-logger=migrator t=2024-03-01T15:05:59.5016909+09:00 level=info msg="Executing migration" id="create index UQE_dashboard_public_config_access_token - v2"
-logger=migrator t=2024-03-01T15:05:59.504941+09:00 level=info msg="Executing migration" id="Rename table dashboard_public_config to dashboard_public - v2"
-logger=migrator t=2024-03-01T15:05:59.5136541+09:00 level=info msg="Executing migration" id="add annotations_enabled column"
-logger=migrator t=2024-03-01T15:05:59.5190321+09:00 level=info msg="Executing migration" id="create default alerting folders"
-logger=migrator t=2024-03-01T15:05:59.522714+09:00 level=info msg="Executing migration" id="create file table"
-logger=migrator t=2024-03-01T15:05:59.526453+09:00 level=info msg="Executing migration" id="file table idx: path natural pk"
-logger=migrator t=2024-03-01T15:05:59.5302029+09:00 level=info msg="Executing migration" id="file table idx: parent_folder_path_hash fast folder retrieval"
-logger=migrator t=2024-03-01T15:05:59.5346029+09:00 level=info msg="Executing migration" id="create file_meta table"
-logger=migrator t=2024-03-01T15:05:59.5373302+09:00 level=info msg="Executing migration" id="file table idx: path key"
-logger=migrator t=2024-03-01T15:05:59.5405237+09:00 level=info msg="Executing migration" id="set path collation in file table"
-logger=migrator t=2024-03-01T15:05:59.5432811+09:00 level=info msg="Executing migration" id="managed permissions migration"
-logger=migrator t=2024-03-01T15:05:59.5465995+09:00 level=info msg="Executing migration" id="managed folder permissions alert actions migration"
-logger=migrator t=2024-03-01T15:05:59.5500001+09:00 level=info msg="Executing migration" id="RBAC action name migrator"
-logger=migrator t=2024-03-01T15:05:59.5536441+09:00 level=info msg="Executing migration" id="Add UID column to playlist"
-logger=migrator t=2024-03-01T15:05:59.5578751+09:00 level=info msg="Executing migration" id="Update uid column values in playlist"
-logger=migrator t=2024-03-01T15:05:59.5610526+09:00 level=info msg="Executing migration" id="Add index for uid in playlist"
-logger=migrator t=2024-03-01T15:05:59.5652639+09:00 level=info msg="Executing migration" id="update group index for alert rules"
-logger=migrator t=2024-03-01T15:05:59.5683653+09:00 level=info msg="Executing migration" id="managed folder permissions alert actions repeated migration"
-logger=migrator t=2024-03-01T15:05:59.5716445+09:00 level=info msg="Executing migration" id="admin only folder/dashboard permission"
-logger=migrator t=2024-03-01T15:05:59.5748855+09:00 level=info msg="Executing migration" id="add action column to seed_assignment"
-logger=migrator t=2024-03-01T15:05:59.5798859+09:00 level=info msg="Executing migration" id="add scope column to seed_assignment"
-logger=migrator t=2024-03-01T15:05:59.5847738+09:00 level=info msg="Executing migration" id="remove unique index builtin_role_role_name before nullable update"
-logger=migrator t=2024-03-01T15:05:59.5880762+09:00 level=info msg="Executing migration" id="update seed_assignment role_name column to nullable"
-logger=migrator t=2024-03-01T15:05:59.6126399+09:00 level=info msg="Executing migration" id="add unique index builtin_role_name back"
-logger=migrator t=2024-03-01T15:05:59.6160822+09:00 level=info msg="Executing migration" id="add unique index builtin_role_action_scope"
-logger=migrator t=2024-03-01T15:05:59.6200734+09:00 level=info msg="Executing migration" id="add primary key to seed_assigment"
-logger=migrator t=2024-03-01T15:05:59.6295866+09:00 level=info msg="Executing migration" id="managed folder permissions alert actions repeated fixed migration"
-logger=migrator t=2024-03-01T15:05:59.6322234+09:00 level=info msg="Executing migration" id="migrate external alertmanagers to datsourcse"
-logger=migrator t=2024-03-01T15:05:59.6362351+09:00 level=info msg="migrations completed" performed=468 skipped=0 duration=1.9715971s
-logger=sqlstore t=2024-03-01T15:05:59.653583+09:00 level=info msg="Created default admin" user=admin
-logger=sqlstore t=2024-03-01T15:05:59.6546592+09:00 level=info msg="Created default organization"
-logger=plugin.loader t=2024-03-01T15:05:59.7710438+09:00 level=info msg="Plugin registered" pluginID=input
-logger=plugin.finder t=2024-03-01T15:05:59.7715824+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=C:\Users\user\Desktop\grafana_test\grafana\data\plugins
-logger=secrets t=2024-03-01T15:05:59.7744376+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
-logger=query_data t=2024-03-01T15:05:59.7812409+09:00 level=info msg="Query Service initialization"
-logger=live.push_http t=2024-03-01T15:05:59.7862229+09:00 level=info msg="Live Push Gateway initialization"
-logger=infra.usagestats.collector t=2024-03-01T15:06:00.1984913+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
-logger=provisioning.alerting t=2024-03-01T15:06:00.206037+09:00 level=info msg="starting to provision alerting"
-logger=provisioning.alerting t=2024-03-01T15:06:00.2088501+09:00 level=info msg="finished to provision alerting"
-logger=grafanaStorageLogger t=2024-03-01T15:06:00.2093546+09:00 level=info msg="storage starting"
-logger=ngalert.state.manager t=2024-03-01T15:06:00.2098851+09:00 level=info msg="Warming state cache for startup"
-logger=http.server t=2024-03-01T15:06:00.2234398+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
-logger=sqlstore.transactions t=2024-03-01T15:06:00.2245165+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
-logger=ngalert.state.manager t=2024-03-01T15:06:00.2455972+09:00 level=info msg="State cache has been initialized" states=0 duration=35.7121ms
-logger=ticker t=2024-03-01T15:06:00.2518163+09:00 level=info msg=starting first_tick=2024-03-01T15:06:10+09:00
-logger=ngalert.multiorg.alertmanager t=2024-03-01T15:06:00.2518163+09:00 level=info msg="starting MultiOrg Alertmanager"
-logger=context userId=0 orgId=0 uname= t=2024-03-01T15:06:22.2988058+09:00 level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=[::1] time_ms=1 duration=1.0576ms size=29 referer= handler=/
-logger=http.server t=2024-03-01T15:06:27.5341914+09:00 level=info msg="Successful Login" User=admin@localhost
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:06:53.0630745+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=2 duration=2.0916ms size=0 referer= handler=/api/live/ws
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:02.105774+09:00 level=error msg="Internal server error" error="[plugin.downstreamError] failed to query data: Post \"localhost:9090\": unsupported protocol scheme \"localhost\"" remote_addr=[::1] traceID=
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:02.1062886+09:00 level=error msg="Request Completed" method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=1 duration=1.9762ms size=116 referer=http://localhost:3000/datasources/edit/Db1Dm6oSk handler=/api/ds/query
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:04.1231363+09:00 level=error msg="Internal server error" error="[plugin.downstreamError] failed to query data: Post \"localhost:9090\": unsupported protocol scheme \"localhost\"" remote_addr=[::1] traceID=
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:04.123793+09:00 level=error msg="Request Completed" method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=2 duration=2.298ms size=116 referer=http://localhost:3000/datasources/edit/Db1Dm6oSk handler=/api/ds/query
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:04.7072817+09:00 level=error msg="Internal server error" error="[plugin.downstreamError] failed to query data: Post \"localhost:9090\": unsupported protocol scheme \"localhost\"" remote_addr=[::1] traceID=
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:04.7078382+09:00 level=error msg="Request Completed" method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=1 duration=1.8147ms size=116 referer=http://localhost:3000/datasources/edit/Db1Dm6oSk handler=/api/ds/query
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:04.9285556+09:00 level=error msg="Internal server error" error="[plugin.downstreamError] failed to query data: Post \"localhost:9090\": unsupported protocol scheme \"localhost\"" remote_addr=[::1] traceID=
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:04.9285556+09:00 level=error msg="Request Completed" method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=1 duration=1.9257ms size=116 referer=http://localhost:3000/datasources/edit/Db1Dm6oSk handler=/api/ds/query
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:05.1055919+09:00 level=error msg="Internal server error" error="[plugin.downstreamError] failed to query data: Post \"localhost:9090\": unsupported protocol scheme \"localhost\"" remote_addr=[::1] traceID=
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:05.1061467+09:00 level=error msg="Request Completed" method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=1 duration=1.7437ms size=116 referer=http://localhost:3000/datasources/edit/Db1Dm6oSk handler=/api/ds/query
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:05.9838399+09:00 level=error msg="Internal server error" error="[plugin.downstreamError] failed to query data: Post \"localhost:9090\": unsupported protocol scheme \"localhost\"" remote_addr=[::1] traceID=
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:05.984365+09:00 level=error msg="Request Completed" method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=3 duration=3.2685ms size=116 referer=http://localhost:3000/datasources/edit/Db1Dm6oSk handler=/api/ds/query
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:09.9902558+09:00 level=error msg="Internal server error" error="[plugin.downstreamError] failed to query data: Post \"localhost:9090\": unsupported protocol scheme \"localhost\"" remote_addr=[::1] traceID=
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:09:09.9909119+09:00 level=error msg="Request Completed" method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=3 duration=3.4581ms size=116 referer=http://localhost:3000/datasources/edit/Db1Dm6oSk handler=/api/ds/query
-logger=server t=2024-03-01T15:13:41.5722781+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
-logger=ticker t=2024-03-01T15:13:41.5728594+09:00 level=info msg=stopped last_tick=2024-03-01T15:13:40+09:00
-logger=tracing t=2024-03-01T15:13:41.5728594+09:00 level=info msg="Closing tracing"
-logger=sqlstore.transactions t=2024-03-01T15:13:41.594884+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
-logger=settings t=2024-03-01T15:18:22.164535+09:00 level=info msg="Starting Grafana" version=9.3.15 commit=8f0a89e818 branch=HEAD compiled=2023-05-22T22:47:20+09:00
-logger=settings t=2024-03-01T15:18:22.1660539+09:00 level=info msg="Config loaded from" file=C:\Users\user\Desktop\grafana_test\grafana/conf/defaults.ini
-logger=settings t=2024-03-01T15:18:22.1660539+09:00 level=info msg="Path Home" path=C:\Users\user\Desktop\grafana_test\grafana
-logger=settings t=2024-03-01T15:18:22.1660539+09:00 level=info msg="Path Data" path=C:\Users\user\Desktop\grafana_test\grafana\data
-logger=settings t=2024-03-01T15:18:22.1660539+09:00 level=info msg="Path Logs" path=C:\Users\user\Desktop\grafana_test\grafana\data\log
-logger=settings t=2024-03-01T15:18:22.1660539+09:00 level=info msg="Path Plugins" path=C:\Users\user\Desktop\grafana_test\grafana\data\plugins
-logger=settings t=2024-03-01T15:18:22.1670721+09:00 level=info msg="Path Provisioning" path=C:\Users\user\Desktop\grafana_test\grafana\conf\provisioning
-logger=settings t=2024-03-01T15:18:22.1670721+09:00 level=info msg="App mode production"
-logger=sqlstore t=2024-03-01T15:18:22.1670721+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
-logger=sqlstore t=2024-03-01T15:18:22.1681982+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=C:\Users\user\Desktop\grafana_test\grafana\data\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
-logger=migrator t=2024-03-01T15:18:22.1911025+09:00 level=info msg="Starting DB migrations"
-logger=migrator t=2024-03-01T15:18:22.1956318+09:00 level=info msg="migrations completed" performed=0 skipped=464 duration=0s
-logger=plugin.loader t=2024-03-01T15:18:22.3037178+09:00 level=info msg="Plugin registered" pluginID=input
-logger=plugin.finder t=2024-03-01T15:18:22.3047435+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=C:\Users\user\Desktop\grafana_test\grafana\data\plugins
-logger=secrets t=2024-03-01T15:18:22.3062559+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
-logger=query_data t=2024-03-01T15:18:22.3123537+09:00 level=info msg="Query Service initialization"
-logger=live.push_http t=2024-03-01T15:18:22.3159131+09:00 level=info msg="Live Push Gateway initialization"
-logger=infra.usagestats.collector t=2024-03-01T15:18:22.5407897+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
-logger=provisioning.alerting t=2024-03-01T15:18:22.543631+09:00 level=info msg="starting to provision alerting"
-logger=provisioning.alerting t=2024-03-01T15:18:22.543631+09:00 level=info msg="finished to provision alerting"
-logger=ngalert.state.manager t=2024-03-01T15:18:22.5446368+09:00 level=info msg="Warming state cache for startup"
-logger=grafanaStorageLogger t=2024-03-01T15:18:22.5446368+09:00 level=info msg="storage starting"
-logger=ngalert.state.manager t=2024-03-01T15:18:22.5588884+09:00 level=info msg="State cache has been initialized" states=0 duration=14.2516ms
-logger=ticker t=2024-03-01T15:18:22.5606344+09:00 level=info msg=starting first_tick=2024-03-01T15:18:30+09:00
-logger=http.server t=2024-03-01T15:18:22.5606344+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
-logger=ngalert.multiorg.alertmanager t=2024-03-01T15:18:22.5606344+09:00 level=info msg="starting MultiOrg Alertmanager"
-logger=context userId=1 orgId=1 uname=admin t=2024-03-01T15:18:29.0146722+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=8 duration=8.6912ms size=0 referer= handler=/api/live/ws
-logger=live t=2024-03-01T15:25:45.5264441+09:00 level=info msg="Initialized channel handler" channel=grafana/dashboard/uid/5qfvW6oIk address=grafana/dashboard/uid/5qfvW6oIk
-logger=cleanup t=2024-03-01T15:28:22.5779081+09:00 level=info msg="Completed cleanup jobs" duration=20.1626ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T12:29:54.49667433+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=13 duration=13.660559ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-03-03T12:30:17.973433021+09:00 level=info msg="Completed cleanup jobs" duration=4.543153ms
+logger=grafana.update.checker t=2024-03-03T12:30:18.08756849+09:00 level=info msg="Update check succeeded" duration=50.088285ms
+logger=plugins.update.checker t=2024-03-03T12:30:18.418396682+09:00 level=info msg="Update check succeeded" duration=199.64358ms
+logger=settings t=2024-03-03T13:21:31.57301623+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=unknown-dev branch=main compiled=2024-03-02T01:14:54+09:00
+logger=settings t=2024-03-03T13:21:31.573594014+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-03-03T13:21:31.573626931+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana/conf/defaults.ini
+logger=settings t=2024-03-03T13:21:31.5736471+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-03-03T13:21:31.573667489+09:00 level=info msg="Path Home" path=/home/dmyang/grafana
+logger=settings t=2024-03-03T13:21:31.57367472+09:00 level=info msg="Path Data" path=/home/dmyang/grafana/data
+logger=settings t=2024-03-03T13:21:31.573691898+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana/data/log
+logger=settings t=2024-03-03T13:21:31.573734915+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana/data/plugins
+logger=settings t=2024-03-03T13:21:31.573762861+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana/conf/provisioning
+logger=settings t=2024-03-03T13:21:31.574133801+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-03-03T13:21:31.574262223+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-03-03T13:21:31.59406279+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-03-03T13:21:31.599595063+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=313.452µs
+logger=secrets t=2024-03-03T13:21:31.600090036+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-03-03T13:21:31.684955917+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-03-03T13:21:31.685005428+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-03-03T13:21:31.685051228+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana/data/plugins
+logger=query_data t=2024-03-03T13:21:31.691693476+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-03-03T13:21:31.694133771+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-03-03T13:21:32.399869777+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-03-03T13:21:32.40313314+09:00 level=warn msg="file has invalid suffix 'sample.yaml:Zone.Identifier' (.yaml,.yml,.json accepted), skipping"
+logger=provisioning.alerting t=2024-03-03T13:21:32.403166137+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-03-03T13:21:32.403188227+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-03-03T13:21:32.404025505+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-03-03T13:21:32.404356169+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-03-03T13:21:32.404306432+09:00 level=info msg="storage starting"
+logger=http.server t=2024-03-03T13:21:32.409313892+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-03-03T13:21:32.431400656+09:00 level=info msg="State cache has been initialized" states=0 duration=27.043037ms
+logger=ngalert.multiorg.alertmanager t=2024-03-03T13:21:32.431486249+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2024-03-03T13:21:32.431758274+09:00 level=info msg=starting first_tick=2024-03-03T13:21:40+09:00
+logger=grafana.update.checker t=2024-03-03T13:21:32.431845203+09:00 level=info msg="Update check succeeded" duration=27.104303ms
+logger=plugins.update.checker t=2024-03-03T13:21:32.675808296+09:00 level=info msg="Update check succeeded" duration=271.573717ms
+logger=cleanup t=2024-03-03T13:31:32.416519993+09:00 level=info msg="Completed cleanup jobs" duration=11.556456ms
+logger=grafana.update.checker t=2024-03-03T13:31:32.45688904+09:00 level=info msg="Update check succeeded" duration=24.660208ms
+logger=plugins.update.checker t=2024-03-03T13:31:32.876992826+09:00 level=info msg="Update check succeeded" duration=200.735471ms
+logger=cleanup t=2024-03-03T13:41:32.414306902+09:00 level=info msg="Completed cleanup jobs" duration=9.266907ms
+logger=grafana.update.checker t=2024-03-03T13:41:32.450361796+09:00 level=info msg="Update check succeeded" duration=17.265791ms
+logger=plugins.update.checker t=2024-03-03T13:41:32.974738166+09:00 level=info msg="Update check succeeded" duration=298.430309ms
+logger=cleanup t=2024-03-03T13:51:32.416341052+09:00 level=info msg="Completed cleanup jobs" duration=10.727882ms
+logger=grafana.update.checker t=2024-03-03T13:51:32.481991029+09:00 level=info msg="Update check succeeded" duration=49.562384ms
+logger=plugins.update.checker t=2024-03-03T13:51:32.898787468+09:00 level=info msg="Update check succeeded" duration=221.586652ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:18.852880008+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=3 duration=3.678191ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:30.65239638+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=286.778µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:31.470849978+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=322.536µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:31.472544331+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=435.103µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:33.840487198+09:00 level=error msg="no admin configuration available" error="no admin configuration available" remote_addr=[::1] traceID=
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:33.840615845+09:00 level=info msg="Request Completed" method=GET path=/api/v1/ngalert/admin_config status=404 remote_addr=[::1] time_ms=0 duration=895.419µs size=59 referer=http://localhost:3000/alerting/admin handler=/api/v1/ngalert/admin_config
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:34.319551016+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=370.833µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:34.321134223+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=199.39µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:35.185861285+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=430.97µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:36.568699411+09:00 level=error msg="Failed to build evaluator for queries and expressions: expression 'A' cannot reference itself. Must be query or another expression" error="Failed to build evaluator for queries and expressions: expression 'A' cannot reference itself. Must be query or another expression" remote_addr=[::1] traceID=
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T13:53:36.568830423+09:00 level=info msg="Request Completed" method=POST path=/api/v1/eval status=400 remote_addr=[::1] time_ms=43 duration=43.652093ms size=157 referer=http://localhost:3000/alerting/new handler=/api/v1/eval
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:12.849565616+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=7 duration=7.850186ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:14.191033223+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=543.246µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:50.215254811+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=2 duration=2.733035ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:50.842217653+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=602.027µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:51.913445915+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=1 duration=1.690077ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:52.101235607+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=733.781µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:52.670126401+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=1 duration=1.711409ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:00:52.822903041+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=537.503µs size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-03-03T14:01:32.416711273+09:00 level=info msg="Completed cleanup jobs" duration=11.494467ms
+logger=grafana.update.checker t=2024-03-03T14:01:32.454532704+09:00 level=info msg="Update check succeeded" duration=22.070823ms
+logger=plugins.update.checker t=2024-03-03T14:01:32.879106693+09:00 level=info msg="Update check succeeded" duration=202.531131ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:02:45.737351067+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=3 duration=3.493087ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:02:46.844745186+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.180599ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:13.36412336+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=2 duration=2.770016ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:14.007653569+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=528.414µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-03-03T14:03:17.660236345+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-03-03T14:03:17.660555283+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-03-03T14:03:17.660713955+09:00 level=info msg=stopped last_tick=2024-03-03T14:03:10+09:00
+logger=settings t=2024-03-03T14:03:18.415446329+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=unknown-dev branch=main compiled=2024-03-02T01:14:54+09:00
+logger=settings t=2024-03-03T14:03:18.415644324+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-03-03T14:03:18.415720585+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana/conf/defaults.ini
+logger=settings t=2024-03-03T14:03:18.415819688+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-03-03T14:03:18.415930272+09:00 level=info msg="Path Home" path=/home/dmyang/grafana
+logger=settings t=2024-03-03T14:03:18.416579139+09:00 level=info msg="Path Data" path=/home/dmyang/grafana/data
+logger=settings t=2024-03-03T14:03:18.416604211+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana/data/log
+logger=settings t=2024-03-03T14:03:18.416611618+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana/data/plugins
+logger=settings t=2024-03-03T14:03:18.416630276+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana/conf/provisioning
+logger=settings t=2024-03-03T14:03:18.416647546+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-03-03T14:03:18.416863753+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-03-03T14:03:18.427928334+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-03-03T14:03:18.431821214+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=271.872µs
+logger=secrets t=2024-03-03T14:03:18.432643931+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-03-03T14:03:18.458352865+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-03-03T14:03:18.458488583+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-03-03T14:03:18.458906462+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana/data/plugins
+logger=query_data t=2024-03-03T14:03:18.461765842+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-03-03T14:03:18.463836731+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-03-03T14:03:19.164659058+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-03-03T14:03:19.165133996+09:00 level=warn msg="file has invalid suffix 'sample.yaml:Zone.Identifier' (.yaml,.yml,.json accepted), skipping"
+logger=provisioning.alerting t=2024-03-03T14:03:19.165175827+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-03-03T14:03:19.165195737+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-03-03T14:03:19.165563639+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-03-03T14:03:19.165741457+09:00 level=info msg="storage starting"
+logger=modules t=2024-03-03T14:03:19.165806113+09:00 level=warn msg="No modules registered..."
+logger=http.server t=2024-03-03T14:03:19.166606102+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-03-03T14:03:19.177411502+09:00 level=info msg="State cache has been initialized" states=0 duration=11.844264ms
+logger=ticker t=2024-03-03T14:03:19.177528125+09:00 level=info msg=starting first_tick=2024-03-03T14:03:20+09:00
+logger=ngalert.multiorg.alertmanager t=2024-03-03T14:03:19.177577529+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-03-03T14:03:19.197632563+09:00 level=info msg="Update check succeeded" duration=31.653054ms
+logger=plugins.update.checker t=2024-03-03T14:03:19.388557797+09:00 level=info msg="Update check succeeded" duration=222.491617ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:19.66950181+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.824666ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:20.723801058+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=7 duration=7.554543ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:20.942834499+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=5 duration=5.930899ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:28.65753947+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=1 duration=1.638397ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:28.960677531+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=522.823µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-03-03T14:03:31.898980805+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-03-03T14:03:31.899156765+09:00 level=info msg=stopped last_tick=2024-03-03T14:03:30+09:00
+logger=tracing t=2024-03-03T14:03:31.899401865+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-03-03T14:03:32.731918454+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=unknown-dev branch=main compiled=2024-03-02T01:14:54+09:00
+logger=settings t=2024-03-03T14:03:32.732115976+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-03-03T14:03:32.732161175+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana/conf/defaults.ini
+logger=settings t=2024-03-03T14:03:32.732183251+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-03-03T14:03:32.732207859+09:00 level=info msg="Path Home" path=/home/dmyang/grafana
+logger=settings t=2024-03-03T14:03:32.732226747+09:00 level=info msg="Path Data" path=/home/dmyang/grafana/data
+logger=settings t=2024-03-03T14:03:32.732244866+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana/data/log
+logger=settings t=2024-03-03T14:03:32.732264294+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana/data/plugins
+logger=settings t=2024-03-03T14:03:32.732271554+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana/conf/provisioning
+logger=settings t=2024-03-03T14:03:32.732292737+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-03-03T14:03:32.73242124+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-03-03T14:03:32.74445216+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-03-03T14:03:32.748071774+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=280.936µs
+logger=secrets t=2024-03-03T14:03:32.748463613+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-03-03T14:03:32.771804291+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-03-03T14:03:32.771881256+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-03-03T14:03:32.771891784+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana/data/plugins
+logger=query_data t=2024-03-03T14:03:32.774109629+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-03-03T14:03:32.777322529+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-03-03T14:03:33.506559708+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-03-03T14:03:33.506998758+09:00 level=warn msg="file has invalid suffix 'sample.yaml:Zone.Identifier' (.yaml,.yml,.json accepted), skipping"
+logger=provisioning.alerting t=2024-03-03T14:03:33.507043526+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-03-03T14:03:33.507055175+09:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2024-03-03T14:03:33.507296409+09:00 level=info msg="storage starting"
+logger=modules t=2024-03-03T14:03:33.507315222+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-03-03T14:03:33.507432641+09:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2024-03-03T14:03:33.509087617+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-03-03T14:03:33.517057211+09:00 level=info msg="State cache has been initialized" states=0 duration=9.621782ms
+logger=ticker t=2024-03-03T14:03:33.517197032+09:00 level=info msg=starting first_tick=2024-03-03T14:03:40+09:00
+logger=ngalert.multiorg.alertmanager t=2024-03-03T14:03:33.517221775+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-03-03T14:03:33.531741752+09:00 level=info msg="Update check succeeded" duration=24.062321ms
+logger=plugins.update.checker t=2024-03-03T14:03:33.7113043+09:00 level=info msg="Update check succeeded" duration=203.800134ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:33.831474965+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.015935ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:38.214870782+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=3 duration=3.574396ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:03:38.521338941+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=649.61µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:05:03.14415343+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=2 duration=2.392907ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:05:03.622236829+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=569.449µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-03-03T14:05:06.934109741+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-03-03T14:05:06.934706114+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-03-03T14:05:06.93497418+09:00 level=info msg=stopped last_tick=2024-03-03T14:05:00+09:00
+logger=settings t=2024-03-03T14:05:07.445257549+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=unknown-dev branch=main compiled=2024-03-02T01:14:54+09:00
+logger=settings t=2024-03-03T14:05:07.44545985+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-03-03T14:05:07.445500421+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana/conf/defaults.ini
+logger=settings t=2024-03-03T14:05:07.445520508+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-03-03T14:05:07.445540163+09:00 level=info msg="Path Home" path=/home/dmyang/grafana
+logger=settings t=2024-03-03T14:05:07.445554526+09:00 level=info msg="Path Data" path=/home/dmyang/grafana/data
+logger=settings t=2024-03-03T14:05:07.445572512+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana/data/log
+logger=settings t=2024-03-03T14:05:07.445599191+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana/data/plugins
+logger=settings t=2024-03-03T14:05:07.445617073+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana/conf/provisioning
+logger=settings t=2024-03-03T14:05:07.445636767+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-03-03T14:05:07.445757218+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-03-03T14:05:07.458028559+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-03-03T14:05:07.461244058+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=281.42µs
+logger=secrets t=2024-03-03T14:05:07.461550954+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-03-03T14:05:07.485471687+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-03-03T14:05:07.485549045+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-03-03T14:05:07.485559465+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana/data/plugins
+logger=query_data t=2024-03-03T14:05:07.489900925+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-03-03T14:05:07.491590933+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-03-03T14:05:08.186240068+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-03-03T14:05:08.186671107+09:00 level=warn msg="file has invalid suffix 'sample.yaml:Zone.Identifier' (.yaml,.yml,.json accepted), skipping"
+logger=provisioning.alerting t=2024-03-03T14:05:08.186728237+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-03-03T14:05:08.186746755+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-03-03T14:05:08.187010068+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-03-03T14:05:08.187318822+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-03-03T14:05:08.188784003+09:00 level=info msg="storage starting"
+logger=http.server t=2024-03-03T14:05:08.192702008+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-03-03T14:05:08.196162573+09:00 level=info msg="State cache has been initialized" states=0 duration=8.84263ms
+logger=ngalert.multiorg.alertmanager t=2024-03-03T14:05:08.196253054+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2024-03-03T14:05:08.196274818+09:00 level=info msg=starting first_tick=2024-03-03T14:05:10+09:00
+logger=grafana.update.checker t=2024-03-03T14:05:08.247696626+09:00 level=info msg="Update check succeeded" duration=60.593472ms
+logger=plugins.update.checker t=2024-03-03T14:05:08.441285262+09:00 level=info msg="Update check succeeded" duration=252.467825ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:05:08.978249652+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=2 duration=2.167116ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:05:13.195246956+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=6 duration=6.294065ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:05:13.500571296+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=876.519µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:06:00.093465603+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=2 duration=2.077688ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T14:06:00.525650838+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=681.876µs size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-03-03T14:15:08.200119837+09:00 level=info msg="Completed cleanup jobs" duration=9.88315ms
+logger=grafana.update.checker t=2024-03-03T14:15:08.270793065+09:00 level=info msg="Update check succeeded" duration=22.312105ms
+logger=plugins.update.checker t=2024-03-03T14:15:08.650498825+09:00 level=info msg="Update check succeeded" duration=208.359545ms
+logger=cleanup t=2024-03-03T14:25:08.219090096+09:00 level=info msg="Completed cleanup jobs" duration=29.349516ms
+logger=grafana.update.checker t=2024-03-03T14:25:08.270394831+09:00 level=info msg="Update check succeeded" duration=21.627991ms
+logger=plugins.update.checker t=2024-03-03T14:25:08.646699922+09:00 level=info msg="Update check succeeded" duration=205.03992ms
+logger=cleanup t=2024-03-03T14:35:08.201329719+09:00 level=info msg="Completed cleanup jobs" duration=11.627822ms
+logger=grafana.update.checker t=2024-03-03T14:35:08.268251069+09:00 level=info msg="Update check succeeded" duration=19.79803ms
+logger=plugins.update.checker t=2024-03-03T14:35:08.646726944+09:00 level=info msg="Update check succeeded" duration=205.106955ms
+logger=cleanup t=2024-03-03T14:45:08.199531008+09:00 level=info msg="Completed cleanup jobs" duration=10.12956ms
+logger=grafana.update.checker t=2024-03-03T14:45:08.267498363+09:00 level=info msg="Update check succeeded" duration=19.074772ms
+logger=plugins.update.checker t=2024-03-03T14:45:08.641509635+09:00 level=info msg="Update check succeeded" duration=199.22509ms
+logger=cleanup t=2024-03-03T14:55:08.194578394+09:00 level=info msg="Completed cleanup jobs" duration=4.837314ms
+logger=grafana.update.checker t=2024-03-03T14:55:08.268929635+09:00 level=info msg="Update check succeeded" duration=20.812567ms
+logger=plugins.update.checker t=2024-03-03T14:55:08.639819663+09:00 level=info msg="Update check succeeded" duration=197.301172ms
+logger=cleanup t=2024-03-03T15:05:08.210860483+09:00 level=info msg="Completed cleanup jobs" duration=20.523116ms
+logger=grafana.update.checker t=2024-03-03T15:05:08.264965823+09:00 level=info msg="Update check succeeded" duration=17.060331ms
+logger=plugins.update.checker t=2024-03-03T15:05:08.646364879+09:00 level=info msg="Update check succeeded" duration=203.967005ms
+logger=cleanup t=2024-03-03T15:15:08.21243931+09:00 level=info msg="Completed cleanup jobs" duration=22.976478ms
+logger=grafana.update.checker t=2024-03-03T15:15:08.274056324+09:00 level=info msg="Update check succeeded" duration=25.252293ms
+logger=plugins.update.checker t=2024-03-03T15:15:08.646910572+09:00 level=info msg="Update check succeeded" duration=205.012587ms
+logger=cleanup t=2024-03-03T15:25:08.211548516+09:00 level=info msg="Completed cleanup jobs" duration=22.151369ms
+logger=grafana.update.checker t=2024-03-03T15:25:08.271995965+09:00 level=info msg="Update check succeeded" duration=24.073058ms
+logger=plugins.update.checker t=2024-03-03T15:25:08.664644007+09:00 level=info msg="Update check succeeded" duration=222.227999ms
+logger=cleanup t=2024-03-03T15:35:08.20203865+09:00 level=info msg="Completed cleanup jobs" duration=11.827707ms
+logger=grafana.update.checker t=2024-03-03T15:35:08.274320164+09:00 level=info msg="Update check succeeded" duration=26.000338ms
+logger=plugins.update.checker t=2024-03-03T15:35:08.728982104+09:00 level=info msg="Update check succeeded" duration=287.369387ms
+logger=cleanup t=2024-03-03T15:45:08.200106934+09:00 level=info msg="Completed cleanup jobs" duration=10.502766ms
+logger=grafana.update.checker t=2024-03-03T15:45:08.270645576+09:00 level=info msg="Update check succeeded" duration=22.623312ms
+logger=plugins.update.checker t=2024-03-03T15:45:08.642916631+09:00 level=info msg="Update check succeeded" duration=201.260791ms
+logger=cleanup t=2024-03-03T15:55:08.19437369+09:00 level=info msg="Completed cleanup jobs" duration=4.319347ms
+logger=grafana.update.checker t=2024-03-03T15:55:08.266662694+09:00 level=info msg="Update check succeeded" duration=17.81187ms
+logger=plugins.update.checker t=2024-03-03T15:55:08.645570529+09:00 level=info msg="Update check succeeded" duration=202.925408ms
+logger=cleanup t=2024-03-03T16:05:08.199920574+09:00 level=info msg="Completed cleanup jobs" duration=10.575591ms
+logger=grafana.update.checker t=2024-03-03T16:05:08.266616307+09:00 level=info msg="Update check succeeded" duration=18.12231ms
+logger=plugins.update.checker t=2024-03-03T16:05:08.646172441+09:00 level=info msg="Update check succeeded" duration=203.699932ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T16:11:27.788546511+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=11 duration=11.686706ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T16:11:28.978165453+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=6 duration=6.780722ms size=0 referer= handler=/api/live/ws
+logger=server t=2024-03-03T16:14:15.661978471+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-03-03T16:14:15.66235334+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-03-03T16:14:15.662682979+09:00 level=info msg=stopped last_tick=2024-03-03T16:14:10+09:00
+logger=settings t=2024-03-03T16:14:17.364704856+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=unknown-dev branch=main compiled=2024-03-02T01:14:54+09:00
+logger=settings t=2024-03-03T16:14:17.364989982+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-03-03T16:14:17.36503092+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana/conf/defaults.ini
+logger=settings t=2024-03-03T16:14:17.365051653+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-03-03T16:14:17.365073615+09:00 level=info msg="Path Home" path=/home/dmyang/grafana
+logger=settings t=2024-03-03T16:14:17.365132881+09:00 level=info msg="Path Data" path=/home/dmyang/grafana/data
+logger=settings t=2024-03-03T16:14:17.365153813+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana/data/log
+logger=settings t=2024-03-03T16:14:17.365161866+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana/data/plugins
+logger=settings t=2024-03-03T16:14:17.365180848+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana/conf/provisioning
+logger=settings t=2024-03-03T16:14:17.365207844+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-03-03T16:14:17.365396718+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-03-03T16:14:17.376944918+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-03-03T16:14:17.380401268+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=324.178µs
+logger=secrets t=2024-03-03T16:14:17.380989286+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-03-03T16:14:17.409462131+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-03-03T16:14:17.409546825+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-03-03T16:14:17.409559185+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana/data/plugins
+logger=query_data t=2024-03-03T16:14:17.412223802+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-03-03T16:14:17.413965637+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-03-03T16:14:18.150277646+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-03-03T16:14:18.150940247+09:00 level=warn msg="file has invalid suffix 'sample.yaml:Zone.Identifier' (.yaml,.yml,.json accepted), skipping"
+logger=provisioning.alerting t=2024-03-03T16:14:18.15098518+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-03-03T16:14:18.151008002+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-03-03T16:14:18.151199644+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-03-03T16:14:18.151605353+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-03-03T16:14:18.151513822+09:00 level=info msg="storage starting"
+logger=http.server t=2024-03-03T16:14:18.154886975+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-03-03T16:14:18.167819552+09:00 level=info msg="State cache has been initialized" states=0 duration=16.211832ms
+logger=ticker t=2024-03-03T16:14:18.167990467+09:00 level=info msg=starting first_tick=2024-03-03T16:14:20+09:00
+logger=ngalert.multiorg.alertmanager t=2024-03-03T16:14:18.168047166+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-03-03T16:14:18.223581011+09:00 level=info msg="Update check succeeded" duration=71.921498ms
+logger=plugins.update.checker t=2024-03-03T16:14:18.39552073+09:00 level=info msg="Update check succeeded" duration=243.83974ms
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T16:14:18.655801964+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=2 duration=2.412605ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T16:14:23.629446022+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=3 duration=3.347421ms size=39478 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T16:14:24.019666584+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=584.921µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T16:14:27.018495008+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=688.577µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-03-03T16:14:29.183480694+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=659.016µs size=0 referer= handler=/api/live/ws

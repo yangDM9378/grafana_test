@@ -67,3 +67,8 @@ scrape_configs:
 - 사이드바의 Dashboard의 New dashboard 클릭
 - Add a new panel을 통해 패널 생성
 - Data source를 선택하고 시각화할 Metric 선택(PromQL이라는 Prometheus 쿼리를 통해서도 데이터 시각화 가능)
+
+## test 용 custom 페이지 생성 (localhost:3000/test)
+- router를 통해 /test 경로 지정이 필요
+- grafana/public/app/routes.tsx에서 경로를 통해 tsx 또는 jsx 파일 import하여 적용
+- 백엔드 프론트엔드 재빌드시 적용

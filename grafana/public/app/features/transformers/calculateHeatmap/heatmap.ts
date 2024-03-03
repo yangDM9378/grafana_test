@@ -16,9 +16,14 @@ import {
   durationToMilliseconds,
   parseDuration,
 } from '@grafana/data';
-import { ScaleDistribution } from '@grafana/schema';
+import { isLikelyAscendingVector } from '@grafana/data/src/transformations/transformers/joinDataFrames';
+import {
+  ScaleDistribution,
+  HeatmapCellLayout,
+  HeatmapCalculationMode,
+  HeatmapCalculationOptions,
+} from '@grafana/schema';
 
-import { HeatmapCellLayout, HeatmapCalculationMode, HeatmapCalculationOptions } from './models.gen';
 import { niceLinearIncrs, niceTimeIncrs } from './utils';
 
 export interface HeatmapTransformerOptions extends HeatmapCalculationOptions {
@@ -32,7 +37,8 @@ export const heatmapTransformer: SynchronousDataTransformerInfo<HeatmapTransform
   description: 'calculate heatmap from source data',
   defaultOptions: {},
 
-  operator: (options) => (source) => source.pipe(map((data) => heatmapTransformer.transformer(options)(data))),
+  operator: (options, ctx) => (source) =>
+    source.pipe(map((data) => heatmapTransformer.transformer(options, ctx)(data))),
 
   transformer: (options: HeatmapTransformerOptions) => {
     return (data: DataFrame[]) => {
@@ -190,7 +196,7 @@ export function rowsToCellsHeatmap(opts: RowsHeatmapOptions): DataFrame {
     },
     fields: [
       {
-        name: 'xMax',
+        name: xField.type === FieldType.time ? 'xMax' : 'x',
         type: xField.type,
         values: new ArrayVector(xs),
         config: xField.config,
@@ -321,7 +327,7 @@ export function calculateHeatmapFromData(frames: DataFrame[], options: HeatmapCa
   };
 
   const heat2d = heatmap(xs, ys, {
-    xSorted: true,
+    xSorted: isLikelyAscendingVector(new ArrayVector(xs)),
     xTime: xField.type === FieldType.time,
     xMode: xBucketsCfg.mode,
     xSize:

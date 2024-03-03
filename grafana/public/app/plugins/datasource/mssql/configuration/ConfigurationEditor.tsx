@@ -21,9 +21,12 @@ import {
   SecretInput,
   Select,
   useStyles2,
+  SecureSocksProxySettings,
 } from '@grafana/ui';
 import { NumberInput } from 'app/core/components/OptionsUI/NumberInput';
+import { config } from 'app/core/config';
 import { ConnectionLimits } from 'app/features/plugins/sql/components/configuration/ConnectionLimits';
+import { useMigrateDatabaseFields } from 'app/features/plugins/sql/components/configuration/useMigrateDatabaseFields';
 
 import { MSSQLAuthenticationType, MSSQLEncryptOptions, MssqlOptions } from '../types';
 
@@ -31,6 +34,8 @@ export const ConfigurationEditor = (props: DataSourcePluginOptionsEditorProps<Ms
   const { options, onOptionsChange } = props;
   const styles = useStyles2(getStyles);
   const jsonData = options.jsonData;
+
+  useMigrateDatabaseFields(props);
 
   const onResetPassword = () => {
     updateDatasourcePluginResetOption(props, 'password');
@@ -99,9 +104,9 @@ export const ConfigurationEditor = (props: DataSourcePluginOptionsEditorProps<Ms
           <Input
             width={longWidth}
             name="database"
-            value={options.database || ''}
+            value={jsonData.database || ''}
             placeholder="database name"
-            onChange={onDSOptionChanged('database')}
+            onChange={onUpdateDatasourceJsonDataOption(props, 'database')}
           ></Input>
         </InlineField>
         <InlineField
@@ -150,6 +155,10 @@ export const ConfigurationEditor = (props: DataSourcePluginOptionsEditorProps<Ms
           </InlineFieldRow>
         )}
       </FieldSet>
+
+      {config.featureToggles.secureSocksDatasourceProxy && (
+        <SecureSocksProxySettings options={options} onOptionsChange={onOptionsChange} />
+      )}
 
       <FieldSet label="TLS/SSL Auth">
         <InlineField
@@ -223,13 +232,7 @@ export const ConfigurationEditor = (props: DataSourcePluginOptionsEditorProps<Ms
         ) : null}
       </FieldSet>
 
-      <ConnectionLimits
-        labelWidth={shortWidth}
-        jsonData={jsonData}
-        onPropertyChanged={(property, value) => {
-          updateDatasourcePluginJsonDataOption(props, property, value);
-        }}
-      ></ConnectionLimits>
+      <ConnectionLimits labelWidth={shortWidth} options={options} onOptionsChange={onOptionsChange} />
 
       <FieldSet label="MS SQL details">
         <InlineField

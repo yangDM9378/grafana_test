@@ -1,6 +1,6 @@
 import { css, cx } from '@emotion/css';
 import { isBefore, formatDuration } from 'date-fns';
-import React, { FC, useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 import {
   GrafanaTheme2,
@@ -17,7 +17,7 @@ import { CombinedRule } from 'app/types/unified-alerting';
 import { DEFAULT_PER_PAGE_PAGINATION } from '../../../../../core/constants';
 import { useHasRuler } from '../../hooks/useHasRuler';
 import { Annotation } from '../../utils/constants';
-import { isGrafanaRulerRule } from '../../utils/rules';
+import { isGrafanaRulerRule, isGrafanaRulerRulePaused } from '../../utils/rules';
 import { DynamicTable, DynamicTableColumnProps, DynamicTableItemProps } from '../DynamicTable';
 import { DynamicTableWithGuidelines } from '../DynamicTableWithGuidelines';
 import { ProvisioningBadge } from '../Provisioning';
@@ -43,7 +43,7 @@ interface Props {
   className?: string;
 }
 
-export const RulesTable: FC<Props> = ({
+export const RulesTable = ({
   rules,
   className,
   showGuidelines = false,
@@ -51,7 +51,7 @@ export const RulesTable: FC<Props> = ({
   showGroupColumn = false,
   showSummaryColumn = false,
   showNextEvaluationColumn = false,
-}) => {
+}: Props) => {
   const styles = useStyles2(getStyles);
 
   const wrapperClass = cx(styles.wrapper, className, { [styles.wrapperMargin]: showGuidelines });
@@ -119,7 +119,7 @@ function useColumns(showSummaryColumn: boolean, showGroupColumn: boolean, showNe
     const isValidLastEvaluation = rule.promRule?.lastEvaluation && isValidDate(rule.promRule.lastEvaluation);
     const isValidIntervalDuration = rule.group.interval && isValidDuration(rule.group.interval);
 
-    if (!isValidLastEvaluation || !isValidIntervalDuration) {
+    if (!isValidLastEvaluation || !isValidIntervalDuration || isGrafanaRulerRulePaused(rule)) {
       return;
     }
 
@@ -154,9 +154,12 @@ function useColumns(showSummaryColumn: boolean, showGroupColumn: boolean, showNe
           const { namespace } = rule;
           const { rulesSource } = namespace;
           const { promRule, rulerRule } = rule;
+
           const isDeleting = !!(hasRuler(rulesSource) && rulerRulesLoaded(rulesSource) && promRule && !rulerRule);
           const isCreating = !!(hasRuler(rulesSource) && rulerRulesLoaded(rulesSource) && rulerRule && !promRule);
-          return <RuleState rule={rule} isDeleting={isDeleting} isCreating={isCreating} />;
+          const isPaused = isGrafanaRulerRulePaused(rule);
+
+          return <RuleState rule={rule} isDeleting={isDeleting} isCreating={isCreating} isPaused={isPaused} />;
         },
         size: '165px',
       },
@@ -255,7 +258,7 @@ function useColumns(showSummaryColumn: boolean, showGroupColumn: boolean, showNe
       renderCell: ({ data: rule }) => {
         return <RuleActionsButtons rule={rule} rulesSource={rule.namespace.rulesSource} />;
       },
-      size: '290px',
+      size: '200px',
     });
 
     return columns;
