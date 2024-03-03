@@ -1,4 +1,4 @@
-/grafana/bin/grafana.exe
+/grafana/bin/grafana
 /promethues/promethues.exe
 /promethues/promtool.exe
 *#
