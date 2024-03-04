@@ -28,7 +28,6 @@ npm_licenses.tar.bz2
 /web/ui/static/react
 
 /vendor
-/.build
 
 /**/node_modules
 
@@ -36,3 +35,5 @@ npm_licenses.tar.bz2
 y.output
 
 * Zone.Identifier
+*Zone.Identifier
+/**/ Zone.Identifier
