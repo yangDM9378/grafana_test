@@ -68,7 +68,37 @@ scrape_configs:
 - Add a new panel을 통해 패널 생성
 - Data source를 선택하고 시각화할 Metric 선택(PromQL이라는 Prometheus 쿼리를 통해서도 데이터 시각화 가능)
 
+## Grafana Build 환경 세팅
+- window의 wsl을 통해 Ubuntu 환경을 구축하여 진행
+- Grafana의 일부 커스텀 플러그인 개발 등 리눅스 환경에서 지원 부분이 있기 때문 
+```bash
+chmod -R 777 *
+sudo apt-get -y update
+sudo apt-get install -y curl
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs git build-essential
+sudo npm install -g n
+sudo n 16.14.2
+sudo npm install -g yarn
+wget https://golang.org/dl/go1.19.4.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+```
+
+## Grafana Build
+- go 기반의 백엔드로 go build가 필요
+```bash
+export PATH=$PATH:/usr/local/go/bin
+cd ~/grafana_test/grafana
+make run
+yarn install
+yarn start
+```
+- grafana의 경우 go와 yarn을 실행 필요
+- 초기 빌드 후 bin/grafana-server를 실행 가능
+- frontend 코드 수정시 재시작 필요
+
 ## test 용 custom 페이지 생성 (localhost:3000/test)
 - router를 통해 /test 경로 지정이 필요
 - grafana/public/app/routes.tsx에서 경로를 통해 tsx 또는 jsx 파일 import하여 적용
 - 백엔드 프론트엔드 재빌드시 적용
+
