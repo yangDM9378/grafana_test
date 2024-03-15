@@ -477,9 +477,13 @@ export const saveRuleFormAction = createAsyncThunk(
 
             // in case of grafana managed
           } else if (type === RuleFormType.grafana) {
+            console.log(values)
             const rulerConfig = getDataSourceRulerConfig(thunkAPI.getState, GRAFANA_RULES_SOURCE_NAME);
+            console.log(rulerConfig)
             const rulerClient = getRulerClient(rulerConfig);
+            console.log(rulerClient)
             identifier = await rulerClient.saveGrafanaRule(values, evaluateEvery, existing);
+            console.log(identifier)
             await thunkAPI.dispatch(fetchRulerRulesAction({ rulesSourceName: GRAFANA_RULES_SOURCE_NAME }));
           } else {
             throw new Error('Unexpected rule form type');
