@@ -7,6 +7,7 @@ export function fetchAnnotations(alertId: string): Promise<StateHistoryItem[]> {
       alertId,
     })
     .then((result) => {
+      console.log(result)
       return result?.sort(sortStateHistory);
     });
 }

@@ -51,7 +51,7 @@ const StateHistory = ({ alertId }: Props) => {
 
   const columns: Array<DynamicTableColumnProps<StateHistoryRowItem>> = [
     { id: 'state', label: 'State', size: 'max-content', renderCell: renderStateCell },
-    { id: 'value', label: '', size: 'auto', renderCell: renderValueCell },
+    { id: 'value', label: 'value', size: 'auto', renderCell: renderValueCell },
     { id: 'timestamp', label: 'Time', size: 'max-content', renderCell: renderTimestampCell },
   ];
 
@@ -71,6 +71,7 @@ const StateHistory = ({ alertId }: Props) => {
           <header className={styles.tableGroupKey}>
             <code>{groupKey}</code>
           </header>
+          <div>11111111111111</div>
           <DynamicTable cols={columns} items={tableItems} />
         </div>
       );
@@ -83,7 +84,7 @@ const StateHistory = ({ alertId }: Props) => {
           label={
             <Label>
               <Stack gap={0.5}>
-                <span>Filter group</span>
+                <span>Filter group11</span>
                 <Tooltip
                   content={
                     <div>
