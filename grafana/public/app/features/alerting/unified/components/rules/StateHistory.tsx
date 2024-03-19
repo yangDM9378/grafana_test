@@ -71,7 +71,6 @@ const StateHistory = ({ alertId }: Props) => {
           <header className={styles.tableGroupKey}>
             <code>{groupKey}</code>
           </header>
-          <div>11111111111111</div>
           <DynamicTable cols={columns} items={tableItems} />
         </div>
       );

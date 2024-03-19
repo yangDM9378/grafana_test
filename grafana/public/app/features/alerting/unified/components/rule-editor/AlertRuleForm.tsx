@@ -243,14 +243,11 @@ export const AlertRuleForm = ({ existing, prefill }: Props) => {
             Save and exit
           </Button>
         </HorizontalGroup>
-        <button>111111111111</button>
         <div className={styles.contentOuter}>
           <CustomScrollbar autoHeightMin="100%" hideHorizontalTrack={true}>
             <div className={styles.contentInner}>
               <AlertRuleNameInput />
-              <button>222222222</button>
               <QueryAndExpressionsStep editingExistingRule={!!existing} onDataChange={checkAlertCondition} />
-              <button>333333333</button>
               {showStep2 && (
                 <>
                   {type === RuleFormType.grafana ? (
@@ -267,7 +264,6 @@ export const AlertRuleForm = ({ existing, prefill }: Props) => {
                   <NotificationsStep />
                 </>
               )}
-              <button>4444444444</button>
             </div>
           </CustomScrollbar>
         </div>
