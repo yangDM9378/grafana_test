@@ -96,10 +96,6 @@ export default function TestAlertHistory() {
       try {
         const alertRuleResponse = await axios.get('http://localhost:3000/api/v1/provisioning/alert-rules');
         setAlertRuleData(alertRuleResponse.data);
-      } catch (error) {
-        console.error('API 호출 중 오류 발생:', error);
-      }
-
         const response = await axios.get('http://localhost:3000/api/annotations');
         const annotationData: Annotation[] = response.data;
         const groupData: Record<string, Annotation[]> = {};
@@ -131,6 +127,9 @@ export default function TestAlertHistory() {
           }
         });
         setData(groupData);
+      } catch (error) {
+        console.error('API 호출 중 오류 발생:', error);
+      }
     };
     fetchData();
   }, []);
