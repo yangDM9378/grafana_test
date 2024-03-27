@@ -37,3 +37,9 @@ y.output
 * Zone.Identifier
 *Zone.Identifier
 /**/ Zone.Identifier
+grafana/data/log/grafana.log
+grafana/data/log/grafana.log
+grafana/data/grafana.db
+*.db
+grafana/data/log/grafana.log
+grafana/data/grafana.db
