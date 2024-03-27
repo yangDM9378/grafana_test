@@ -227,7 +227,7 @@ export const AlertRuleForm = ({ existing, prefill }: Props) => {
           <Button
             variant="primary"
             type="button"
-            onClick={handleSubmit((values) => submit(values, false), onInvalid)}
+            onClick={handleSubmit((values) => {submit(values, false), onInvalid})}
             disabled={submitState.loading}
           >
             {submitState.loading && <Spinner className={styles.buttonSpinner} inline={true} />}

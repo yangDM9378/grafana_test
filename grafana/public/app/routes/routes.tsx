@@ -67,7 +67,7 @@ export function getAppRoutes(): RouteDescriptor[] {
     {
       path: '/test',
       pageClass: 'page-dashboard',
-      routeName: DashboardRoutes.Home,
+      routeName: DashboardRoutes.Test,
       component: SafeDynamicImport(
         () => import(/* webpackChunkName: "DashboardPage" */ '../features/test/testPage')
       ),

@@ -234,7 +234,6 @@ export const QueryAndExpressionsStep = ({ editingExistingRule, onDataChange }: P
   return (
     <RuleEditorSection stepNo={2} title="Set a query and alert condition">
       <AlertType editingExistingRule={editingExistingRule} />
-
       {/* This is the PromQL Editor for recording rules */}
       {isRecordingRuleType && dataSourceName && (
         <Field error={errors.expression?.message} invalid={!!errors.expression?.message}>
@@ -247,7 +246,6 @@ export const QueryAndExpressionsStep = ({ editingExistingRule, onDataChange }: P
           />
         </Field>
       )}
-
       {/* This is the PromQL Editor for Cloud rules */}
       {isCloudAlertRuleType && dataSourceName && (
         <Field error={errors.expression?.message} invalid={!!errors.expression?.message}>
@@ -269,7 +267,6 @@ export const QueryAndExpressionsStep = ({ editingExistingRule, onDataChange }: P
           />
         </Field>
       )}
-
       {/* This is the editor for Grafana managed rules */}
       {isGrafanaManagedType && (
         <Stack direction="column">
@@ -301,6 +298,7 @@ export const QueryAndExpressionsStep = ({ editingExistingRule, onDataChange }: P
               dispatch(updateExpression(model));
             }}
           />
+
           {/* action buttons */}
           <Stack direction="row">
             <Tooltip content={'You appear to have no compatible data sources'} show={noCompatibleDataSources}>
@@ -317,7 +315,6 @@ export const QueryAndExpressionsStep = ({ editingExistingRule, onDataChange }: P
                 Add query
               </Button>
             </Tooltip>
-
             {config.expressionsEnabled && (
               <Button
                 type="button"
