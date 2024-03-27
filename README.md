@@ -1,7 +1,6 @@
 # grafana_test
 
 - 해당 repo는 Grafana를 Custom test를 진행해보기 위한 test repo이다.
-- (03.01) 초기 환경은 local에서 조성하고 추후 docker 기반으로 수정할 예정이다.
 
 ## 버전 정보
 
@@ -72,3 +71,20 @@ scrape_configs:
 - router를 통해 /test 경로 지정이 필요
 - grafana/public/app/routes.tsx에서 경로를 통해 tsx 또는 jsx 파일 import하여 적용
 - 백엔드 프론트엔드 재빌드시 적용
+
+# Custom Test 1. Alert History Page (2024년 3월 26일 완료) -> 구조 리팩토링 예정
+- 해당 내용은 /grafana/public/features/testAlertHistory.tsx에 있음
+
+## 개요
+- grafana의 알람의 경우 Alert Rule 별로 Alert의 상태를 기록하는 기능 존재
+- 모든 Alert Rule에 대한 Alert가 언제 발생했고 어느 대시보드와 관련이 있는지 한번에 볼 수 있는 페이지 부재
+
+## 개발 방향성
+- 기존 grafana에서 발생하는 Alert는 Alert Rule을 설정하고 Alert Rule의 기준에 따라 Alert가 발생
+- grafana db의 alert_rule에 알람 설정 시 데이터 적재
+- grafana db의 annotation에 알람 상태 변경 시 데이터 적재 (대시보드의 패널의 annotation도 같이 적재 됨)
+- grafana backend API에서 Alert History Page 기능 구현을 위해 필요한 API를 사용하여 구현
+
+## 화면 구성안
+- grafana에서 Alert-rule에 의해 발생하는 Alarm의 alarm rule 정보, 대시보드 정보, 알람 발생 시간 정보를 제공
+- 날짜별로 발생한 알람을 분류하여 정보 제공
