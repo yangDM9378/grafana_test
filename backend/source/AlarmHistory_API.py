@@ -57,11 +57,14 @@ def get_data():
         
         # 서버 명 및 IP
 
+        # 알람 룰 명
+        alarmTitle = da['rule_title']
+
         # 알람 메시지
         rule_data_json = json.loads(da['rule_data'])
         pattern = re.compile(r'^[^{]*')
-        MetricMatch = pattern.match(rule_data_json[0]["model"]["expr"])
-        MetricText = MetricMatch[0] if MetricMatch else ''
+        metricMatch = pattern.match(rule_data_json[0]["model"]["expr"])
+        metricText = metricMatch[0] if metricMatch else ''
         referenceValue = rule_data_json[2]["model"]["conditions"][0]["evaluator"]["params"][0]
         conditionType = rule_data_json[2]["model"]["conditions"][0]["evaluator"]["type"]
         conditionText = '규칙이 잘못됨'
@@ -69,13 +72,13 @@ def get_data():
             conditionText = '낮'
         else:
             conditionText = '높'
-        alertHistoryMessage = f"Metric {MetricText}이 기준값 {referenceValue}보다 {conditionText}습니다."
-        print(alertHistoryMessage)
+        alertHistoryMessage = f"Metric {metricText}이 기준값 {referenceValue}보다 {conditionText}습니다."
 
         # response 값
         temp_dic['Date']=date
         temp_dic['Time']=time
         temp_dic['Message']=alertHistoryMessage
+        temp_dic['AlarmTitle']=alarmTitle
         alarm_history_response[date].append(temp_dic)
     return jsonify(alarm_history_response)
 
