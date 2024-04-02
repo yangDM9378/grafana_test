@@ -3682,3 +3682,654 @@ logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:09:12.0054325+09:00 
 logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:09:12.4761642+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=604.6µs size=0 referer= handler=/api/live/ws
 logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:09:14.82621+09:00 level=info msg="Request Completed" method=GET path=/test status=404 remote_addr=[::1] time_ms=3 duration=3.1347ms size=43038 referer= handler=notfound
 logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:09:15.0313671+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=760.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:20.3559184+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=636.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:21.9194548+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=589.2µs size=0 referer= handler=/api/live/ws
+logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/uid/a10f9a0d-42b1-4558-9cda-2c1e6aeed610/api/v1/status/buildinfo remote_addr=[::1] referer=http://localhost:3000/alerting/list t=2024-04-02T09:11:25.8194984+09:00 level=error msg="Proxy request failed" err="dial tcp 127.0.0.1:9090: connect: connection refused"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:25.8197394+09:00 level=error msg="Request Completed" method=GET path=/api/datasources/proxy/uid/a10f9a0d-42b1-4558-9cda-2c1e6aeed610/api/v1/status/buildinfo status=502 remote_addr=[::1] time_ms=12 duration=12.077ms size=0 referer=http://localhost:3000/alerting/list handler=/api/datasources/proxy/uid/:uid/*
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:42.7444842+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=414µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:44.8626747+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=910.9µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:44.8637655+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=209µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:53.3873152+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=416.9µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:53.3884214+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=306.4µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:55.2270957+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=430.3µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:55.2285535+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=309.2µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:11:59.5019922+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=735µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:12:03.4337977+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=1 duration=1.7198ms size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=cleanup t=2024-04-02T09:16:30.9383127+09:00 level=info msg="Completed cleanup jobs" duration=2.7166ms
+logger=grafana.update.checker t=2024-04-02T09:16:31.0258848+09:00 level=info msg="Update check succeeded" duration=14.5328ms
+logger=plugins.update.checker t=2024-04-02T09:16:31.3853158+09:00 level=info msg="Update check succeeded" duration=191.0498ms
+logger=ngalert.notifier.webhook t=2024-04-02T09:21:43.5915996+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T09:21:43.5917259+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:21:43.5974589+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=45 duration=45.5298ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T09:21:52.0373403+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T09:21:52.0374495+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:21:52.0393605+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=30 duration=30.1216ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T09:22:41.0316636+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T09:22:41.031776+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:22:41.0338834+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=31 duration=31.0083ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T09:23:02.7058676+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T09:23:02.7059775+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:23:02.7079217+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=33 duration=33.2757ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T09:23:27.6622716+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T09:23:27.6624014+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:23:27.6643887+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=29 duration=29.9768ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T09:23:49.372352+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T09:23:49.3724584+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T09:23:49.374452+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=33 duration=33.5871ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=cleanup t=2024-04-02T09:26:30.9376391+09:00 level=info msg="Completed cleanup jobs" duration=3.2019ms
+logger=grafana.update.checker t=2024-04-02T09:26:31.0276169+09:00 level=info msg="Update check succeeded" duration=15.3581ms
+logger=plugins.update.checker t=2024-04-02T09:26:31.3955885+09:00 level=info msg="Update check succeeded" duration=200.2448ms
+logger=cleanup t=2024-04-02T09:36:30.9371337+09:00 level=info msg="Completed cleanup jobs" duration=1.9829ms
+logger=grafana.update.checker t=2024-04-02T09:36:31.0319993+09:00 level=info msg="Update check succeeded" duration=21.0234ms
+logger=plugins.update.checker t=2024-04-02T09:36:31.3908496+09:00 level=info msg="Update check succeeded" duration=196.196ms
+logger=cleanup t=2024-04-02T09:46:30.9368221+09:00 level=info msg="Completed cleanup jobs" duration=1.2667ms
+logger=grafana.update.checker t=2024-04-02T09:46:31.032376+09:00 level=info msg="Update check succeeded" duration=21.791ms
+logger=plugins.update.checker t=2024-04-02T09:46:31.3896436+09:00 level=info msg="Update check succeeded" duration=194.613ms
+logger=cleanup t=2024-04-02T09:56:30.9363328+09:00 level=info msg="Completed cleanup jobs" duration=1.443ms
+logger=grafana.update.checker t=2024-04-02T09:56:31.0317678+09:00 level=info msg="Update check succeeded" duration=21.1063ms
+logger=plugins.update.checker t=2024-04-02T09:56:31.3922564+09:00 level=info msg="Update check succeeded" duration=196.555ms
+logger=cleanup t=2024-04-02T10:06:30.9362019+09:00 level=info msg="Completed cleanup jobs" duration=1.4031ms
+logger=grafana.update.checker t=2024-04-02T10:06:31.0398172+09:00 level=info msg="Update check succeeded" duration=29.2126ms
+logger=plugins.update.checker t=2024-04-02T10:06:31.4209174+09:00 level=info msg="Update check succeeded" duration=226.5988ms
+logger=cleanup t=2024-04-02T10:16:30.9567991+09:00 level=info msg="Completed cleanup jobs" duration=20.5695ms
+logger=grafana.update.checker t=2024-04-02T10:16:31.0274001+09:00 level=info msg="Update check succeeded" duration=16.8539ms
+logger=plugins.update.checker t=2024-04-02T10:16:31.3914319+09:00 level=info msg="Update check succeeded" duration=195.0104ms
+logger=cleanup t=2024-04-02T10:26:30.938911+09:00 level=info msg="Completed cleanup jobs" duration=4.4128ms
+logger=grafana.update.checker t=2024-04-02T10:26:31.0261541+09:00 level=info msg="Update check succeeded" duration=15.4148ms
+logger=plugins.update.checker t=2024-04-02T10:26:31.3941385+09:00 level=info msg="Update check succeeded" duration=199.4878ms
+logger=ngalert.notifier.webhook t=2024-04-02T10:35:06.805288+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:35:06.8054147+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:35:06.8082707+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=27 duration=27.5364ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T10:35:23.9689554+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:35:23.9690885+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:35:23.9709006+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=20 duration=20.775ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=server t=2024-04-02T10:35:54.8038458+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-02T10:35:54.8040146+09:00 level=info msg=stopped last_tick=2024-04-02T10:35:50+09:00
+logger=tracing t=2024-04-02T10:35:54.8040564+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-02T10:35:56.6844126+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=c6c6e0d4 branch=main compiled=2024-03-04T23:48:05+09:00
+logger=settings t=2024-04-02T10:35:56.6847649+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-02T10:35:56.6848384+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-02T10:35:56.6848673+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-02T10:35:56.6848929+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-02T10:35:56.6849185+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-02T10:35:56.6849944+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-02T10:35:56.6850482+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-02T10:35:56.6851357+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-02T10:35:56.6852343+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-02T10:35:56.685532+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-02T10:35:56.6855799+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-02T10:35:56.7019669+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-02T10:35:56.7082989+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=1.1734ms
+logger=secrets t=2024-04-02T10:35:56.7092995+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-02T10:35:56.7911905+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-02T10:35:56.79127+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-02T10:35:56.7913055+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-02T10:35:56.7975203+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-02T10:35:56.8005588+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-02T10:35:57.8156283+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-02T10:35:57.8172657+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-02T10:35:57.8173396+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-02T10:35:57.8174856+09:00 level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2024-04-02T10:35:57.8176198+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-02T10:35:57.8179318+09:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2024-04-02T10:35:57.8214608+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-04-02T10:35:57.8365395+09:00 level=info msg="State cache has been initialized" states=0 duration=18.6056ms
+logger=ngalert.multiorg.alertmanager t=2024-04-02T10:35:57.8369529+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2024-04-02T10:35:57.837133+09:00 level=info msg=starting first_tick=2024-04-02T10:36:00+09:00
+logger=grafana.update.checker t=2024-04-02T10:35:57.9051911+09:00 level=info msg="Update check succeeded" duration=87.2063ms
+logger=plugins.update.checker t=2024-04-02T10:35:58.0810344+09:00 level=info msg="Update check succeeded" duration=263.4525ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:35:58.0846462+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.551ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:36:40.5873642+09:00 level=info msg="Request Completed" method=GET path=/favicon-32x32.png status=404 remote_addr=[::1] time_ms=8 duration=8.057ms size=43038 referer=http://localhost:3000/swagger-ui handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:36:41.6978787+09:00 level=info msg="Request Completed" method=GET path=/favicon-16x16.png status=404 remote_addr=[::1] time_ms=2 duration=2.3767ms size=43038 referer=http://localhost:3000/swagger-ui handler=notfound
+logger=ngalert.notifier.webhook t=2024-04-02T10:44:01.6388741+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:44:01.6390248+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:44:01.641456+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=27 duration=27.7982ms size=435 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=cleanup t=2024-04-02T10:45:57.8426543+09:00 level=info msg="Completed cleanup jobs" duration=23.4579ms
+logger=grafana.update.checker t=2024-04-02T10:45:57.9202586+09:00 level=info msg="Update check succeeded" duration=13.4936ms
+logger=plugins.update.checker t=2024-04-02T10:45:58.2948009+09:00 level=info msg="Update check succeeded" duration=212.6558ms
+logger=ngalert.notifier.webhook t=2024-04-02T10:46:53.2028224+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:46:53.202957+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:46:53.205265+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=21 duration=21.4973ms size=426 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T10:51:31.5418029+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:51:31.5419319+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:51:31.5725858+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=49 duration=49.5893ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T10:52:04.2761479+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:52:04.276275+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:52:04.2810838+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=26 duration=26.0926ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T10:52:19.6385626+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:52:19.6387404+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:52:23.3383868+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:52:23.3385252+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:02.2707668+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:02.2708811+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:11.0591034+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:11.0592396+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T10:53:11.0659575+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=25 duration=25.3183ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:18.0020423+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:18.0023446+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:22.9315328+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:22.9316539+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.4079866+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.4080839+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.5893504+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.5894859+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.7526913+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.7528504+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.8928011+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:23.8929007+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:32.6485928+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:32.6487331+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:34.2869166+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:34.2870859+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:34.4838716+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T10:53:34.483995+09:00 level=error msg="Missing group labels"
+logger=cleanup t=2024-04-02T10:55:57.8299928+09:00 level=info msg="Completed cleanup jobs" duration=11.5646ms
+logger=grafana.update.checker t=2024-04-02T10:55:57.9224938+09:00 level=info msg="Update check succeeded" duration=16.3821ms
+logger=plugins.update.checker t=2024-04-02T10:55:58.277816+09:00 level=info msg="Update check succeeded" duration=194.9098ms
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:41.8085207+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:41.8086717+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:42.9141657+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:42.9142809+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:43.5718483+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:43.5719526+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:43.7756635+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:43.775782+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:43.9880007+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T11:04:43.9881545+09:00 level=error msg="Missing group labels"
+logger=cleanup t=2024-04-02T11:05:57.8203107+09:00 level=info msg="Completed cleanup jobs" duration=2.4698ms
+logger=grafana.update.checker t=2024-04-02T11:05:57.9213956+09:00 level=info msg="Update check succeeded" duration=14.8509ms
+logger=plugins.update.checker t=2024-04-02T11:05:58.2842693+09:00 level=info msg="Update check succeeded" duration=201.6993ms
+logger=ngalert.notifier.webhook t=2024-04-02T11:07:32.3348537+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T11:07:32.334983+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:07:43.7952275+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/alerts status=202 remote_addr=[::1] time_ms=37 duration=37.5798ms size=35 referer="http://localhost:3000/alerting/notifications/receivers/new?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/alerts
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:07:43.8232878+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=559.9µs size=64 referer="http://localhost:3000/alerting/notifications?alertmanager=grafana" handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:07:46.0065586+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=355.2µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:07:46.0082222+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=315µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:00.3595821+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=421.8µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:00.3610434+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=371.3µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:05.0754424+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=734.7µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:05.076754+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=343.3µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:14.3001829+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=8 duration=8.978ms size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:14.3026426+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=1 duration=1.5989ms size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:21.9849391+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/alerts status=202 remote_addr=[::1] time_ms=51 duration=51.0832ms size=35 referer=http://localhost:3000/alerting/routes handler=/api/alertmanager/grafana/config/api/v1/alerts
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:27.0080229+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=1 duration=1.212ms size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:28.8377853+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=347.8µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:08:28.8388544+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=256.7µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:10:06.6204676+09:00 level=info msg="Request Completed" method=GET path=/api/ruler/grafana/api/v1/rules/192.000.000.000/test status=202 remote_addr=[::1] time_ms=1 duration=1.92ms size=26 referer=http://localhost:3000/alerting/new handler=/api/ruler/grafana/api/v1/rules/:Namespace/:Groupname
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:10:06.717672+09:00 level=info msg="Request Completed" method=POST path=/api/ruler/grafana/api/v1/rules/192.000.000.000 status=202 remote_addr=[::1] time_ms=19 duration=19.3189ms size=45 referer=http://localhost:3000/alerting/new handler=/api/ruler/grafana/api/v1/rules/:Namespace
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:10:13.0892121+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=323.4µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:10:29.4542415+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=686.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:10:50.5878643+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=605.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:18.1801514+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=589.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:27.2197748+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=676.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:39.6052679+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=687.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:42.4477523+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=641.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:46.8491343+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=848.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:47.8608237+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=630.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:48.5414928+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=775.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:50.2587439+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=649.2µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:50.8562246+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=824.1µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:51.4429947+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.0451ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:51.9596276+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=660.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:52.4060411+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=696.4µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:52.7874658+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=648.3µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:53.2146894+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=657.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:54.0255061+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=606.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:54.6569783+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=735.1µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:55.1236219+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=854.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:11:57.2902528+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=638.9µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:12:00.0113044+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:12:04.6285648+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=784.5µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:13:00.0128062+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:13:23.8284194+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=726.4µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:13:24.6356487+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=601µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:13:25.194198+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=644.3µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:13:31.6385808+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=580.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:13:39.2734043+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=587µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:14:00.0100976+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T11:14:02.2387354+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=629.3µs size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-04-02T11:15:57.8253179+09:00 level=info msg="Completed cleanup jobs" duration=7.4683ms
+logger=grafana.update.checker t=2024-04-02T11:15:57.9266945+09:00 level=info msg="Update check succeeded" duration=20.9473ms
+logger=plugins.update.checker t=2024-04-02T11:15:58.2883918+09:00 level=info msg="Update check succeeded" duration=206.9007ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:16:00.0136954+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:17:00.0225725+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:18:00.0132338+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:19:00.011274+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:20:00.0110458+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:21:00.0142351+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:22:00.0123489+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:23:00.0073803+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:24:00.0102389+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:25:00.0103479+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T11:25:57.8202637+09:00 level=info msg="Completed cleanup jobs" duration=990.9µs
+logger=grafana.update.checker t=2024-04-02T11:25:57.9306311+09:00 level=info msg="Update check succeeded" duration=23.8183ms
+logger=plugins.update.checker t=2024-04-02T11:25:58.2784442+09:00 level=info msg="Update check succeeded" duration=196.507ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:26:00.0345467+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:27:00.0218671+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:28:00.0111386+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:29:00.0160459+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:30:00.0201595+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:31:00.0128916+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:32:00.0113887+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:33:00.0200618+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:34:00.020193+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:35:00.0127774+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T11:35:57.8446552+09:00 level=info msg="Completed cleanup jobs" duration=26.4259ms
+logger=grafana.update.checker t=2024-04-02T11:35:57.9189161+09:00 level=info msg="Update check succeeded" duration=13.2871ms
+logger=plugins.update.checker t=2024-04-02T11:35:58.279307+09:00 level=info msg="Update check succeeded" duration=197.413ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:36:00.0153694+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:37:00.0120429+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:38:00.0101524+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:39:00.0126727+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:40:00.0151321+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:41:00.0124985+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:42:00.0147735+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:43:00.0116567+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:44:00.0101532+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:45:00.0116394+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T11:45:57.8293548+09:00 level=info msg="Completed cleanup jobs" duration=11.4122ms
+logger=grafana.update.checker t=2024-04-02T11:45:57.9239482+09:00 level=info msg="Update check succeeded" duration=18.445ms
+logger=plugins.update.checker t=2024-04-02T11:45:58.2796354+09:00 level=info msg="Update check succeeded" duration=197.208ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:46:00.0172581+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:47:00.0151262+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:48:00.0125927+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:49:00.011969+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:50:00.005809+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:51:00.0174008+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:52:00.0157946+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:53:00.0228071+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:54:00.01537+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:55:00.0125751+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T11:55:57.8641659+09:00 level=info msg="Completed cleanup jobs" duration=44.2916ms
+logger=grafana.update.checker t=2024-04-02T11:55:57.9203611+09:00 level=info msg="Update check succeeded" duration=14.9528ms
+logger=plugins.update.checker t=2024-04-02T11:55:58.2744406+09:00 level=info msg="Update check succeeded" duration=191.7792ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:56:00.0115415+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:57:00.0092581+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:58:00.0098694+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T11:59:00.0134413+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:00:00.0304085+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:01:00.0126728+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:02:00.0141842+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:03:00.0219212+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:04:00.0117571+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:05:00.0101669+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T12:05:57.8410957+09:00 level=info msg="Completed cleanup jobs" duration=23.0814ms
+logger=grafana.update.checker t=2024-04-02T12:05:57.9213954+09:00 level=info msg="Update check succeeded" duration=14.6304ms
+logger=plugins.update.checker t=2024-04-02T12:05:58.2922288+09:00 level=info msg="Update check succeeded" duration=210.867ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:06:00.0117237+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:07:00.0120874+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:08:00.0339253+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:09:00.0099021+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:10:00.0153611+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:11:00.0186873+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:12:00.0221428+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:13:00.016942+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:14:00.012559+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:15:00.0213175+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T12:15:57.8430987+09:00 level=info msg="Completed cleanup jobs" duration=23.2123ms
+logger=grafana.update.checker t=2024-04-02T12:15:57.9240737+09:00 level=info msg="Update check succeeded" duration=18.1506ms
+logger=plugins.update.checker t=2024-04-02T12:15:58.2807955+09:00 level=info msg="Update check succeeded" duration=198.5225ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:16:00.0135745+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:17:00.0124558+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:18:00.0160243+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:19:00.0071072+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:20:00.0109089+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:21:00.0131842+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:22:00.0156332+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:23:00.0120933+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:24:00.0129476+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:25:00.0146224+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T12:25:57.8419385+09:00 level=info msg="Completed cleanup jobs" duration=22.6473ms
+logger=grafana.update.checker t=2024-04-02T12:25:57.9235631+09:00 level=info msg="Update check succeeded" duration=17.1301ms
+logger=plugins.update.checker t=2024-04-02T12:25:58.2805592+09:00 level=info msg="Update check succeeded" duration=198.9792ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:26:00.0107706+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:27:00.0145993+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:28:00.0146187+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:28:34.9897213+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=663µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:29:00.0103203+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:30:00.0213379+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:31:00.0163319+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:31:21.7947829+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=453.5µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:31:30.8615458+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=806.4µs size=64 referer="http://localhost:3000/alerting/notifications?alertmanager=grafana" handler=/api/plugins/:pluginId/settings
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:45.2685518+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:45.2686526+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:46.4324244+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:46.4325354+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:47.1522326+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:47.1523927+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:47.4154388+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:31:47.4155418+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:31:59.6339672+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=971.2µs size=64 referer="http://localhost:3000/alerting/notifications?alertmanager=grafana" handler=/api/plugins/:pluginId/settings
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:32:00.0131451+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:32:07.4899165+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=758.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:32:23.8643316+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=592.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:32:40.7290169+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=593.9µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:33:00.0109725+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:21.0727339+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.073ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:27.9529038+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=677.2µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:46.7214283+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=599.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:49.333441+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=655.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:50.2756698+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=611.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:50.5400168+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=582.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:50.9530755+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=740.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:51.8754023+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=649.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:33:52.6809266+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=774.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:01.8195886+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=628.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:02.7200138+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=608.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:03.3609576+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=790.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:13.5586853+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=781µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:15.9390259+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=783.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:16.8211457+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=748.1µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:17.6563445+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=645.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:28.2139803+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=887.2µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:29.1311579+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=625.2µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:30.0334759+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=848.2µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:30.8027321+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=728.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:31.5174315+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=728.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:32.3823882+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=724.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:32.8991998+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=607.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:33.5747812+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=744.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:34.1737038+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=597.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:34.7330258+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=642.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:35.2496322+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=769.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:35.7138209+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=699.3µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:36.2213241+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.2698ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:36.4935688+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=822µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:36.9629284+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=557.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:37.4030711+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=721.4µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:37.6735661+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=611.4µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:37.938072+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=673.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:38.5567616+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=615µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:39.0058345+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=584.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:44.818337+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=602.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:48.9668922+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=595.1µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:50.0640925+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=575.4µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:50.9180038+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=718.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:51.6098863+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=555.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:34:52.3066526+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=724µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:35:00.029682+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:00.8284961+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=595.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:03.7569352+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.0599ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:12.6010519+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=645µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:13.8072643+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=581.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:16.5323566+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=605.4µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:33.4242168+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=796.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:36.2139898+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=332.9µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:36.2152193+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=331.5µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:35:54.2081279+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/alerts status=202 remote_addr=[::1] time_ms=56 duration=56.7536ms size=35 referer=http://localhost:3000/alerting/routes handler=/api/alertmanager/grafana/config/api/v1/alerts
+logger=cleanup t=2024-04-02T12:35:57.824907+09:00 level=info msg="Completed cleanup jobs" duration=5.3446ms
+logger=grafana.update.checker t=2024-04-02T12:35:57.9428262+09:00 level=info msg="Update check succeeded" duration=36.0244ms
+logger=plugins.update.checker t=2024-04-02T12:35:58.2821464+09:00 level=info msg="Update check succeeded" duration=200.7719ms
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:36:00.0138725+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:37:00.0120005+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:37:07.4771779+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/alerts status=202 remote_addr=[::1] time_ms=54 duration=54.1921ms size=35 referer=http://localhost:3000/alerting/routes handler=/api/alertmanager/grafana/config/api/v1/alerts
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:37:15.6317175+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=579.3µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:37:40.5686692+09:00 level=info msg="Request Completed" method=DELETE path=/api/ruler/grafana/api/v1/rules/192.000.000.000/test status=202 remote_addr=[::1] time_ms=20 duration=20.0277ms size=27 referer=http://localhost:3000/alerting/list handler=/api/ruler/grafana/api/v1/rules/:Namespace/:Groupname
+logger=ngalert.scheduler t=2024-04-02T12:37:50.0034323+09:00 level=info msg="Alert rule cannot be removed from the scheduler as it is not scheduled" rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1
+logger=ngalert.state.manager rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:37:50.0043856+09:00 level=info msg="Rules state was reset" states=1
+logger=ngalert.sender.router rule_uid=b0ee2bdb-b45c-4d85-8f69-d918d10aee28 org_id=1 t=2024-04-02T12:37:50.0047348+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:39:39.6149344+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=46 duration=46.3018ms size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:39:39.6193881+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=680µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:39:41.8995087+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=16 duration=16.986ms size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:39:42.6578768+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=11 duration=11.3116ms size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:39:42.6593603+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=454.4µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:40:22.6596225+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=1 duration=1.0852ms size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=cleanup t=2024-04-02T12:45:57.8302584+09:00 level=info msg="Completed cleanup jobs" duration=11.5931ms
+logger=grafana.update.checker t=2024-04-02T12:45:57.9221776+09:00 level=info msg="Update check succeeded" duration=16.1207ms
+logger=plugins.update.checker t=2024-04-02T12:45:58.2792531+09:00 level=info msg="Update check succeeded" duration=197.844ms
+logger=ngalert.notifier.webhook t=2024-04-02T12:47:28.2626669+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:47:28.2628185+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:47:28.2629404+09:00 level=warn msg="failed to template webhook message" error="template: :1:12: executing \"\" at <{{template \"defualt.title\"}}>: template \"defualt.title\" not defined"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:47:28.2696402+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=30 duration=30.9382ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T12:47:58.0695791+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:47:58.0697001+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:47:58.0759442+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=26 duration=26.9422ms size=437 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T12:48:47.8855012+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:48:47.8856603+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:48:47.8899296+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=24 duration=24.0959ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T12:48:58.0918452+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:48:58.0919713+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:48:58.0982308+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=26 duration=26.2425ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T12:49:18.3734534+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:49:18.3736+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:50:56.4436434+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:50:56.443762+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:50:56.4494715+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=28 duration=28.3803ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:11.964006+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:11.96412+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:51:11.9707351+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=26 duration=26.0794ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:12.9330914+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:12.9332127+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:51:12.9382194+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=24 duration=24.0978ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:18.9635011+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:18.9636144+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:19.8433694+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:19.8434792+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:20.0681204+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:51:20.0683624+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:01.355907+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:01.3560254+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:54:05.13337+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=687.5µs size=0 referer= handler=/api/live/ws
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:08.5931913+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:08.5933187+09:00 level=error msg="Missing group labels"
+logger=server t=2024-04-02T12:54:11.2261616+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-02T12:54:11.2264295+09:00 level=info msg=stopped last_tick=2024-04-02T12:54:10+09:00
+logger=tracing t=2024-04-02T12:54:11.2263917+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-02T12:54:11.7161917+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=c6c6e0d4 branch=main compiled=2024-03-04T23:48:05+09:00
+logger=settings t=2024-04-02T12:54:11.716443+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-02T12:54:11.7164966+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-02T12:54:11.7165263+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-02T12:54:11.7165563+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-02T12:54:11.7165944+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-02T12:54:11.7166297+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-02T12:54:11.7166556+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-02T12:54:11.7166784+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-02T12:54:11.7167036+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-02T12:54:11.7168705+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-02T12:54:11.7169638+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-02T12:54:11.7327689+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-02T12:54:11.7379935+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=835.1µs
+logger=secrets t=2024-04-02T12:54:11.7387167+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-02T12:54:11.8323224+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-02T12:54:11.83243+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-02T12:54:11.832479+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-02T12:54:11.8387985+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-02T12:54:11.8414878+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-02T12:54:12.9139857+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-02T12:54:12.9151072+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-02T12:54:12.9151821+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-02T12:54:12.9153535+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-02T12:54:12.9153232+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-02T12:54:12.9154975+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-02T12:54:12.915552+09:00 level=info msg="State cache has been initialized" states=0 duration=222.7µs
+logger=ticker t=2024-04-02T12:54:12.9156287+09:00 level=info msg=starting first_tick=2024-04-02T12:54:20+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-02T12:54:12.9156517+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2024-04-02T12:54:12.9199979+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-02T12:54:12.9977176+09:00 level=info msg="Update check succeeded" duration=82.3651ms
+logger=plugins.update.checker t=2024-04-02T12:54:13.1764817+09:00 level=info msg="Update check succeeded" duration=260.4877ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:54:13.1770069+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.7233ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T12:54:15.6623445+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=731.9µs size=0 referer= handler=/api/live/ws
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:19.8774496+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:19.8775718+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:21.4107744+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:21.410908+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:21.5910292+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:21.5911511+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:21.7003496+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:21.7004434+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:23.8395955+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T12:54:23.8397752+09:00 level=error msg="Missing group labels"
+logger=cleanup t=2024-04-02T13:04:12.9468201+09:00 level=info msg="Completed cleanup jobs" duration=30.4883ms
+logger=grafana.update.checker t=2024-04-02T13:04:13.0134061+09:00 level=info msg="Update check succeeded" duration=14.8622ms
+logger=plugins.update.checker t=2024-04-02T13:04:13.3800747+09:00 level=info msg="Update check succeeded" duration=203.097ms
+logger=cleanup t=2024-04-02T13:14:12.9579074+09:00 level=info msg="Completed cleanup jobs" duration=40.647ms
+logger=grafana.update.checker t=2024-04-02T13:14:13.0167671+09:00 level=info msg="Update check succeeded" duration=16.9826ms
+logger=plugins.update.checker t=2024-04-02T13:14:13.3709136+09:00 level=info msg="Update check succeeded" duration=193.711ms
+logger=ngalert.notifier.webhook t=2024-04-02T13:19:35.8871514+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:19:35.8872731+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:19:40.2347019+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:19:40.2348095+09:00 level=error msg="Missing group labels"
+logger=cleanup t=2024-04-02T13:24:12.9207982+09:00 level=info msg="Completed cleanup jobs" duration=4.9522ms
+logger=grafana.update.checker t=2024-04-02T13:24:13.0193235+09:00 level=info msg="Update check succeeded" duration=19.9439ms
+logger=plugins.update.checker t=2024-04-02T13:24:13.3750494+09:00 level=info msg="Update check succeeded" duration=197.6397ms
+logger=ngalert.notifier.webhook t=2024-04-02T13:31:27.8396707+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:31:27.8398078+09:00 level=error msg="Missing group labels"
+logger=cleanup t=2024-04-02T13:34:12.9237951+09:00 level=info msg="Completed cleanup jobs" duration=7.8006ms
+logger=grafana.update.checker t=2024-04-02T13:34:13.0136359+09:00 level=info msg="Update check succeeded" duration=15.2919ms
+logger=plugins.update.checker t=2024-04-02T13:34:13.3746867+09:00 level=info msg="Update check succeeded" duration=197.5427ms
+logger=ngalert.notifier.webhook t=2024-04-02T13:34:50.1271112+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:34:50.1272179+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:35:02.6546176+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:35:02.65476+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:36:59.6481391+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:36:59.6482678+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:36:59.6537248+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=24 duration=24.2129ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:37:21.7340075+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=795.8µs size=0 referer= handler=/api/live/ws
+logger=ngalert.notifier.webhook t=2024-04-02T13:37:23.9746962+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:37:23.9748573+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:37:47.9001805+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:37:47.9003537+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:38:04.431788+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:38:04.4318814+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:39:24.8449424+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=391.5µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:39:24.8477948+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=469.9µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:39:25.270953+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=387.6µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:39:30.4194451+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=660µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:39:30.4210279+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=360.1µs size=64 referer=http://localhost:3000/alerting/routes handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:41:46.6816686+09:00 level=info msg="Request Completed" method=GET path=/api/ruler/grafana/api/v1/rules/192.000.000.000/1 status=202 remote_addr=[::1] time_ms=11 duration=11.0996ms size=23 referer=http://localhost:3000/alerting/new handler=/api/ruler/grafana/api/v1/rules/:Namespace/:Groupname
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:41:46.7915156+09:00 level=info msg="Request Completed" method=POST path=/api/ruler/grafana/api/v1/rules/192.000.000.000 status=202 remote_addr=[::1] time_ms=8 duration=8.8041ms size=45 referer=http://localhost:3000/alerting/new handler=/api/ruler/grafana/api/v1/rules/:Namespace
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:14.8055711+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=470.9µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:42.9100619+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=666.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:50.1898253+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=831.1µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:51.8541041+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=732.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:52.2997172+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=659.9µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:52.7499434+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=626.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:53.1924206+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=616.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:53.4898628+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=768.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:53.7639484+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=794.3µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:42:55.7309037+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=814.1µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:43:30.0117064+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:43:31.4759337+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=0 duration=349.3µs size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=cleanup t=2024-04-02T13:44:12.9208469+09:00 level=info msg="Completed cleanup jobs" duration=3.5632ms
+logger=grafana.update.checker t=2024-04-02T13:44:13.0227418+09:00 level=info msg="Update check succeeded" duration=22.5829ms
+logger=plugins.update.checker t=2024-04-02T13:44:13.384389+09:00 level=info msg="Update check succeeded" duration=205.4709ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:44:30.0202571+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:45:23.504581+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=730.4µs size=0 referer= handler=/api/live/ws
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:45:30.0110649+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:46:30.011475+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:47:30.0100856+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:48:29.858533+09:00 level=info msg="Request Completed" method=GET path=/api/plugins/grafana-oncall-app/settings status=404 remote_addr=[::1] time_ms=11 duration=11.7907ms size=64 referer=http://localhost:3000/alerting/notifications handler=/api/plugins/:pluginId/settings
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:48:30.0115906+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:35.8139733+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:35.814142+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:48:35.8227889+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=29 duration=29.8043ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:53.3400998+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:53.3401983+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:55.6196495+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:55.6197599+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:55.7639575+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:48:55.7640976+09:00 level=error msg="Missing group labels"
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:49:30.0131327+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.notifier.webhook t=2024-04-02T13:49:52.954742+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:49:52.9548797+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T13:49:52.9616728+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=31 duration=31.1817ms size=438 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.notifier.webhook t=2024-04-02T13:50:02.1998706+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:50:02.1999776+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T13:50:14.0805905+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T13:50:14.0807037+09:00 level=error msg="Missing group labels"
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:50:30.0119258+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:51:30.0108273+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:52:30.0103898+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:53:30.0108011+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T13:54:12.9404795+09:00 level=info msg="Completed cleanup jobs" duration=23.807ms
+logger=grafana.update.checker t=2024-04-02T13:54:13.0163961+09:00 level=info msg="Update check succeeded" duration=18.402ms
+logger=plugins.update.checker t=2024-04-02T13:54:13.3758181+09:00 level=info msg="Update check succeeded" duration=198.7722ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:54:30.0108305+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:55:30.0208647+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:56:30.0106765+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:57:30.022881+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:58:30.0106678+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T13:59:30.0116984+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:00:30.020861+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:01:30.0113649+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:02:30.0136856+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:03:30.0122114+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T14:04:11.7590276+09:00 level=info msg="Completed cleanup jobs" duration=2.7379ms
+logger=grafana.update.checker t=2024-04-02T14:04:11.8545138+09:00 level=info msg="Update check succeeded" duration=14.9377ms
+logger=plugins.update.checker t=2024-04-02T14:04:12.2296651+09:00 level=info msg="Update check succeeded" duration=212.5565ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:04:30.0109216+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:05:30.0114139+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:06:30.0111569+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:07:30.0109145+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:08:30.0123571+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:09:30.0130666+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:10:30.0169201+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:11:30.0144981+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.notifier.webhook t=2024-04-02T14:11:31.9673658+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T14:11:31.9674683+09:00 level=error msg="Missing group labels"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-02T14:11:31.9709086+09:00 level=info msg="Request Completed" method=POST path=/api/alertmanager/grafana/config/api/v1/receivers/test status=207 remote_addr=[::1] time_ms=27 duration=27.5029ms size=425 referer="http://localhost:3000/alerting/notifications/receivers/SMS%20test/edit?alertmanager=grafana" handler=/api/alertmanager/grafana/config/api/v1/receivers/test
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:12:30.0107764+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.notifier.webhook t=2024-04-02T14:12:57.9013431+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T14:12:57.9015166+09:00 level=error msg="Missing group labels"
+logger=ngalert.notifier.webhook t=2024-04-02T14:13:07.8807011+09:00 level=error msg="Missing receiver"
+logger=ngalert.notifier.webhook t=2024-04-02T14:13:07.8808069+09:00 level=error msg="Missing group labels"
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:13:30.0255822+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T14:14:11.7999204+09:00 level=info msg="Completed cleanup jobs" duration=42.8427ms
+logger=grafana.update.checker t=2024-04-02T14:14:11.8573675+09:00 level=info msg="Update check succeeded" duration=18.5548ms
+logger=plugins.update.checker t=2024-04-02T14:14:12.2135544+09:00 level=info msg="Update check succeeded" duration=195.6224ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:14:30.0110875+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:15:30.0122387+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:16:30.0068954+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:17:30.0117284+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:18:30.0126228+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:19:30.0105434+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:20:30.0115529+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:21:30.0210358+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:22:30.018483+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:23:30.033147+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T14:24:11.7797972+09:00 level=info msg="Completed cleanup jobs" duration=23.1161ms
+logger=grafana.update.checker t=2024-04-02T14:24:11.8560363+09:00 level=info msg="Update check succeeded" duration=16.2046ms
+logger=plugins.update.checker t=2024-04-02T14:24:12.2143743+09:00 level=info msg="Update check succeeded" duration=196.9797ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:24:30.0132443+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:25:30.011846+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:26:30.0127285+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:27:30.0115753+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:28:30.0141745+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:29:30.0123986+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:30:30.0112142+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:31:30.0104839+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:32:30.0106031+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:33:30.0164524+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T14:34:11.766321+09:00 level=info msg="Completed cleanup jobs" duration=9.9258ms
+logger=grafana.update.checker t=2024-04-02T14:34:11.8592124+09:00 level=info msg="Update check succeeded" duration=20.4658ms
+logger=plugins.update.checker t=2024-04-02T14:34:12.2168832+09:00 level=info msg="Update check succeeded" duration=199.6989ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:34:30.010236+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:35:30.0124025+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:36:30.0122855+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:37:30.0124454+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:38:30.0174804+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:39:30.0102108+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:40:30.0320485+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:41:30.0122638+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:42:30.0129557+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:43:30.0104437+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T14:44:11.7677281+09:00 level=info msg="Completed cleanup jobs" duration=10.63ms
+logger=grafana.update.checker t=2024-04-02T14:44:11.8545927+09:00 level=info msg="Update check succeeded" duration=15.3534ms
+logger=plugins.update.checker t=2024-04-02T14:44:12.2146233+09:00 level=info msg="Update check succeeded" duration=195.7638ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:44:30.0106186+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:45:30.0111905+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:46:30.0122289+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:47:30.0109315+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:48:30.0112941+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:49:30.0113999+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:50:30.0155368+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:51:30.0100975+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:52:30.0106573+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:53:30.0117865+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=cleanup t=2024-04-02T14:54:11.7712582+09:00 level=info msg="Completed cleanup jobs" duration=15.0566ms
+logger=grafana.update.checker t=2024-04-02T14:54:11.8523725+09:00 level=info msg="Update check succeeded" duration=13.7659ms
+logger=plugins.update.checker t=2024-04-02T14:54:12.2182825+09:00 level=info msg="Update check succeeded" duration=201.0226ms
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:54:30.0186152+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:55:30.0116203+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:56:30.0095709+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=ngalert.sender.router rule_uid=efbd7b5f-5226-404d-bdaa-8c75406f5af2 org_id=1 t=2024-04-02T14:57:30.0115711+09:00 level=info msg="Sending alerts to local notifier" count=1

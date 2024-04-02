@@ -58,6 +58,7 @@ export const TestContactPointModal = ({ isOpen, onDismiss, onTest }: Props) => {
           }, {} as Labels),
       };
       onTest(alert);
+      console.log(alert)
     } else {
       onTest();
     }
