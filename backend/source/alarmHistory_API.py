@@ -1,20 +1,18 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
+from flask import Blueprint, jsonify
+from collections import defaultdict
 import sqlite3
 from datetime import datetime
-from collections import defaultdict
 import json
 import re
 
-app = Flask(__name__)
-CORS(app)
+# Blueprint 객체 생성
+alarm_history_api = Blueprint('alarm_history_api', __name__)
 
 # 데이터베이스 연결 함수
 def connect_to_db():
     conn = sqlite3.connect('/home/dmyang/grafana_test/grafana/data/grafana.db')
     conn.row_factory = sqlite3.Row
     return conn
-    
 
 # 데이터 조회 함수
 def alarm_history_query_data():
@@ -29,15 +27,8 @@ def alarm_history_query_data():
     conn.close()
     return data
 
-# 루트 엔드포인트
-@app.route('/')
-def index():
-    return "Flask App for Grafana Data"
-
-# 데이터 엔드포인트
-@app.route('/alarmhistory', methods=['GET'])
-def get_data():
-    data = alarm_history_query_data()
+# 데이터 처리 함수
+def process_data(data):
     alarm_history_response = defaultdict(list)
 
     for da in data:
@@ -55,8 +46,6 @@ def get_data():
         seconds = str(created_timestamp.second).zfill(2)
         time = f"{hours}:{minutes}:{seconds}"
         
-        # 서버 명 및 IP
-
         # 알람 룰 명
         alarmTitle = da['rule_title']
 
@@ -80,10 +69,13 @@ def get_data():
         temp_dic['Message']=alertHistoryMessage
         temp_dic['AlarmTitle']=alarmTitle
         alarm_history_response[date].append(temp_dic)
+
+    return alarm_history_response
+
+
+# 데이터 엔드포인트
+@alarm_history_api.route('/alarmhistory', methods=['GET'])
+def get_data():
+    data = alarm_history_query_data()
+    alarm_history_response = process_data(data)
     return jsonify(alarm_history_response)
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-    
