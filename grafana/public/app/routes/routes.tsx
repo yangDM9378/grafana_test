@@ -65,7 +65,7 @@ export function getAppRoutes(): RouteDescriptor[] {
       ),
     },
     {
-      path: '/test',
+      path: '/test/:child',
       pageClass: 'page-dashboard',
       routeName: DashboardRoutes.Test,
       component: SafeDynamicImport(

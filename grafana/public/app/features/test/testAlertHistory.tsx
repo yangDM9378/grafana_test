@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Icon} from '@grafana/ui';
+import { Icon } from '@grafana/ui';
 
 interface Annotation {
   alertId: number;
@@ -148,10 +148,10 @@ export default function TestAlertHistory() {
           const matchedRule = alertRuleData.filter((rule: Rule) => {
             return rule.id === alertingData.alertId;
           });
-          const MetricMatch = matchedRule[0].data[0].model?.expr.match(/^[^{]*/)
+          const MetricMatch = matchedRule[0]?.data[0]?.model?.expr.match(/^[^{]*/)
           const MetricText = MetricMatch ? MetricMatch[0]: ''
-          const referenceValue = matchedRule[0].data[2].model?.conditions?.[0].evaluator.params?.[0]
-          const conditionType = matchedRule[0].data[2].model?.conditions?.[0].evaluator.type
+          const referenceValue = matchedRule[0]?.data[2]?.model?.conditions?.[0].evaluator.params?.[0]
+          const conditionType = matchedRule[0]?.data[2]?.model?.conditions?.[0].evaluator.type
           let conditionText = '규칙이 잘못됨'
           if (conditionType === 'lt') {
             conditionText = '낮'
