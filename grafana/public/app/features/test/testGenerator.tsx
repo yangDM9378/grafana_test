@@ -24,8 +24,8 @@ export default function testGenerator() {
       const folderCreateResponse = await axios.post('http://localhost:3000/api/folders', folderReqData);
       const newFolderUid = folderCreateResponse.data.uid
       console.log(newFolderUid)
-      const newdataSourceData = { ...datasourceWindowPrometheus, name: `${formData.ip}-window`, url: `${formData.ip}:${datasourceWindowPrometheus.url}` }
-      console.log(newdataSourceData)
+      const newdataSourceData = { ...datasourceWindowPrometheus, name: `${formData.ip}-window`, url: `http://${formData.ip}:${datasourceWindowPrometheus.url}` }
+      console.log('---------------------', newdataSourceData)
       const DatasourceCreateResponse = await axios.post('http://localhost:3000/api/datasources/', newdataSourceData)
       console.log(DatasourceCreateResponse)
     } catch (error) {
