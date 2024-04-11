@@ -1,0 +1,7 @@
+{
+    "name": "",
+    "type": "prometheus",
+    "url": "9090",
+    "access": "proxy",
+    "basicAuth": false
+}
