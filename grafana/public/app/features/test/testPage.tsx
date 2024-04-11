@@ -7,15 +7,15 @@ import TestGenerator from './testGenerator'
 
 export default function TestPage() {
   const param = window.location.pathname;
-  const child = param.split('/')[2]; 
+  const child = param.split('/')[2];
 
   return (
     <div>
       {/* <TestAlarm/>
       <Test3dFab/> */}
-      {(child === 'alarmhistory' && (<TestAlertHisory/>))}
-      {(child === 'refactoringalerthistory' && (<RefactoringAlertHistory/>))}
-      {(child === 'generator') && <TestGenerator/>}
+      {(child === 'alarmhistory' && (<TestAlertHisory />))}
+      {(child === 'refactoringalerthistory' && (<RefactoringAlertHistory />))}
+      {(child === 'generator') && <TestGenerator />}
     </div>
   )
 }

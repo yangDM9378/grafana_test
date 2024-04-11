@@ -1,11 +1,15 @@
 from flask import Flask
 from flask_cors import CORS
+
 from main_API import main_api
 from alarmHistory_API import alarm_history_api
 from sms_API import sms_api
 
 app = Flask(__name__)
 CORS(app)
+
+# email config 적는곳
+
 
 # Blueprint 등록
 app.register_blueprint(main_api)
