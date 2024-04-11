@@ -8,12 +8,8 @@ from sms_API import sms_api
 app = Flask(__name__)
 CORS(app)
 
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'dmyanguds@gmail.com'
-app.config['MAIL_PASSWORD'] =''
-app.config['MAIL_DEFAULT_SENDER'] = 'dmyanguds@gmail.com'
+# email config 적는곳
+
 
 # Blueprint 등록
 app.register_blueprint(main_api)

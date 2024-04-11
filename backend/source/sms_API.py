@@ -13,8 +13,8 @@ def send_email():
         message = f"알람 제목은 {alert_data['title']} 발생 시간은 {alert_data['alerts'][0]['startsAt']}"
         html_content = render_template('alert_template.html', alert_data=alert_data)
         
-        recipients = ['dmyanguds@gmail.com']
-        msg = Message(subject=subject, recipients=recipients)
+        recipients = ['dmyang@uds.ai']
+        msg = Message(subject='test mail입니다', recipients=recipients)
         msg.html = html_content
         mail.send(msg)
         print(alert_data)
