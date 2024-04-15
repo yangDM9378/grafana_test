@@ -16,7 +16,11 @@ interface TemplateData {
   [key: string]: string[]; // 인덱스 시그니처 추가
 }
 
-export default function testGenerator() {
+interface TestGeneratorProps {
+  selectedRack: number;
+}
+
+export default function testGenerator({ selectedRack }:TestGeneratorProps) {
   const [formData, setFormData] = useState<FormData>({ ip: '', servername: '', assetNum: '' })
   const [templatesData, setTemplatesData] = useState<TemplateData>({ os: [], db: [], app: [] })
 
@@ -69,15 +73,28 @@ export default function testGenerator() {
       console.log(templates)
       dashboardImportTest.dashboard.title = formData.servername;
       const dashboardData = { ...dashboardImportTest, folderUid: folderCreateResponse.uid }
-      const DashboardCreateResponse = await axios.post('http://localhost:3000/api/dashboards/import', dashboardData)
-      console.log(DashboardCreateResponse)
+      const dashboardCreateResponse = await axios.post('http://localhost:3000/api/dashboards/import', dashboardData)
+      console.log(dashboardCreateResponse)
+      const newDashboardId = dashboardCreateResponse.data.dashboardId
+      addServer(selectedRack, newDashboardId) 
     } catch (error) {
       console.error('Error createing folder', error);
     }
   }
 
+  const addServer = async (selectedRack: number, newDashboardId:number) => {
+    try {
+      console.log(selectedRack);
+      const addServerResponse = await axios.post(`http://127.0.0.1:5000/racks/${selectedRack}/servers`, {
+      newDashboardId});
+      console.log(addServerResponse);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div>
+    <div style= {{ position: 'absolute', top: '0', right: '200px', width: '200px', height: '200px', border: '3px solid yellow' }}>
       <form onSubmit={handleSubmit}>
         <label>ip 입력:
           <input type="text" name='ip' value={formData.ip} onChange={handleFormDataChange} />

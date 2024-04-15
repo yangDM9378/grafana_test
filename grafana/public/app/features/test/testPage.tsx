@@ -1,9 +1,7 @@
 import React from 'react'
-// import Test3dFab from './test3dFab'
-// import TestAlarm from './testAlarm'
 import TestAlertHisory from './testAlertHistory'
 import RefactoringAlertHistory from './refactoringTestAlertHistory'
-import TestGenerator from './testGenerator'
+import TestAdmin from './testAdmin'
 
 export default function TestPage() {
   const param = window.location.pathname;
@@ -11,11 +9,9 @@ export default function TestPage() {
 
   return (
     <div>
-      {/* <TestAlarm/>
-      <Test3dFab/> */}
       {(child === 'alarmhistory' && (<TestAlertHisory />))}
       {(child === 'refactoringalerthistory' && (<RefactoringAlertHistory />))}
-      {(child === 'generator') && <TestGenerator />}
+      {(child === 'admin' && (<TestAdmin />))}
     </div>
   )
 }
