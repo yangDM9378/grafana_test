@@ -48,7 +48,7 @@ export default function testGenerator({ selectedRack }:TestGeneratorProps) {
     event.preventDefault();
     console.log('formData', formData)
     console.log('templatesData', templatesData)
-    const templates = Object.values(templatesData).flat()
+    // const templates = Object.values(templatesData).flat()
     try {
       const folderReqData = {
         "uid": "",
@@ -70,23 +70,21 @@ export default function testGenerator({ selectedRack }:TestGeneratorProps) {
       // const DatasourceCreateResponse = await axios.post('http://localhost:3000/api/datasources/', datasourceReqData)
       console.log(DatasourceCreateResponse)
 
-      console.log(templates)
       dashboardImportTest.dashboard.title = formData.servername;
       const dashboardData = { ...dashboardImportTest, folderUid: folderCreateResponse.uid }
       const dashboardCreateResponse = await axios.post('http://localhost:3000/api/dashboards/import', dashboardData)
       console.log(dashboardCreateResponse)
-      const newDashboardId = dashboardCreateResponse.data.dashboardId
-      addServer(selectedRack, newDashboardId) 
+      const newDashboardUId = dashboardCreateResponse.data.uid
+      addServer(selectedRack, newDashboardUId) 
     } catch (error) {
       console.error('Error createing folder', error);
     }
   }
 
-  const addServer = async (selectedRack: number, newDashboardId:number) => {
+  const addServer = async (selectedRack: number, newDashboardUId:string) => {
     try {
-      console.log(selectedRack);
       const addServerResponse = await axios.post(`http://127.0.0.1:5000/racks/${selectedRack}/servers`, {
-      newDashboardId});
+        newDashboardUId});
       console.log(addServerResponse);
     } catch (error) {
       console.error(error);
