@@ -31,7 +31,7 @@ export default function TestAdmin() {
 
   const createRack = async () => {
     try{
-      await axios.post('http://127.0.0.1:5000/createRack',{rackInfo:['1','123']})
+      await axios.post('http://127.0.0.1:5000//racks/create',{rackInfo:['1','123']})
       fetchRackData()
     } catch (error) {
       console.error(error)
