@@ -12622,3 +12622,356 @@ logger=ngalert.sender.router rule_uid=e6f6c395-dbda-4780-bb08-98171d0b1b43 org_i
 logger=server t=2024-04-16T14:02:09.2577381+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
 logger=tracing t=2024-04-16T14:02:09.2582955+09:00 level=info msg="Closing tracing"
 logger=ticker t=2024-04-16T14:02:09.2585291+09:00 level=info msg=stopped last_tick=2024-04-16T14:02:00+09:00
+logger=settings t=2024-04-17T10:53:18.953378+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T10:53:18.9540768+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T10:53:18.9541337+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T10:53:18.9541698+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T10:53:18.9542094+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T10:53:18.9542397+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T10:53:18.9542648+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T10:53:18.9543153+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T10:53:18.9543702+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T10:53:18.954435+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T10:53:18.955433+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T10:53:18.9558245+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T10:53:18.9876996+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T10:53:18.9926074+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=667.7µs
+logger=secrets t=2024-04-17T10:53:18.9943402+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T10:53:19.3101488+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T10:53:19.3102458+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T10:53:19.3102866+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T10:53:19.4020732+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T10:53:19.4090817+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T10:53:20.4325146+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T10:53:20.4580489+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T10:53:20.4581518+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-17T10:53:20.4597541+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-17T10:53:20.4597693+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-17T10:53:20.4622021+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-17T10:53:20.5228796+09:00 level=info msg="State cache has been initialized" states=0 duration=63.1048ms
+logger=ngalert.multiorg.alertmanager t=2024-04-17T10:53:20.5231132+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2024-04-17T10:53:20.5233435+09:00 level=info msg=starting first_tick=2024-04-17T10:53:30+09:00
+logger=http.server t=2024-04-17T10:53:20.6040775+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-17T10:53:22.2423755+09:00 level=info msg="Update check succeeded" duration=1.7823997s
+logger=plugins.update.checker t=2024-04-17T10:53:22.3950317+09:00 level=info msg="Update check succeeded" duration=1.9335466s
+logger=server t=2024-04-17T10:57:21.7530918+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-04-17T10:57:21.7534272+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-04-17T10:57:21.7534744+09:00 level=info msg=stopped last_tick=2024-04-17T10:57:20+09:00
+logger=sqlstore.transactions t=2024-04-17T10:57:21.7651729+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=settings t=2024-04-17T10:58:52.2945556+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T10:58:52.2948903+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T10:58:52.2949595+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T10:58:52.2949863+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T10:58:52.2950119+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T10:58:52.2950478+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T10:58:52.2950842+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T10:58:52.2951077+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T10:58:52.2951597+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T10:58:52.2951969+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T10:58:52.2953989+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T10:58:52.2954988+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T10:58:52.3110688+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T10:58:52.3160817+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=795.1µs
+logger=secrets t=2024-04-17T10:58:52.3171582+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T10:58:52.4109535+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T10:58:52.4110702+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T10:58:52.4111187+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T10:58:52.4168934+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T10:58:52.4214648+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T10:58:53.4496697+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T10:58:53.4514685+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T10:58:53.4515396+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-04-17T10:58:53.4516595+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-17T10:58:53.4518405+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-17T10:58:53.4519871+09:00 level=info msg="State cache has been initialized" states=0 duration=326.7µs
+logger=modules t=2024-04-17T10:58:53.4516524+09:00 level=warn msg="No modules registered..."
+logger=ticker t=2024-04-17T10:58:53.4521855+09:00 level=info msg=starting first_tick=2024-04-17T10:59:00+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-17T10:58:53.4522623+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2024-04-17T10:58:53.4546969+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-17T10:58:53.5331412+09:00 level=info msg="Update check succeeded" duration=81.3427ms
+logger=plugins.update.checker t=2024-04-17T10:58:53.6918389+09:00 level=info msg="Update check succeeded" duration=239.9822ms
+logger=server t=2024-04-17T11:01:26.5681327+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-17T11:01:26.5685642+09:00 level=info msg=stopped last_tick=2024-04-17T11:01:20+09:00
+logger=tracing t=2024-04-17T11:01:26.5687337+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-17T11:05:24.1239346+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T11:05:24.1253435+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T11:05:24.1254307+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T11:05:24.1254597+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T11:05:24.1255328+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T11:05:24.1255789+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T11:05:24.1256065+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T11:05:24.1256304+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T11:05:24.1256539+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T11:05:24.1256779+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T11:05:24.1264243+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T11:05:24.1267062+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T11:05:24.1608926+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T11:05:24.1662837+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=1.3659ms
+logger=secrets t=2024-04-17T11:05:24.1675912+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T11:05:24.5458102+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T11:05:24.5459413+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T11:05:24.5460152+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T11:05:24.6574987+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T11:05:24.6688266+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T11:05:25.7300839+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T11:05:25.7573258+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T11:05:25.7574211+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-17T11:05:25.7583145+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-17T11:05:25.7583808+09:00 level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2024-04-17T11:05:25.7595058+09:00 level=info msg="State cache has been initialized" states=0 duration=1.1226ms
+logger=grafanaStorageLogger t=2024-04-17T11:05:25.7597798+09:00 level=info msg="storage starting"
+logger=ticker t=2024-04-17T11:05:25.7604287+09:00 level=info msg=starting first_tick=2024-04-17T11:05:30+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-17T11:05:25.760457+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2024-04-17T11:05:25.8547015+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-17T11:05:27.5815513+09:00 level=info msg="Update check succeeded" duration=1.8227659s
+logger=plugins.update.checker t=2024-04-17T11:05:27.7461624+09:00 level=info msg="Update check succeeded" duration=1.9871458s
+logger=context t=2024-04-17T11:07:55.795373+09:00 level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context userId=0 orgId=0 uname= t=2024-04-17T11:07:55.7957271+09:00 level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=[::1] time_ms=1 duration=1.074ms size=29 referer= handler=/
+logger=context t=2024-04-17T11:07:55.7980757+09:00 level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context t=2024-04-17T11:08:34.0379525+09:00 level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=http.server t=2024-04-17T11:08:34.0566307+09:00 level=info msg="Successful Login" User=admin@localhost
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:08:37.6505407+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=603.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:08:55.6053575+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.3278ms size=39472 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:08:55.804876+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=706.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:09:50.2871755+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=3 duration=3.9004ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:09:52.4464235+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=613.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:10:40.0913877+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=3 duration=3.3299ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:10:42.494219+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=752.2µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:11:13.345251+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=3 duration=3.3062ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:11:15.4866476+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=574.8µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-17T11:11:18.540083+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-04-17T11:11:18.5403235+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-04-17T11:11:18.5404627+09:00 level=info msg=stopped last_tick=2024-04-17T11:11:10+09:00
+logger=settings t=2024-04-17T11:11:19.1530722+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T11:11:19.1534182+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T11:11:19.1534837+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T11:11:19.1535486+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T11:11:19.1536084+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T11:11:19.153634+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T11:11:19.1536587+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T11:11:19.1536826+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T11:11:19.1537075+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T11:11:19.1537357+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T11:11:19.1539273+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T11:11:19.1539945+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T11:11:19.1711066+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T11:11:19.175703+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=715.2µs
+logger=secrets t=2024-04-17T11:11:19.1762586+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T11:11:19.2676664+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T11:11:19.267777+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T11:11:19.2678295+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T11:11:19.2741639+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T11:11:19.2779632+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T11:11:20.2883725+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T11:11:20.2897163+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T11:11:20.289784+09:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2024-04-17T11:11:20.2901094+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-17T11:11:20.2901315+09:00 level=info msg="Warming state cache for startup"
+logger=modules t=2024-04-17T11:11:20.292111+09:00 level=warn msg="No modules registered..."
+logger=http.server t=2024-04-17T11:11:20.2932921+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-04-17T11:11:20.2983093+09:00 level=info msg="State cache has been initialized" states=0 duration=8.1752ms
+logger=ticker t=2024-04-17T11:11:20.2985339+09:00 level=info msg=starting first_tick=2024-04-17T11:11:30+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-17T11:11:20.298616+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:11:20.3307763+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.6233ms size=0 referer= handler=/api/live/ws
+logger=grafana.update.checker t=2024-04-17T11:11:20.3789072+09:00 level=info msg="Update check succeeded" duration=87.5078ms
+logger=plugins.update.checker t=2024-04-17T11:11:20.549971+09:00 level=info msg="Update check succeeded" duration=259.7455ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:11:21.0443049+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=3 duration=3.2117ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:11:23.204856+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.314ms size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-17T11:13:44.4600064+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-04-17T11:13:44.4602945+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-04-17T11:13:44.4603676+09:00 level=info msg=stopped last_tick=2024-04-17T11:13:40+09:00
+logger=settings t=2024-04-17T11:13:45.2951044+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T11:13:45.2954109+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T11:13:45.2955009+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T11:13:45.2955361+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T11:13:45.2955636+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T11:13:45.2956211+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T11:13:45.2956484+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T11:13:45.2956908+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T11:13:45.2957494+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T11:13:45.2957842+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T11:13:45.2959878+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T11:13:45.2960891+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T11:13:45.3112434+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T11:13:45.3170505+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=858.5µs
+logger=secrets t=2024-04-17T11:13:45.3177494+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T11:13:45.3948196+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T11:13:45.3949419+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T11:13:45.3949922+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T11:13:45.3998054+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T11:13:45.4022253+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T11:13:46.4704032+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T11:13:46.47464+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T11:13:46.4747524+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-17T11:13:46.4749621+09:00 level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2024-04-17T11:13:46.4751058+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-17T11:13:46.4764717+09:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2024-04-17T11:13:46.4783129+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-04-17T11:13:46.5028324+09:00 level=info msg="State cache has been initialized" states=0 duration=26.3584ms
+logger=ticker t=2024-04-17T11:13:46.5029579+09:00 level=info msg=starting first_tick=2024-04-17T11:13:50+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-17T11:13:46.5030126+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-04-17T11:13:46.5722407+09:00 level=info msg="Update check succeeded" duration=96.3357ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:13:46.5912179+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=9 duration=9.0268ms size=0 referer= handler=/api/live/ws
+logger=plugins.update.checker t=2024-04-17T11:13:46.7308085+09:00 level=info msg="Update check succeeded" duration=252.2291ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:13:47.1316781+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=6 duration=6.2376ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:13:49.4221283+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=665.3µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:23:18.438605+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=18 duration=18.9516ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:23:20.7483075+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=10 duration=10.18ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-04-17T11:23:46.4779936+09:00 level=info msg="Completed cleanup jobs" duration=1.3538ms
+logger=grafana.update.checker t=2024-04-17T11:23:46.587919+09:00 level=info msg="Update check succeeded" duration=15.5215ms
+logger=plugins.update.checker t=2024-04-17T11:23:46.9205952+09:00 level=info msg="Update check succeeded" duration=189.2905ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:24:10.6293499+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.8344ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:24:12.939192+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=657.1µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-17T11:24:16.4347688+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-04-17T11:24:16.4349876+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-04-17T11:24:16.4351347+09:00 level=info msg=stopped last_tick=2024-04-17T11:24:10+09:00
+logger=settings t=2024-04-17T11:24:19.0641051+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T11:24:19.0644673+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T11:24:19.0645512+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T11:24:19.0646459+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T11:24:19.06469+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T11:24:19.0647224+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T11:24:19.0647556+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T11:24:19.0647919+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T11:24:19.064846+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T11:24:19.064915+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T11:24:19.0652593+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T11:24:19.0654123+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T11:24:19.0839736+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T11:24:19.0894308+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=855.2µs
+logger=secrets t=2024-04-17T11:24:19.0900485+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T11:24:19.4193439+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T11:24:19.4194199+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T11:24:19.4194983+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T11:24:19.5106942+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T11:24:19.5129587+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T11:24:20.5781774+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T11:24:20.5998153+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T11:24:20.5999039+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-04-17T11:24:20.600047+09:00 level=info msg="Warming state cache for startup"
+logger=modules t=2024-04-17T11:24:20.6001088+09:00 level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2024-04-17T11:24:20.6002345+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-17T11:24:20.6002647+09:00 level=info msg="State cache has been initialized" states=0 duration=217.1µs
+logger=ticker t=2024-04-17T11:24:20.6003698+09:00 level=info msg=starting first_tick=2024-04-17T11:24:30+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-17T11:24:20.6005853+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2024-04-17T11:24:20.6959114+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:24:20.7063615+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=127.0.0.1 time_ms=4 duration=4.5685ms size=43041 referer= handler=notfound
+logger=grafana.update.checker t=2024-04-17T11:24:22.4731406+09:00 level=info msg="Update check succeeded" duration=1.872653s
+logger=plugins.update.checker t=2024-04-17T11:24:22.629708+09:00 level=info msg="Update check succeeded" duration=2.0296065s
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:24:23.3740454+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=746µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:24:48.9236213+09:00 level=info msg="Request Completed" method=GET path=//d/bd08afe7-d29a-4071-85a4-6c3317491aa6/64K07Lu07ZOo7YSw status=404 remote_addr=127.0.0.1 time_ms=2 duration=2.9711ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:24:51.2480525+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=975µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:24:58.1363679+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=582.2µs size=0 referer= handler=/api/live/ws
+logger=live t=2024-04-17T11:24:58.4246193+09:00 level=info msg="Initialized channel handler" channel=grafana/dashboard/uid/bd08afe7-d29a-4071-85a4-6c3317491aa6 address=grafana/dashboard/uid/bd08afe7-d29a-4071-85a4-6c3317491aa6
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:25:54.4210039+09:00 level=info msg="Request Completed" method=GET path=//d/bd08afe7-d29a-4071-85a4-6c3317491aa6/64K07Lu07ZOo7YSw status=404 remote_addr=127.0.0.1 time_ms=3 duration=3.391ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:25:55.1617399+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=605.5µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:25:56.6187885+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=127.0.0.1 time_ms=2 duration=2.391ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:25:57.3417993+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=723µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:25:58.0987441+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=581.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:26:00.1233538+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=127.0.0.1 time_ms=2 duration=2.6479ms size=43046 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T11:26:00.864485+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=544.8µs size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-04-17T11:34:20.6157503+09:00 level=info msg="Completed cleanup jobs" duration=13.7488ms
+logger=grafana.update.checker t=2024-04-17T11:34:22.4904092+09:00 level=info msg="Update check succeeded" duration=16.7904ms
+logger=plugins.update.checker t=2024-04-17T11:34:22.8170994+09:00 level=info msg="Update check succeeded" duration=185.6807ms
+logger=cleanup t=2024-04-17T11:44:20.6309731+09:00 level=info msg="Completed cleanup jobs" duration=29.4842ms
+logger=grafana.update.checker t=2024-04-17T11:44:22.490215+09:00 level=info msg="Update check succeeded" duration=15.1983ms
+logger=plugins.update.checker t=2024-04-17T11:44:22.8060361+09:00 level=info msg="Update check succeeded" duration=176.1064ms
+logger=cleanup t=2024-04-17T11:54:20.6126123+09:00 level=info msg="Completed cleanup jobs" duration=10.9175ms
+logger=grafana.update.checker t=2024-04-17T11:54:22.494418+09:00 level=info msg="Update check succeeded" duration=20.0361ms
+logger=plugins.update.checker t=2024-04-17T11:54:22.812121+09:00 level=info msg="Update check succeeded" duration=180.9221ms
+logger=cleanup t=2024-04-17T12:04:20.6137581+09:00 level=info msg="Completed cleanup jobs" duration=11.915ms
+logger=grafana.update.checker t=2024-04-17T12:04:22.5069703+09:00 level=info msg="Update check succeeded" duration=33.5598ms
+logger=plugins.update.checker t=2024-04-17T12:04:22.8286164+09:00 level=info msg="Update check succeeded" duration=196.9231ms
+logger=cleanup t=2024-04-17T12:14:20.6067646+09:00 level=info msg="Completed cleanup jobs" duration=5.3727ms
+logger=grafana.update.checker t=2024-04-17T12:14:22.4932745+09:00 level=info msg="Update check succeeded" duration=19.9146ms
+logger=plugins.update.checker t=2024-04-17T12:14:22.8122797+09:00 level=info msg="Update check succeeded" duration=180.7467ms
+logger=cleanup t=2024-04-17T12:24:20.6242249+09:00 level=info msg="Completed cleanup jobs" duration=22.8681ms
+logger=grafana.update.checker t=2024-04-17T12:24:22.4889323+09:00 level=info msg="Update check succeeded" duration=15.3017ms
+logger=plugins.update.checker t=2024-04-17T12:24:22.8079895+09:00 level=info msg="Update check succeeded" duration=177.4707ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:32:04.1868483+09:00 level=info msg="Request Completed" method=GET path=//d/bd08afe7-d29a-4071-85a4-6c3317491aa6/64K07Lu07ZOo7YSw status=404 remote_addr=[::1] time_ms=4 duration=4.6964ms size=46620 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:32:04.9286217+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=570µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:32:07.1578684+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.7449ms size=46620 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:32:07.8617572+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=577.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:32:56.1754531+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.7942ms size=46620 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:32:56.9031553+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=677.3µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-17T12:32:59.2856516+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-04-17T12:32:59.285791+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-04-17T12:32:59.2859249+09:00 level=info msg=stopped last_tick=2024-04-17T12:32:50+09:00
+logger=settings t=2024-04-17T12:32:59.9012308+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T12:32:59.9015161+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T12:32:59.9015827+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T12:32:59.9016129+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T12:32:59.9016846+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T12:32:59.9017409+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T12:32:59.901767+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T12:32:59.9017896+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T12:32:59.9018419+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T12:32:59.901902+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T12:32:59.9020975+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T12:32:59.9021785+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T12:32:59.9183442+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T12:32:59.9237114+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=747µs
+logger=secrets t=2024-04-17T12:32:59.9243203+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T12:33:00.0100119+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T12:33:00.0100876+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T12:33:00.0101241+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T12:33:00.0170308+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T12:33:00.0207882+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T12:33:01.0636345+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T12:33:01.0655844+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T12:33:01.0657238+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-04-17T12:33:01.0658345+09:00 level=info msg="Warming state cache for startup"
+logger=modules t=2024-04-17T12:33:01.0659282+09:00 level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2024-04-17T12:33:01.0661703+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-17T12:33:01.0661735+09:00 level=info msg="State cache has been initialized" states=0 duration=337.9µs
+logger=ticker t=2024-04-17T12:33:01.0664884+09:00 level=info msg=starting first_tick=2024-04-17T12:33:10+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-17T12:33:01.0666212+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2024-04-17T12:33:01.070022+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:33:01.0909627+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=3 duration=3.7616ms size=0 referer= handler=/api/live/ws
+logger=grafana.update.checker t=2024-04-17T12:33:01.188607+09:00 level=info msg="Update check succeeded" duration=122.4067ms
+logger=plugins.update.checker t=2024-04-17T12:33:01.3498954+09:00 level=info msg="Update check succeeded" duration=283.5834ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:33:01.6308608+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=3 duration=3.3582ms size=46620 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:33:02.3562496+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=640.2µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-17T12:33:38.397028+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-17T12:33:38.3972685+09:00 level=info msg=stopped last_tick=2024-04-17T12:33:30+09:00
+logger=tracing t=2024-04-17T12:33:38.3972697+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-17T12:33:38.9625118+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-17T12:33:38.9628039+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-17T12:33:38.962863+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-17T12:33:38.962929+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-17T12:33:38.9629709+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-17T12:33:38.9629975+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-17T12:33:38.9630212+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-17T12:33:38.9630513+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-17T12:33:38.9630746+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-17T12:33:38.9631004+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-17T12:33:38.9632944+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-17T12:33:38.9633601+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-17T12:33:38.9778286+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-17T12:33:38.9832239+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=865.5µs
+logger=secrets t=2024-04-17T12:33:38.9838004+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-17T12:33:39.0629813+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-17T12:33:39.063063+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-17T12:33:39.06313+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-17T12:33:39.069014+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-17T12:33:39.0717274+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-17T12:33:40.1882887+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-17T12:33:40.1897972+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-17T12:33:40.1898848+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-17T12:33:40.1899939+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-17T12:33:40.1899993+09:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2024-04-17T12:33:40.1941182+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafanaStorageLogger t=2024-04-17T12:33:40.1943609+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-17T12:33:40.2179648+09:00 level=info msg="State cache has been initialized" states=0 duration=27.9633ms
+logger=ticker t=2024-04-17T12:33:40.2181032+09:00 level=info msg=starting first_tick=2024-04-17T12:33:50+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-17T12:33:40.2181617+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-04-17T12:33:40.2618158+09:00 level=info msg="Update check succeeded" duration=71.3702ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:33:40.2998521+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.5596ms size=0 referer= handler=/api/live/ws
+logger=plugins.update.checker t=2024-04-17T12:33:40.4194055+09:00 level=info msg="Update check succeeded" duration=229.1436ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:33:40.8646667+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=4 duration=4.8394ms size=46620 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-17T12:33:41.6418161+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=578.9µs size=0 referer= handler=/api/live/ws
+logger=context t=2024-04-17T12:41:17.8861363+09:00 level=warn msg="invalid API key" error="invalid API key" traceID=
+logger=context userId=0 orgId=0 uname= t=2024-04-17T12:41:17.8863082+09:00 level=info msg="Request Completed" method=GET path=/api/v1/provisioning/alert-rules status=401 remote_addr=[::1] time_ms=0 duration=454.4µs size=43 referer=
+logger=server t=2024-04-17T12:43:34.9891992+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-17T12:43:34.9893829+09:00 level=info msg=stopped last_tick=2024-04-17T12:43:30+09:00
+logger=tracing t=2024-04-17T12:43:34.989438+09:00 level=info msg="Closing tracing"

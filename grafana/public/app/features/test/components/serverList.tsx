@@ -7,7 +7,7 @@ interface ServerListProps {
 }
 
 export default function ServerList({ selectedRack, setOpenAddServer }: ServerListProps) {
-  const [rackServer, setRackServer] = useState<{ dashboard: any, meta: any }[]>([]);
+  const [rackServerData, setRackServerData] = useState<{ dashboard: any, meta: any }[]>([]);
 
   useEffect(() => {
     fetchRackServer()
@@ -21,7 +21,8 @@ export default function ServerList({ selectedRack, setOpenAddServer }: ServerLis
         const serverDataRes = await axios.get(`http://localhost:3000/api/dashboards/uid/${server_uid}`);
         serversData.push(serverDataRes.data);
       }
-      setRackServer(serversData)
+      console.log(serversData)
+      setRackServerData(serversData)
     } catch (error) {
       console.log()
     }
@@ -33,12 +34,18 @@ export default function ServerList({ selectedRack, setOpenAddServer }: ServerLis
   };
 
   return (
-    <div style={{ position: 'absolute', top: '0', right: '0', width: '200px', height: '200px', border: '3px solid yellow' }}>
+    <div style={{ position: 'absolute', top: '0', right: '0', border: '3px solid yellow' }}>
       <h1>ServerList</h1>
       <div>{selectedRack}번째 Rack</div>
-      {rackServer.map((server:any, idx:number) => (
-        <li key={idx}>server id는 {server}</li>
-      ))}
+      {rackServerData.map((rackServer:any, index:number) => (
+        <div key={index} style={{border: '3px solid blue'}}>
+          <div>dashboard uid{rackServer.dashboard.uid}</div>
+          <div>dashboard title{rackServer.dashboard.title}</div>
+          <div>folder title{rackServer.meta.folderTitle}</div>
+          <div>url{rackServer.meta.url}</div>
+        </div>
+      )
+      )}
       <button onClick={handleAddServerClick}>서버 추가하기</button>
     </div>
   );
