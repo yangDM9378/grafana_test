@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios'
 import { createFolder } from 'app/features/manage-dashboards/state/actions';
 import { createDataSource } from 'app/features/datasources/api'
-import dashboardImportTest from './jsonFile/dashboard-import-test.json';
+import dashboardImportTest from '../jsonFile/dashboard-import-test.json';
 
 interface FormData {
   ip: string;
@@ -83,16 +83,15 @@ export default function testGenerator({ selectedRack }:TestGeneratorProps) {
 
   const addServer = async (selectedRack: number, newDashboardUId:string) => {
     try {
-      const addServerResponse = await axios.post(`http://127.0.0.1:5000/racks/${selectedRack}/servers`, {
+      await axios.post(`http://127.0.0.1:5000/racks/${selectedRack}/servers`, {
         newDashboardUId});
-      console.log(addServerResponse);
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div style= {{ position: 'absolute', top: '0', right: '200px', width: '200px', height: '200px', border: '3px solid yellow' }}>
+    <div style= {{border: '3px solid yellow' }}>
       <form onSubmit={handleSubmit}>
         <label>ip 입력:
           <input type="text" name='ip' value={formData.ip} onChange={handleFormDataChange} />

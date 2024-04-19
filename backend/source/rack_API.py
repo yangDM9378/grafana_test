@@ -73,13 +73,14 @@ def conn_rack_server(rack_id):
 
 @rack_api.route('/racks/<rack_id>/servers', methods=['GET'])
 def get_rack_server(rack_id):
-    conn=connect_to_db()
+    conn = connect_to_db()
     cursor = conn.cursor()
     cursor.execute("SELECT dashboards FROM rack WHERE id=?", (rack_id,))
     conn_rack_server_data = cursor.fetchone()
     conn.close()
 
-    if conn_rack_server_data['dashboards']:
+    if conn_rack_server_data and conn_rack_server_data['dashboards']:
         dashboards_list = json.loads(conn_rack_server_data['dashboards'])
-        return json.dumps(dashboards_list)
-    return []
+        return jsonify(dashboards_list)
+
+    return jsonify([])
