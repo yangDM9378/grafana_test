@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import { createFolder } from 'app/features/manage-dashboards/state/actions';
-import { createDataSource } from 'app/features/datasources/api'
+import datasourceTest from '../jsonFile/datasource-test.json'
 import dashboardImportTest from '../jsonFile/dashboard-import-test.json';
 
 interface FormData {
@@ -54,22 +54,34 @@ export default function testGenerator({ selectedRack }:TestGeneratorProps) {
         "uid": "",
         "title": formData.ip,
       }
+
+      // folder 생성
       const folderCreateResponse = await createFolder(folderReqData);
       // const folderCreateResponse = await axios.post('http://localhost:3000/api/folders', folderReqData);
       console.log(folderCreateResponse)
+      
+      
+      // promethus data source 생성
+      
+      const newPromethuesDatasource = { ...datasourceTest.prometheus, name: `${formData.ip}-promethues`, url: `http://${formData.ip}:${datasourceTest.prometheus.url}` }
+      const promethuesDatasourceRes = await axios.post('http://localhost:3000/api/datasources/', newPromethuesDatasource)
+      console.log(promethuesDatasourceRes)
+      
+      // zabbix data source 생성
+      const newZabbixDatasource = {
+        ...datasourceTest.zabbix,
+        name: `${formData.ip}-zabbix`,
+        url: `http://${formData.ip}/${datasourceTest.zabbix.url}`,
+        jsonData: {
+          username: 'Admin',
+          password: 'zabbix'
+        },
+      };
+      const zabbixDatasourceRes = await axios.post('http://localhost:3000/api/datasources/', newZabbixDatasource)
+      console.log(zabbixDatasourceRes)
 
-      const datasourceReqData = {
-        "name": "",
-        "type": "prometheus",
-        "url": "9090",
-        "access": "proxy",
-        "basicAuth": false
-      }
-      const newdataSourceData = { ...datasourceReqData, name: `${formData.ip}-window`, url: `http://${formData.ip}:${datasourceReqData.url}` }
-      const DatasourceCreateResponse = await createDataSource(newdataSourceData)
-      // const DatasourceCreateResponse = await axios.post('http://localhost:3000/api/datasources/', datasourceReqData)
-      console.log(DatasourceCreateResponse)
 
+      // dashboard Import
       dashboardImportTest.dashboard.title = formData.servername;
       const dashboardData = { ...dashboardImportTest, folderUid: folderCreateResponse.uid }
       const dashboardCreateResponse = await axios.post('http://localhost:3000/api/dashboards/import', dashboardData)

@@ -14949,3 +14949,458 @@ logger=plugins.update.checker t=2024-04-19T13:53:19.6110928+09:00 level=info msg
 logger=server t=2024-04-19T13:57:52.018451+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
 logger=tracing t=2024-04-19T13:57:52.0188298+09:00 level=info msg="Closing tracing"
 logger=ticker t=2024-04-19T13:57:52.0191726+09:00 level=info msg=stopped last_tick=2024-04-19T13:57:50+09:00
+logger=settings t=2024-04-22T12:48:31.1133779+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-22T12:48:31.1140439+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-22T12:48:31.1141082+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-22T12:48:31.1141667+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-22T12:48:31.1142075+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-22T12:48:31.114232+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-22T12:48:31.1142706+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-22T12:48:31.1143101+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-22T12:48:31.1143392+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-22T12:48:31.1143639+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-22T12:48:31.1152111+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-22T12:48:31.1155444+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-22T12:48:31.1503698+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-22T12:48:31.1559557+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=775.1µs
+logger=secrets t=2024-04-22T12:48:31.157962+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-22T12:48:31.5652715+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-22T12:48:31.5653937+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-22T12:48:31.5654514+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-22T12:48:31.6693657+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-22T12:48:31.6762355+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-22T12:48:32.7933852+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-22T12:48:32.8212545+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-22T12:48:32.8213656+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-04-22T12:48:32.822356+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-22T12:48:32.8225228+09:00 level=info msg="storage starting"
+logger=modules t=2024-04-22T12:48:32.8248638+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-22T12:48:32.83054+09:00 level=info msg="State cache has been initialized" states=1 duration=8.1816ms
+logger=ngalert.multiorg.alertmanager t=2024-04-22T12:48:32.8306383+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2024-04-22T12:48:32.8312969+09:00 level=info msg=starting first_tick=2024-04-22T12:48:40+09:00
+logger=http.server t=2024-04-22T12:48:32.9803634+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-22T12:48:34.8464773+09:00 level=info msg="Update check succeeded" duration=2.0242062s
+logger=plugins.update.checker t=2024-04-22T12:48:35.0974482+09:00 level=info msg="Update check succeeded" duration=2.2741143s
+logger=ngalert.scheduler rule_uid=d4f522de-e891-4bf6-850f-a70cf8a2386c org_id=1 version=1 fingerprint=ba283f08ac63f431 attempt=0 now=2024-04-22T12:49:00+09:00 t=2024-04-22T12:49:10.0110057+09:00 level=error msg="Failed to evaluate rule" error="failed to execute query A: Get \"http://192.168.1.160:9090/api/v1/query_range?end=1713757740&query=up%7Bjob%3D%22window%22%7D&start=1713757140&step=1\": dial tcp 192.168.1.160:9090: i/o timeout" duration=10.008334s
+logger=ngalert.state.manager rule_uid=d4f522de-e891-4bf6-850f-a70cf8a2386c org_id=1 t=2024-04-22T12:49:10.0113173+09:00 level=info msg="Detected stale state entry" cacheID="[[\"__alert_rule_namespace_uid__\",\"a18853dd-0c99-40f2-9aba-bab013f39e01\"],[\"__alert_rule_uid__\",\"d4f522de-e891-4bf6-850f-a70cf8a2386c\"],[\"__name__\",\"up\"],[\"alertname\",\"alert-test\"],[\"grafana_folder\",\"192.168.1.160\"],[\"instance\",\"192.168.1.160:9182\"],[\"job\",\"window\"]]" state=Normal reason=
+logger=ngalert.sender.router rule_uid=d4f522de-e891-4bf6-850f-a70cf8a2386c org_id=1 t=2024-04-22T12:49:10.0268111+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=alertmanager org=1 t=2024-04-22T12:49:40.0491809+09:00 level=error component=alertmanager orgID=1 component=dispatcher msg="Notify for alerts failed" num_alerts=1 err="email_test/webhook[0]: notify retry canceled due to unrecoverable error after 1 attempts: webhook response status 404 NOT FOUND"
+logger=context userId=0 orgId=1 uname= t=2024-04-22T12:49:41.7986715+09:00 level=info msg="Request Completed" method=DELETE path=/api/v1/provisioning/alert-rules/d4f522de-e891-4bf6-850f-a70cf8a2386c status=204 remote_addr=[::1] time_ms=30 duration=30.913ms size=0 referer= handler=/api/v1/provisioning/alert-rules/:UID
+logger=ngalert.scheduler t=2024-04-22T12:49:50.0006231+09:00 level=info msg="Alert rule cannot be removed from the scheduler as it is not scheduled" rule_uid=d4f522de-e891-4bf6-850f-a70cf8a2386c org_id=1
+logger=ngalert.state.manager rule_uid=d4f522de-e891-4bf6-850f-a70cf8a2386c org_id=1 t=2024-04-22T12:49:50.0014938+09:00 level=info msg="Rules state was reset" states=1
+logger=ngalert.sender.router rule_uid=d4f522de-e891-4bf6-850f-a70cf8a2386c org_id=1 t=2024-04-22T12:49:50.0015933+09:00 level=info msg="Sending alerts to local notifier" count=1
+logger=server t=2024-04-22T12:51:14.0837829+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-22T12:51:14.0843094+09:00 level=info msg=stopped last_tick=2024-04-22T12:51:10+09:00
+logger=tracing t=2024-04-22T12:51:14.0842108+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-22T12:51:14.7045266+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-22T12:51:14.7048189+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-22T12:51:14.7048755+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-22T12:51:14.7049057+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-22T12:51:14.7049359+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-22T12:51:14.7049642+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-22T12:51:14.7049895+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-22T12:51:14.70502+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-22T12:51:14.705045+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-22T12:51:14.7050845+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-22T12:51:14.7052791+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-22T12:51:14.7053332+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-22T12:51:14.7215765+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-22T12:51:14.727271+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=883.6µs
+logger=secrets t=2024-04-22T12:51:14.7280431+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-22T12:51:14.828029+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-22T12:51:14.8281497+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-04-22T12:51:14.8281869+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-04-22T12:51:14.8331569+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-22T12:51:14.8361988+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-22T12:51:15.8727824+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-22T12:51:15.8747625+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-22T12:51:15.8748177+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-22T12:51:15.8751597+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-22T12:51:15.8755137+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-22T12:51:15.8774543+09:00 level=info msg="storage starting"
+logger=http.server t=2024-04-22T12:51:15.8789211+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-04-22T12:51:15.9147884+09:00 level=info msg="State cache has been initialized" states=0 duration=39.2565ms
+logger=ticker t=2024-04-22T12:51:15.914942+09:00 level=info msg=starting first_tick=2024-04-22T12:51:20+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-22T12:51:15.9149965+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-04-22T12:51:15.9579614+09:00 level=info msg="Update check succeeded" duration=82.9186ms
+logger=plugins.update.checker t=2024-04-22T12:51:16.1539158+09:00 level=info msg="Update check succeeded" duration=278.3909ms
+logger=server t=2024-04-22T12:52:09.3658965+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-04-22T12:52:09.3661448+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-04-22T12:52:09.3662518+09:00 level=info msg=stopped last_tick=2024-04-22T12:52:00+09:00
+logger=settings t=2024-04-22T12:53:37.7110785+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-22T12:53:37.7113929+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-22T12:53:37.7114505+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-22T12:53:37.7115205+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-22T12:53:37.7115803+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-22T12:53:37.7116246+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-22T12:53:37.711653+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-22T12:53:37.711676+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-22T12:53:37.7117308+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-22T12:53:37.7117558+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-22T12:53:37.7119646+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-22T12:53:37.7120458+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-22T12:53:37.7257912+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-22T12:53:37.731113+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=871.5µs
+logger=secrets t=2024-04-22T12:53:37.7319002+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-22T12:53:37.8177321+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-22T12:53:37.817829+09:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.loader t=2024-04-22T12:53:37.9176772+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-app
+logger=plugin.loader t=2024-04-22T12:53:37.9177854+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-datasource
+logger=plugin.loader t=2024-04-22T12:53:37.9432512+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-triggers-panel
+logger=query_data t=2024-04-22T12:53:37.9493539+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-22T12:53:37.95188+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-22T12:53:39.0164281+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-22T12:53:39.0177086+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-22T12:53:39.017777+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-04-22T12:53:39.0178723+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-22T12:53:39.0179386+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-22T12:53:39.0180636+09:00 level=info msg="State cache has been initialized" states=0 duration=183.5µs
+logger=ticker t=2024-04-22T12:53:39.0181554+09:00 level=info msg=starting first_tick=2024-04-22T12:53:40+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-22T12:53:39.0182132+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=modules t=2024-04-22T12:53:39.0182339+09:00 level=warn msg="No modules registered..."
+logger=http.server t=2024-04-22T12:53:39.021488+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-22T12:53:39.0877177+09:00 level=info msg="Update check succeeded" duration=69.8307ms
+logger=plugins.update.checker t=2024-04-22T12:53:39.268266+09:00 level=info msg="Update check succeeded" duration=249.8745ms
+logger=context t=2024-04-22T12:54:13.4811543+09:00 level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context userId=0 orgId=0 uname= t=2024-04-22T12:54:13.4816633+09:00 level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=[::1] time_ms=0 duration=795.5µs size=29 referer= handler=/
+logger=context t=2024-04-22T12:54:13.4837468+09:00 level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=context t=2024-04-22T12:54:17.8920069+09:00 level=warn msg="failed to look up session from cookie" error="user token not found"
+logger=http.server t=2024-04-22T12:54:17.9106911+09:00 level=info msg="Successful Login" User=admin@localhost
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T12:54:20.9378932+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=913.9µs size=0 referer= handler=/api/live/ws
+logger=plugindashboards t=2024-04-22T12:55:52.0852599+09:00 level=info msg="Plugin state changed" pluginId=alexanderzobnin-zabbix-app enabled=true
+logger=plugindashboards t=2024-04-22T12:55:52.0853901+09:00 level=info msg="Syncing plugin dashboards to DB" pluginId=alexanderzobnin-zabbix-app
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T12:55:52.4395755+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=654.9µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-22T12:55:58.6348067+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-22T12:55:58.6352775+09:00 level=info msg=stopped last_tick=2024-04-22T12:55:50+09:00
+logger=tracing t=2024-04-22T12:55:58.6352946+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-22T12:55:59.4278169+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-22T12:55:59.4281512+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-22T12:55:59.4282195+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-22T12:55:59.4282591+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-22T12:55:59.4283011+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-22T12:55:59.4283477+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-22T12:55:59.4283922+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-22T12:55:59.4284284+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-22T12:55:59.4284798+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-22T12:55:59.4285176+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-22T12:55:59.4287613+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-22T12:55:59.4288455+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-22T12:55:59.4444616+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-22T12:55:59.449923+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=947.7µs
+logger=secrets t=2024-04-22T12:55:59.4506663+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-22T12:55:59.5429165+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-22T12:55:59.5429946+09:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.loader t=2024-04-22T12:55:59.6354069+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-app
+logger=plugin.loader t=2024-04-22T12:55:59.6354973+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-datasource
+logger=plugin.loader t=2024-04-22T12:55:59.6549343+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-triggers-panel
+logger=query_data t=2024-04-22T12:55:59.6630018+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-22T12:55:59.6661772+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-22T12:56:00.7327733+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-22T12:56:00.7343209+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-22T12:56:00.7344324+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-04-22T12:56:00.7346754+09:00 level=info msg="Warming state cache for startup"
+logger=modules t=2024-04-22T12:56:00.7346612+09:00 level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2024-04-22T12:56:00.7349039+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-04-22T12:56:00.7349436+09:00 level=info msg="State cache has been initialized" states=0 duration=267.4µs
+logger=ticker t=2024-04-22T12:56:00.7351621+09:00 level=info msg=starting first_tick=2024-04-22T12:56:10+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-22T12:56:00.7352277+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2024-04-22T12:56:00.737597+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-22T12:56:00.8309822+09:00 level=info msg="Update check succeeded" duration=95.9377ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T12:56:00.9085924+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=4 duration=4.9186ms size=0 referer= handler=/api/live/ws
+logger=plugins.update.checker t=2024-04-22T12:56:01.0088808+09:00 level=info msg="Update check succeeded" duration=273.2226ms
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T12:56:36.6261468+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T12:56:36.6283517+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T12:56:36.6288454+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=12 duration=12.0055ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T12:58:02.5811399+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T12:58:02.5830613+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T12:58:02.5834899+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=6 duration=6.318ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=context userId=0 orgId=0 uname= t=2024-04-22T12:59:45.3500594+09:00 level=info msg="Request Completed" method=PUT path=/api/datasources/uid/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 status=401 remote_addr=[::1] time_ms=0 duration=348.4µs size=27 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/uid/:uid
+logger=context userId=0 orgId=0 uname= t=2024-04-22T12:59:45.352499+09:00 level=info msg="Request Completed" method=GET path=/api/login/ping status=401 remote_addr=[::1] time_ms=0 duration=222.8µs size=26 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/login/ping
+logger=context userId=0 orgId=0 uname= t=2024-04-22T12:59:45.3599074+09:00 level=info msg="Access denied" userID=0 accessErrorID=ACE0922699344 permissions="all(action:datasources:read scopes: action:datasources:write scopes:)"
+logger=context userId=0 orgId=0 uname= t=2024-04-22T12:59:45.360034+09:00 level=info msg="Request Completed" method=GET path=/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 status=302 remote_addr=[::1] time_ms=0 duration=404.8µs size=24 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/connections/your-connections/datasources/edit/*
+logger=context userId=0 orgId=0 uname= t=2024-04-22T12:59:45.3630026+09:00 level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=[::1] time_ms=0 duration=269.2µs size=29 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/
+logger=http.server t=2024-04-22T12:59:50.2161511+09:00 level=info msg="Successful Login" User=admin@localhost
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T12:59:52.7292869+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=592.7µs size=0 referer= handler=/api/live/ws
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T12:59:55.2294803+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T12:59:55.2315168+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T12:59:55.2318289+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=5 duration=5.8173ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:00:03.3722982+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:00:03.3739159+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:00:03.3742224+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=5 duration=5.6843ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:02:35.5209138+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:02:35.5228362+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:02:35.5231506+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=5 duration=5.7633ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:03:53.2449812+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:03:53.2466189+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:03:53.2469661+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=4 duration=4.7461ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:04:07.8521378+09:00 level=error msg="Zabbix authentication error" error="Invalid params. Incorrect user name or password or account is temporarily blocked."
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:04:07.8522936+09:00 level=error msg="Zabbix API request error" error="Invalid params. Incorrect user name or password or account is temporarily blocked."
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:04:07.8525234+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=12 duration=12.9954ms size=128 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:04:15.9916796+09:00 level=error msg="Zabbix authentication error" error="Invalid params. Incorrect user name or password or account is temporarily blocked."
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:04:15.9917844+09:00 level=error msg="Zabbix API request error" error="Invalid params. Incorrect user name or password or account is temporarily blocked."
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:04:15.9920034+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/6/resources/zabbix-api status=500 remote_addr=[::1] time_ms=9 duration=9.9263ms size=128 referer=http://localhost:3000/connections/your-connections/datasources/edit/ca584e0c-bf7e-4ca3-9731-1880ea0546b2 handler=/api/datasources/:id/resources/*
+logger=cleanup t=2024-04-22T13:06:00.7377526+09:00 level=info msg="Completed cleanup jobs" duration=2.5429ms
+logger=grafana.update.checker t=2024-04-22T13:06:00.849905+09:00 level=info msg="Update check succeeded" duration=17.1862ms
+logger=plugins.update.checker t=2024-04-22T13:06:01.2058239+09:00 level=info msg="Update check succeeded" duration=196.5517ms
+logger=sqlstore.transactions t=2024-04-22T13:07:21.5836833+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=cleanup t=2024-04-22T13:16:00.7476468+09:00 level=info msg="Completed cleanup jobs" duration=11.4264ms
+logger=grafana.update.checker t=2024-04-22T13:16:00.8488964+09:00 level=info msg="Update check succeeded" duration=17.5381ms
+logger=plugins.update.checker t=2024-04-22T13:16:01.2089988+09:00 level=info msg="Update check succeeded" duration=199.5026ms
+logger=cleanup t=2024-04-22T13:26:00.760279+09:00 level=info msg="Completed cleanup jobs" duration=25.2197ms
+logger=grafana.update.checker t=2024-04-22T13:26:00.8495225+09:00 level=info msg="Update check succeeded" duration=18.3832ms
+logger=plugins.update.checker t=2024-04-22T13:26:01.208703+09:00 level=info msg="Update check succeeded" duration=197.8432ms
+logger=cleanup t=2024-04-22T13:36:00.7630429+09:00 level=info msg="Completed cleanup jobs" duration=27.3358ms
+logger=grafana.update.checker t=2024-04-22T13:36:00.8489193+09:00 level=info msg="Update check succeeded" duration=16.4655ms
+logger=plugins.update.checker t=2024-04-22T13:36:01.2042685+09:00 level=info msg="Update check succeeded" duration=194.6848ms
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:39:41.1173174+09:00 level=error msg="bad request data" error="invalid character 'T' looking for beginning of value" remote_addr=[::1] traceID=
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:39:41.1174374+09:00 level=info msg="Request Completed" method=POST path=/api/datasources/ status=400 remote_addr=[::1] time_ms=9 duration=9.2147ms size=43 referer= handler=/api/datasources/
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:40:12.2573602+09:00 level=error msg="bad request data" error="invalid character 'T' looking for beginning of value" remote_addr=[::1] traceID=
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:40:12.2574766+09:00 level=info msg="Request Completed" method=POST path=/api/datasources/ status=400 remote_addr=[::1] time_ms=10 duration=10.6983ms size=43 referer= handler=/api/datasources/
+logger=sqlstore.transactions t=2024-04-22T13:41:19.2170486+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:42:25.3214898+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=559.1µs size=0 referer= handler=/api/live/ws
+logger=sqlstore.transactions t=2024-04-22T13:42:43.9979828+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:42:46.2299691+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=628µs size=0 referer= handler=/api/live/ws
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:43:32.2481346+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:43:32.2497856+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:43:32.2501238+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/11/resources/zabbix-api status=500 remote_addr=[::1] time_ms=6 duration=6.1135ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/a2ad8add-08f6-4820-b9c2-cffc9f56f0b7 handler=/api/datasources/:id/resources/*
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:43:44.9865305+09:00 level=info msg="Request Completed" method=DELETE path=/api/datasources/1 status=404 remote_addr=[::1] time_ms=11 duration=11.1829ms size=35 referer= handler=/api/datasources/:id
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:43:52.0498497+09:00 level=info msg="Request Completed" method=DELETE path=/api/datasources/46 status=404 remote_addr=[::1] time_ms=8 duration=8.8298ms size=35 referer= handler=/api/datasources/:id
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:43:53.9411424+09:00 level=info msg="Request Completed" method=DELETE path=/api/datasources/5 status=404 remote_addr=[::1] time_ms=10 duration=10.8159ms size=35 referer= handler=/api/datasources/:id
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:43:55.0474907+09:00 level=info msg="Request Completed" method=DELETE path=/api/datasources/6 status=404 remote_addr=[::1] time_ms=21 duration=21.4622ms size=35 referer= handler=/api/datasources/:id
+logger=sqlstore.transactions t=2024-04-22T13:43:55.7127146+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:43:56.6110325+09:00 level=info msg="Request Completed" method=DELETE path=/api/datasources/8 status=404 remote_addr=[::1] time_ms=11 duration=11.0379ms size=35 referer= handler=/api/datasources/:id
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:43:57.1095491+09:00 level=info msg="Request Completed" method=DELETE path=/api/datasources/9 status=404 remote_addr=[::1] time_ms=8 duration=8.7194ms size=35 referer= handler=/api/datasources/:id
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:43:57.4900553+09:00 level=info msg="Request Completed" method=DELETE path=/api/datasources/9 status=404 remote_addr=[::1] time_ms=9 duration=9.0869ms size=35 referer= handler=/api/datasources/:id
+logger=sqlstore.transactions t=2024-04-22T13:44:05.0268065+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:44:14.2238595+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=750.8µs size=0 referer= handler=/api/live/ws
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:44:28.3183649+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:44:28.3200487+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:44:28.3203921+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/13/resources/zabbix-api status=500 remote_addr=[::1] time_ms=5 duration=5.0341ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/a68117ca-1bb5-466c-ba82-bbe7ee677db6 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:45:33.5500719+09:00 level=error msg="Error querying Zabbix version" error="invalid character '<' looking for beginning of value"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:45:33.5594009+09:00 level=error msg="Zabbix API request error" error="invalid character '<' looking for beginning of value"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:45:33.5599353+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/13/resources/zabbix-api status=500 remote_addr=[::1] time_ms=21 duration=21.3697ms size=103 referer=http://localhost:3000/connections/your-connections/datasources/edit/a68117ca-1bb5-466c-ba82-bbe7ee677db6 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:45:41.9562025+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T13:45:41.9582337+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:45:41.9586272+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/13/resources/zabbix-api status=500 remote_addr=[::1] time_ms=6 duration=6.0629ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/a68117ca-1bb5-466c-ba82-bbe7ee677db6 handler=/api/datasources/:id/resources/*
+logger=cleanup t=2024-04-22T13:46:00.7627347+09:00 level=info msg="Completed cleanup jobs" duration=27.2711ms
+logger=grafana.update.checker t=2024-04-22T13:46:00.8474181+09:00 level=info msg="Update check succeeded" duration=15.1456ms
+logger=plugins.update.checker t=2024-04-22T13:46:01.2056512+09:00 level=info msg="Update check succeeded" duration=196.0704ms
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:48:06.5560237+09:00 level=error msg="bad request data" error="invalid character '}' looking for beginning of object key string" remote_addr=[::1] traceID=
+logger=context userId=0 orgId=1 uname= t=2024-04-22T13:48:06.5562032+09:00 level=info msg="Request Completed" method=POST path=/api/datasources/ status=400 remote_addr=[::1] time_ms=9 duration=9.2136ms size=43 referer= handler=/api/datasources/
+logger=sqlstore.transactions t=2024-04-22T13:48:10.0836879+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:48:12.7213237+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=2 duration=2.1989ms size=0 referer= handler=/api/live/ws
+logger=sqlstore.transactions t=2024-04-22T13:48:36.7827408+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=sqlstore.transactions t=2024-04-22T13:48:38.212161+09:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T13:48:40.8968349+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=594.5µs size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-04-22T13:56:00.7425732+09:00 level=info msg="Completed cleanup jobs" duration=5.8455ms
+logger=grafana.update.checker t=2024-04-22T13:56:00.8458356+09:00 level=info msg="Update check succeeded" duration=14.4744ms
+logger=plugins.update.checker t=2024-04-22T13:56:01.2264812+09:00 level=info msg="Update check succeeded" duration=216.7314ms
+logger=cleanup t=2024-04-22T14:06:00.7402244+09:00 level=info msg="Completed cleanup jobs" duration=3.8425ms
+logger=grafana.update.checker t=2024-04-22T14:06:00.8495233+09:00 level=info msg="Update check succeeded" duration=16.6109ms
+logger=plugins.update.checker t=2024-04-22T14:06:01.2132221+09:00 level=info msg="Update check succeeded" duration=203.9233ms
+logger=cleanup t=2024-04-22T14:16:00.7475096+09:00 level=info msg="Completed cleanup jobs" duration=12.3588ms
+logger=grafana.update.checker t=2024-04-22T14:16:00.8473495+09:00 level=info msg="Update check succeeded" duration=14.6234ms
+logger=plugins.update.checker t=2024-04-22T14:16:01.2104515+09:00 level=info msg="Update check succeeded" duration=199.5594ms
+logger=cleanup t=2024-04-22T14:26:00.7489037+09:00 level=info msg="Completed cleanup jobs" duration=11.7511ms
+logger=grafana.update.checker t=2024-04-22T14:26:00.8585634+09:00 level=info msg="Update check succeeded" duration=26.6738ms
+logger=plugins.update.checker t=2024-04-22T14:26:01.2069949+09:00 level=info msg="Update check succeeded" duration=196.3916ms
+logger=cleanup t=2024-04-22T14:36:00.7482549+09:00 level=info msg="Completed cleanup jobs" duration=11.5037ms
+logger=grafana.update.checker t=2024-04-22T14:36:00.8490002+09:00 level=info msg="Update check succeeded" duration=16.4514ms
+logger=plugins.update.checker t=2024-04-22T14:36:01.2061148+09:00 level=info msg="Update check succeeded" duration=195.3887ms
+logger=server t=2024-04-22T14:36:24.8323529+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-04-22T14:36:24.8325639+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-04-22T14:36:24.8328194+09:00 level=info msg=stopped last_tick=2024-04-22T14:36:20+09:00
+logger=settings t=2024-04-22T14:36:26.5946125+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-22T14:36:26.5949453+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-22T14:36:26.595024+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-22T14:36:26.5950576+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-22T14:36:26.5950877+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-22T14:36:26.5951137+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-22T14:36:26.595138+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-22T14:36:26.5951629+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-22T14:36:26.5951874+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-22T14:36:26.5952108+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-22T14:36:26.5954127+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-22T14:36:26.5954937+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-22T14:36:26.6108859+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-22T14:36:26.6156746+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=755.8µs
+logger=secrets t=2024-04-22T14:36:26.6162823+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-22T14:36:26.7173337+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-22T14:36:26.7174161+09:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.loader t=2024-04-22T14:36:26.8071396+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-app
+logger=plugin.loader t=2024-04-22T14:36:26.8072776+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-triggers-panel
+logger=plugin.loader t=2024-04-22T14:36:26.8073238+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-datasource
+logger=query_data t=2024-04-22T14:36:26.8289173+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-22T14:36:26.8310679+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-22T14:36:27.894208+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-22T14:36:27.8966847+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-22T14:36:27.8967721+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-22T14:36:27.8969246+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-22T14:36:27.8969598+09:00 level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2024-04-22T14:36:27.8976236+09:00 level=info msg="State cache has been initialized" states=0 duration=663µs
+logger=ticker t=2024-04-22T14:36:27.8978717+09:00 level=info msg=starting first_tick=2024-04-22T14:36:30+09:00
+logger=grafanaStorageLogger t=2024-04-22T14:36:27.8978963+09:00 level=info msg="storage starting"
+logger=ngalert.multiorg.alertmanager t=2024-04-22T14:36:27.8978746+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2024-04-22T14:36:27.9002896+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-04-22T14:36:27.9905517+09:00 level=info msg="Update check succeeded" duration=93.6429ms
+logger=plugins.update.checker t=2024-04-22T14:36:28.1668882+09:00 level=info msg="Update check succeeded" duration=269.8964ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T14:36:28.1856074+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=14 duration=14.417ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T14:36:55.2148546+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=836.8µs size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-04-22T14:46:27.9122888+09:00 level=info msg="Completed cleanup jobs" duration=13.3312ms
+logger=grafana.update.checker t=2024-04-22T14:46:28.0049888+09:00 level=info msg="Update check succeeded" duration=14.252ms
+logger=plugins.update.checker t=2024-04-22T14:46:28.3594702+09:00 level=info msg="Update check succeeded" duration=192.3002ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T14:52:45.5775549+09:00 level=error msg="Failed to build evaluator for queries and expressions: expression 'A' cannot reference itself. Must be query or another expression" error="Failed to build evaluator for queries and expressions: expression 'A' cannot reference itself. Must be query or another expression" remote_addr=[::1] traceID=
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T14:52:45.5777623+09:00 level=info msg="Request Completed" method=POST path=/api/v1/eval status=400 remote_addr=[::1] time_ms=2 duration=2.83ms size=157 referer=http://localhost:3000/alerting/new handler=/api/v1/eval
+logger=cleanup t=2024-04-22T14:56:27.9027586+09:00 level=info msg="Completed cleanup jobs" duration=3.7131ms
+logger=grafana.update.checker t=2024-04-22T14:56:28.0058712+09:00 level=info msg="Update check succeeded" duration=14.6405ms
+logger=plugins.update.checker t=2024-04-22T14:56:28.3665988+09:00 level=info msg="Update check succeeded" duration=199.2677ms
+logger=cleanup t=2024-04-22T15:06:27.9064208+09:00 level=info msg="Completed cleanup jobs" duration=9.0094ms
+logger=grafana.update.checker t=2024-04-22T15:06:28.0063095+09:00 level=info msg="Update check succeeded" duration=14.7163ms
+logger=plugins.update.checker t=2024-04-22T15:06:28.3626589+09:00 level=info msg="Update check succeeded" duration=194.2685ms
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:11:40.0259221+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:11:40.0274616+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:11:40.0278691+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/16/resources/zabbix-api status=500 remote_addr=[::1] time_ms=10 duration=10.073ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/e807ff02-b917-4a34-a473-d5235b1b68e3 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:11:46.0680222+09:00 level=error msg="Error querying Zabbix version" error="request failed, status: 404 Not Found"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:11:46.0695943+09:00 level=error msg="Zabbix API request error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:11:46.069927+09:00 level=error msg="Request Completed" method=POST path=/api/datasources/16/resources/zabbix-api status=500 remote_addr=[::1] time_ms=4 duration=4.8642ms size=83 referer=http://localhost:3000/connections/your-connections/datasources/edit/e807ff02-b917-4a34-a473-d5235b1b68e3 handler=/api/datasources/:id/resources/*
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:18.8410474+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:18.8438492+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:18.8462103+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=15 duration=15.8691ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:28.3798452+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:28.382088+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:28.3823455+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=7 duration=7.9451ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:35.4367897+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:35.4384868+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:35.4390692+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=6 duration=6.5398ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:43.8848291+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:43.8868229+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:43.8870442+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=8 duration=8.4088ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:46.5280076+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:46.5303158+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:46.5306095+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=5 duration=5.4637ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:46.9676087+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:46.9693696+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:46.9694367+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=4 duration=4.8274ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:47.3237829+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:47.3258759+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:47.3264075+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=5 duration=5.5014ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:51.6110938+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:51.611328+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=3 duration=3.3921ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:52.6238014+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:52.6240615+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=4 duration=4.5706ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:53.3793944+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:53.3809532+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:53.3811945+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=4 duration=4.8201ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:55.3983156+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:55.399765+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:55.3999944+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=4 duration=4.4338ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:57.0192717+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:57.0231249+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:57.0234923+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=8 duration=8.6874ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:59.379605+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:12:59.3815032+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:12:59.38181+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=5 duration=5.3466ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:17.8982331+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:17.9009739+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:13:17.9012111+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=6 duration=6.832ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1&tab=query" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:19.7238734+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:19.7264448+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:13:19.7271089+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=6 duration=6.2569ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1&tab=query" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:30.9350339+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:30.9365221+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:13:30.9367615+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=5 duration=5.573ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1&tab=query" handler=/api/ds/query
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:32.6294434+09:00 level=warn msg="Error getting Zabbix version"
+logger=plugin.alexanderzobnin-zabbix-datasource t=2024-04-22T15:13:32.6315578+09:00 level=error msg="Zabbix authentication error" error="request failed, status: 404 Not Found"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:13:32.631817+09:00 level=info msg="Request Completed" method=POST path=/api/ds/query status=400 remote_addr=[::1] time_ms=5 duration=5.0886ms size=93 referer="http://localhost:3000/dashboard/new?editPanel=1&folderUid=c91936d0-6796-4936-86e9-be9264fdc5a6&orgId=1&tab=query" handler=/api/ds/query
+logger=cleanup t=2024-04-22T15:16:27.9266531+09:00 level=info msg="Completed cleanup jobs" duration=27.7846ms
+logger=grafana.update.checker t=2024-04-22T15:16:28.0070885+09:00 level=info msg="Update check succeeded" duration=14.9771ms
+logger=plugins.update.checker t=2024-04-22T15:16:28.3698634+09:00 level=info msg="Update check succeeded" duration=202.0472ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:16:48.9987808+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=602.3µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-22T15:16:50.8644504+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-22T15:16:50.8646042+09:00 level=info msg=stopped last_tick=2024-04-22T15:16:50+09:00
+logger=tracing t=2024-04-22T15:16:50.8649562+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-22T15:16:52.7585499+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-22T15:16:52.7591605+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-22T15:16:52.7592633+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-22T15:16:52.7593021+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-22T15:16:52.7593446+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-22T15:16:52.7593706+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-22T15:16:52.7593941+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-22T15:16:52.7594186+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-22T15:16:52.7594404+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-22T15:16:52.759463+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-22T15:16:52.7597029+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-22T15:16:52.7598092+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-22T15:16:52.7777806+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-22T15:16:52.78329+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=692.5µs
+logger=secrets t=2024-04-22T15:16:52.7838391+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-22T15:16:52.8877019+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-22T15:16:52.8877906+09:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.loader t=2024-04-22T15:16:52.9801086+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-app
+logger=plugin.loader t=2024-04-22T15:16:52.9802475+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-datasource
+logger=plugin.loader t=2024-04-22T15:16:52.9977655+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-triggers-panel
+logger=query_data t=2024-04-22T15:16:53.0048181+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-22T15:16:53.0071141+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-22T15:16:54.101396+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-22T15:16:54.1033802+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-22T15:16:54.1034862+09:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-04-22T15:16:54.1046449+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-22T15:16:54.1067684+09:00 level=info msg="storage starting"
+logger=http.server t=2024-04-22T15:16:54.1084112+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=modules t=2024-04-22T15:16:54.1050428+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-22T15:16:54.1323156+09:00 level=info msg="State cache has been initialized" states=0 duration=27.6664ms
+logger=ticker t=2024-04-22T15:16:54.1328+09:00 level=info msg=starting first_tick=2024-04-22T15:17:00+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-22T15:16:54.1331367+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-04-22T15:16:54.2060865+09:00 level=info msg="Update check succeeded" duration=102.4478ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:16:54.3084342+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.5167ms size=0 referer= handler=/api/live/ws
+logger=plugins.update.checker t=2024-04-22T15:16:54.3835848+09:00 level=info msg="Update check succeeded" duration=279.7659ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:16:54.6109726+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=977.8µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:16:57.8495481+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=892.6µs size=0 referer= handler=/api/live/ws
+logger=server t=2024-04-22T15:17:05.1262244+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-04-22T15:17:05.1264179+09:00 level=info msg=stopped last_tick=2024-04-22T15:17:00+09:00
+logger=tracing t=2024-04-22T15:17:05.1275277+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-04-22T15:17:18.1593508+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=058c8a3f branch=main compiled=2024-04-03T13:30:45+09:00
+logger=settings t=2024-04-22T15:17:18.1601246+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-04-22T15:17:18.1602023+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-04-22T15:17:18.1602429+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-04-22T15:17:18.1602785+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-04-22T15:17:18.1603097+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-04-22T15:17:18.1603381+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-04-22T15:17:18.160367+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-04-22T15:17:18.1603985+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-04-22T15:17:18.1604379+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-04-22T15:17:18.1611569+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-04-22T15:17:18.161261+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-04-22T15:17:18.178157+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-04-22T15:17:18.1862317+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=1.5625ms
+logger=secrets t=2024-04-22T15:17:18.1871896+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-04-22T15:17:18.3253984+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-04-22T15:17:18.3254991+09:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.loader t=2024-04-22T15:17:18.4634679+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-app
+logger=plugin.loader t=2024-04-22T15:17:18.4635864+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-triggers-panel
+logger=plugin.loader t=2024-04-22T15:17:18.4636268+09:00 level=info msg="Plugin registered" pluginID=alexanderzobnin-zabbix-datasource
+logger=query_data t=2024-04-22T15:17:18.4981995+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-04-22T15:17:18.5054877+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-04-22T15:17:19.8105474+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-04-22T15:17:19.8125416+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-04-22T15:17:19.8126522+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-04-22T15:17:19.8131305+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-04-22T15:17:19.8137073+09:00 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-04-22T15:17:19.8227726+09:00 level=info msg="storage starting"
+logger=http.server t=2024-04-22T15:17:19.8270287+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-04-22T15:17:19.8420021+09:00 level=info msg="State cache has been initialized" states=0 duration=28.2912ms
+logger=ticker t=2024-04-22T15:17:19.8421777+09:00 level=info msg=starting first_tick=2024-04-22T15:17:20+09:00
+logger=ngalert.multiorg.alertmanager t=2024-04-22T15:17:19.8422298+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:17:19.9166246+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=2 duration=2.1093ms size=0 referer= handler=/api/live/ws
+logger=grafana.update.checker t=2024-04-22T15:17:19.934577+09:00 level=info msg="Update check succeeded" duration=121.0655ms
+logger=plugins.update.checker t=2024-04-22T15:17:20.2598094+09:00 level=info msg="Update check succeeded" duration=445.8677ms
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:17:20.4057499+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=790.7µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:17:35.2803749+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=681.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:17:47.8089559+09:00 level=info msg="Request Completed" method=GET path=/test/adminm status=404 remote_addr=[::1] time_ms=4 duration=4.8347ms size=40471 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:17:48.0304176+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=575.3µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:17:51.8787947+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.5539ms size=40471 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:17:52.0714424+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=581.6µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:18:33.5062085+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=6 duration=6.6923ms size=46057 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:18:35.858522+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=767µs size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:18:51.1257622+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=622.1µs size=0 referer= handler=/api/live/ws
+logger=live t=2024-04-22T15:19:16.1923646+09:00 level=info msg="Initialized channel handler" channel=grafana/dashboard/uid/eca0f0a2-e6ee-4caa-9bdf-b17193e471a9 address=grafana/dashboard/uid/eca0f0a2-e6ee-4caa-9bdf-b17193e471a9
