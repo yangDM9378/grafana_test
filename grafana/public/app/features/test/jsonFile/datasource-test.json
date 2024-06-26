@@ -1,0 +1,21 @@
+{
+    "zabbix": {
+        "name": "",
+        "type": "alexanderzobnin-zabbix-datasource",
+        "access": "proxy",
+        "url": "zabbix/api_jsonrpc.php",
+        "jsonData": {
+            "username": "Admin",
+            "password": "zabbix"
+        },
+        "version": 1,
+        "editable": false
+    },
+    "prometheus": {
+        "name": "",
+        "type": "prometheus",
+        "url": "9090",
+        "access": "proxy",
+        "basicAuth": false
+    }
+}

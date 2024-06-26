@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 // import TestAlarm from './testAlarm'
-import TestGenerator from './testGenerator'
-import ServerList from './components/serverList';
+import TestGenerator from './components/testGenerator';
+import AlertConfig from './components/alertConfig'
 
 interface Rack {
   id: number;
@@ -10,19 +10,38 @@ interface Rack {
   dashboards: string;
 }
 
+interface DashboardStatusMap {
+  [dashboardUid:string] : boolean;
+}
+
 export default function TestAdmin() {
   const [rackData, setRackData] = useState<Rack[]>([])
   const [selectedRack, setSelectedRack] = useState<number>(-1);
   const [openAddServer, setOpenAddServer] = useState<boolean>(false);
-
+  const [openAlertConfig, setOpenAlertConfig] = useState<boolean>(false);
+  const [rackServerData, setRackServerData] = useState<{ dashboard: any, meta: any }[]>([]);
+  const [selectDashboardUid, setSelectDashboardUid] = useState<string>('')
+  const [selectFolderUid, setSelectFolderUid] = useState<string>('')
+  const [dashboardStatusMap, setDashboardStatusMap] = useState<DashboardStatusMap>({});
+  
   useEffect(() => {
     fetchRackData()
+    fetchDashboardStatus();
+    // const interval = setInterval(() => {
+    //   fetchDashboardStatus();
+    // }, 5000);
+  
+    // return () => clearInterval(interval);
   }, [])
+
+  useEffect(() => {
+    fetchRackServer()
+    setOpenAddServer(false)
+  },[selectedRack])
 
   const fetchRackData = async () => {
     try {
       const rackRes = await axios.get('http://127.0.0.1:5000/racks');
-      console.log(rackRes)
       setRackData(rackRes.data)
     } catch (error) {
       console.error('API 호출 중 오류 발생:', error);
@@ -41,19 +60,81 @@ export default function TestAdmin() {
   const selectRack = (rackId: number) => {
     setSelectedRack(rackId);
   }
-  
+
+  const fetchRackServer = async () => {
+    try {
+      const rackServerRes = await axios.get(`http://127.0.0.1:5000/racks/${selectedRack}/servers`)
+      const serversData = [];
+      for (const server_uid of rackServerRes.data) {
+        const serverDataRes = await axios.get(`http://localhost:3000/api/dashboards/uid/${server_uid}`);
+        serversData.push(serverDataRes.data);
+      }
+      setRackServerData(serversData)
+    } catch (error) {
+      console.log()
+    }
+  }
+
+  const fetchDashboardStatus = async () => {
+    try {
+      console.log('통신중')
+      const dashboardStatusRes = await axios.get(`http://127.0.0.1:5000/alarm/status`);
+      setDashboardStatusMap(dashboardStatusRes.data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const handleAddServerClick = () => {
+    setOpenAddServer(true);
+  };
+
+  const handleServerClick = (dashboardUid: string, folderUid:string) => {
+    setSelectDashboardUid(dashboardUid)
+    setSelectFolderUid(folderUid)
+    setOpenAlertConfig(true);
+    setOpenAddServer(false);
+    setSelectedRack(-1);
+  }
 
   return (
     <div>
-      <div style={{ width: '60%', height: '800px', border: "3px solid #ffffff", position: 'relative' }}>
+      <div style={{height: '800px', border: "3px solid #ffffff", position: 'relative' }}>
         <p>3D Fab</p>
         {rackData.map((rack:Rack) => (
           <li key={rack.id} onClick={() => selectRack(rack.id)}>{rack.id}번째 랙입니다.</li>
         ))}
         <button onClick={createRack}>Rack 생성</button>
-        {selectedRack !== -1 && <ServerList selectedRack={selectedRack} setOpenAddServer={setOpenAddServer} />}
-        {openAddServer && <TestGenerator selectedRack={selectedRack} />}
+        <div style={{ position: 'absolute', top: '0', right: '0', border: '3px solid yellow', display:'flex' }}>
+          {openAddServer && <TestGenerator selectedRack={selectedRack} />}
+          {selectedRack !== -1 && (
+            <div>
+              <h1>ServerList</h1>
+              <div>{selectedRack}번째 Rack</div>
+              {rackServerData.map((rackServer:any, index:number) => (
+                <div key={index} style={{border: '3px solid blue'}} onClick={() => handleServerClick(rackServer.dashboard.uid,rackServer.meta.folderUid)}>
+                  <div>dashboard uid{rackServer.dashboard.uid}</div>
+                  <div>dashboard title{rackServer.dashboard.title}</div>
+                  <div>folder title{rackServer.meta.folderTitle}</div>
+                  <div>folder uid {rackServer.meta.folderUid}</div>
+                  <div>url{rackServer.meta.url}</div>
+                  {dashboardStatusMap[rackServer.dashboard.uid] === true ? (
+                      <div>Alerting</div>
+                    ) : (
+                      <div>No Alerting</div>
+                    )}
+                </div>
+              )
+              )}
+              <button onClick={handleAddServerClick}>서버 추가하기</button>
+            </div>
+          )}
+        </div>
+        <div style={{ position: 'absolute', top: '0', right: '0', border: '3px solid yellow', display:'flex' }}>
+          {openAlertConfig && <AlertConfig selectDashboardUId={selectDashboardUid} selectFolderUid={selectFolderUid}/>}
+        </div>
       </div>
+      
     </div>
   )
 }
