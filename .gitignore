@@ -32,6 +32,7 @@ npm_licenses.tar.bz2
 /**/node_modules
 
 backend/.venv/
+backend/venv/
 
 # Ignore parser debug
 y.output

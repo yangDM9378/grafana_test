@@ -1,6 +1,9 @@
 # grafana_test
 
 - 해당 repo는 Grafana를 Custom test를 진행해보기 위한 test repo이다.
+- test 개발 예정 페이지 정보
+  - Test1. 전체 Alarm에 대한 발생 정보를 제공하는 page
+  - Test2. 서버 연결 및 연결 확인 가능한 Admin page 개발
 
 ## 버전 정보
 
@@ -96,10 +99,38 @@ make run
 yarn install
 yarn start
 ```
+- 빌드시 오류 발생 (go 환경 변수 등록 경로 문제)
+```bash
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+```
 
 - grafana의 경우 go와 yarn을 실행 필요
 - 초기 빌드 후 bin/grafana-server를 실행 가능
 - frontend 코드 수정시 재시작 필요
+
+## flask Python API 서버 실행
+
+- python 설치 필요
+- python 가상환경 설치 후 flask 설치
+
+```bash
+python3 -m venv .venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+- 빌드시 오류 발생 (go 환경 변수 등록 경로 문제)
+```bash
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+```
+
+- grafana의 경우 go와 yarn을 실행 필요
+- 초기 빌드 후 bin/grafana-server를 실행 가능
+- frontend 코드 수정시 재시작 필요
+
 
 ## test 용 custom 페이지 생성 (localhost:3000/test)
 
@@ -107,9 +138,10 @@ yarn start
 - grafana/public/app/routes.tsx에서 경로를 통해 tsx 또는 jsx 파일 import하여 적용
 - 백엔드 프론트엔드 재빌드시 적용
 
-# Custom Test 1. Alert History Page (2024년 3월 26일 완료) -> 구조 리팩토링 예정
+# Custom Test 1. Alert History Page
 
-- 해당 내용은 /grafana/public/features/testAlertHistory.tsx에 있음
+- /grafana/public/features/test/testAlertHistory.tsx 개발
+
 
 ## 개요
 
@@ -123,7 +155,53 @@ yarn start
 - grafana db의 annotation에 알람 상태 변경 시 데이터 적재 (대시보드의 패널의 annotation도 같이 적재 됨)
 - grafana backend API에서 Alert History Page 기능 구현을 위해 필요한 API를 사용하여 구현
 
+## 기능
+- grafana alert를 통해 울린 모든 alarm의 정보를 화면에 전시
+
 ## 화면 구성안
 
 - grafana에서 Alert-rule에 의해 발생하는 Alarm의 alarm rule 정보, 대시보드 정보, 알람 발생 시간 정보를 제공
 - 날짜별로 발생한 알람을 분류하여 정보 제공
+
+# Custom Test 1-1. Alert History Page Flask로 통해 로직 이전
+
+- /grafana/public/features/test/testAlert/refactoringTestAlertHistory.tsx 개발
+- /backend/alarm_History_API.py 개발
+
+## 개요
+
+- 백엔드에서 로직을 처리하여 프론트엔드에서의 성능 향상
+- 백엔드에서 원하는 형태의 json 파일로 프론트엔드에서는 해당 데이터를 보여주기 위해서 개발
+
+## 개발 방향성
+
+- 기존의 frontend에 있던 Alert History 로직을 backend로 이동
+- backend에서 frontend에서 보여줄 데이터를 처리하여 json 형식으로 전송
+
+## 기능
+
+- 기존 Alert History Page와 동일
+
+## 화면 구성안
+
+- 기존 Alert History Page와 동일
+
+# Custom Test 2. 서버 연결 및 연결 확인 가능한 Admin page 개발
+
+## 개요
+
+- grafana의 경우 대시보드를 생성하기 위해 plugin을 통해 datasouce와 dashboard를 생성하는 과정이 필요
+- 많은 plugin 중 실제로 사용할 plugin은 몇개 되지 않는데 사용자가 직접 설정할 경우 많은 plugin 중 선택해야하는 문제 (promethus를 기본으로 하는 datasource를 생성하도록 custom)
+- 특정 exporter에 따른 dashboard template을 통해 정해진 dashboard를 생성
+- dashboard를 연결된 exporter가 설치된 서버라고 생각하고 
+
+## 개발 방향성
+
+- grafana의 내부 api(/swagger)를 통해 datasource를 생성 (promethus로 생성)
+- datasouce를 생성 후 해당 template 양식(Json 파일)을 통해 dashboard 생성
+
+## 화면 구성안
+
+- 서버를 담는 Rack 생성 버튼 클릭 시 빈 Rack 생성
+- Rack 클릭 시 Rack에 생성한 서버 리스트 전시
+- 서버 추가 버튼 클릭 시 iP주소 / 서버 명 / Template 선택 하여 datasource와 dashboard 생성

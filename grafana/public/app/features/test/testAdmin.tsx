@@ -100,7 +100,7 @@ export default function TestAdmin() {
   return (
     <div>
       <div style={{height: '800px', border: "3px solid #ffffff", position: 'relative' }}>
-        <p>3D Fab</p>
+        <p>Admin Page</p>
         {rackData.map((rack:Rack) => (
           <li key={rack.id} onClick={() => selectRack(rack.id)}>{rack.id}번째 랙입니다.</li>
         ))}

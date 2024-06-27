@@ -15404,3 +15404,136 @@ logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:18:33.5062085+09:00 
 logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:18:35.858522+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=767µs size=0 referer= handler=/api/live/ws
 logger=context userId=1 orgId=1 uname=admin t=2024-04-22T15:18:51.1257622+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=622.1µs size=0 referer= handler=/api/live/ws
 logger=live t=2024-04-22T15:19:16.1923646+09:00 level=info msg="Initialized channel handler" channel=grafana/dashboard/uid/eca0f0a2-e6ee-4caa-9bdf-b17193e471a9 address=grafana/dashboard/uid/eca0f0a2-e6ee-4caa-9bdf-b17193e471a9
+logger=settings t=2024-06-27T13:46:21.5126851+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=14ab27bc branch=main compiled=2024-04-17T12:44:53+09:00
+logger=settings t=2024-06-27T13:46:21.5132594+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-06-27T13:46:21.5133464+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-06-27T13:46:21.5133826+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-06-27T13:46:21.5134127+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-06-27T13:46:21.5134367+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-06-27T13:46:21.5134748+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-06-27T13:46:21.5134971+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-06-27T13:46:21.5135283+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-06-27T13:46:21.5135498+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-06-27T13:46:21.5144227+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-06-27T13:46:21.5147576+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-06-27T13:46:21.5507517+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-06-27T13:46:21.5557182+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=776.9µs
+logger=secrets t=2024-06-27T13:46:21.5579122+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-06-27T13:46:21.8507988+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-06-27T13:46:21.8508961+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-06-27T13:46:21.8509577+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-06-27T13:46:21.9441132+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-06-27T13:46:21.9534125+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-06-27T13:46:22.9597442+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-06-27T13:46:22.9862995+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-06-27T13:46:22.986409+09:00 level=info msg="finished to provision alerting"
+logger=modules t=2024-06-27T13:46:22.988165+09:00 level=warn msg="No modules registered..."
+logger=grafanaStorageLogger t=2024-06-27T13:46:22.9883453+09:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2024-06-27T13:46:22.9881926+09:00 level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2024-06-27T13:46:23.0302208+09:00 level=info msg="State cache has been initialized" states=0 duration=42.0252ms
+logger=ngalert.multiorg.alertmanager t=2024-06-27T13:46:23.0305723+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2024-06-27T13:46:23.0310128+09:00 level=info msg=starting first_tick=2024-06-27T13:46:30+09:00
+logger=http.server t=2024-06-27T13:46:23.0982931+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=grafana.update.checker t=2024-06-27T13:46:24.9176169+09:00 level=info msg="Update check succeeded" duration=1.9282266s
+logger=plugins.update.checker t=2024-06-27T13:46:25.0962245+09:00 level=info msg="Update check succeeded" duration=2.1079786s
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:33.6788968+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=22 duration=22.715ms size=43210 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:33.6987368+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=10 duration=10.2475ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:33.7090419+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=19 duration=19.5092ms size=12352 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:43.8203174+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=4 duration=4.0747ms size=43210 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:43.8306329+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.6001ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:43.8310314+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=2 duration=2.4475ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:43.9821088+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.579ms size=43210 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:43.9914488+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.2346ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:43.9918851+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=2 duration=2.3162ms size=39802 referer=http://localhost:3000/test/admin handler=public-assets
+logger=server t=2024-06-27T13:46:47.7986907+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-06-27T13:46:47.7988966+09:00 level=info msg=stopped last_tick=2024-06-27T13:46:40+09:00
+logger=tracing t=2024-06-27T13:46:47.7989882+09:00 level=info msg="Closing tracing"
+logger=settings t=2024-06-27T13:46:48.6632021+09:00 level=info msg="Starting Grafana" version=9.5.12 commit=14ab27bc branch=main compiled=2024-04-17T12:44:53+09:00
+logger=settings t=2024-06-27T13:46:48.6634365+09:00 level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+logger=settings t=2024-06-27T13:46:48.6634834+09:00 level=info msg="Config loaded from" file=/home/dmyang/grafana_test/grafana/conf/defaults.ini
+logger=settings t=2024-06-27T13:46:48.6635282+09:00 level=info msg=Target target=[all]
+logger=settings t=2024-06-27T13:46:48.6635836+09:00 level=info msg="Path Home" path=/home/dmyang/grafana_test/grafana
+logger=settings t=2024-06-27T13:46:48.6636198+09:00 level=info msg="Path Data" path=/home/dmyang/grafana_test/grafana/data
+logger=settings t=2024-06-27T13:46:48.663642+09:00 level=info msg="Path Logs" path=/home/dmyang/grafana_test/grafana/data/log
+logger=settings t=2024-06-27T13:46:48.6636856+09:00 level=info msg="Path Plugins" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=settings t=2024-06-27T13:46:48.6637083+09:00 level=info msg="Path Provisioning" path=/home/dmyang/grafana_test/grafana/conf/provisioning
+logger=settings t=2024-06-27T13:46:48.6637306+09:00 level=info msg="App mode production"
+logger=sqlstore t=2024-06-27T13:46:48.6638893+09:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2024-06-27T13:46:48.6639727+09:00 level=warn msg="SQLite database file has broader permissions than it should" path=/home/dmyang/grafana_test/grafana/data/grafana.db mode=-rw-r--r-- expected=-rw-r-----
+logger=migrator t=2024-06-27T13:46:48.6789746+09:00 level=info msg="Starting DB migrations"
+logger=migrator t=2024-06-27T13:46:48.6833919+09:00 level=info msg="migrations completed" performed=0 skipped=484 duration=680µs
+logger=secrets t=2024-06-27T13:46:48.6839763+09:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.loader t=2024-06-27T13:46:48.7634043+09:00 level=warn msg="Plugin missing module.js" pluginID=input warning="Missing module.js, If you loaded this plugin from git, make sure to compile it."
+logger=plugin.loader t=2024-06-27T13:46:48.7635129+09:00 level=info msg="Plugin registered" pluginID=input
+logger=local.finder t=2024-06-27T13:46:48.7635654+09:00 level=warn msg="Skipping finding plugins as directory does not exist" path=/home/dmyang/grafana_test/grafana/data/plugins
+logger=query_data t=2024-06-27T13:46:48.7690893+09:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-06-27T13:46:48.7730889+09:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2024-06-27T13:46:49.7564666+09:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-06-27T13:46:49.7578341+09:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-06-27T13:46:49.7578897+09:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2024-06-27T13:46:49.7583758+09:00 level=info msg="storage starting"
+logger=modules t=2024-06-27T13:46:49.7587294+09:00 level=warn msg="No modules registered..."
+logger=ngalert.state.manager t=2024-06-27T13:46:49.7587599+09:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2024-06-27T13:46:49.7621073+09:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-06-27T13:46:49.7654707+09:00 level=info msg="State cache has been initialized" states=0 duration=6.7084ms
+logger=ticker t=2024-06-27T13:46:49.7656149+09:00 level=info msg=starting first_tick=2024-06-27T13:46:50+09:00
+logger=ngalert.multiorg.alertmanager t=2024-06-27T13:46:49.7656749+09:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafana.update.checker t=2024-06-27T13:46:49.8352817+09:00 level=info msg="Update check succeeded" duration=76.8066ms
+logger=plugins.update.checker t=2024-06-27T13:46:50.0144941+09:00 level=info msg="Update check succeeded" duration=256.1648ms
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:50.21693+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=4 duration=4.677ms size=43210 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:50.2243357+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.0811ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:50.2251487+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=2 duration=2.144ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:50.5731267+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.148ms size=43210 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:50.5815365+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.372ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:50.5815544+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=1 duration=1.9898ms size=43210 referer=http://localhost:3000/test/admin handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:52.5220395+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.1948ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:46:52.5220649+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=2 duration=2.1454ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:35.8851558+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.2818ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:35.8852963+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=1 duration=1.84ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.0904475+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.0916ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.0910031+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=2 duration=2.5366ms size=39802 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.2871523+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.4715ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.2876559+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=2 duration=2.2459ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.4992915+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=5 duration=5.5348ms size=16098 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.5016+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=7 duration=7.2431ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.6937934+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.493ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.6938646+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=1 duration=1.9494ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.8989233+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.1169ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:36.8997353+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=2 duration=2.8988ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.10458+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=1 duration=1.8823ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.1049346+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.3076ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.3241029+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=2 duration=2.0153ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.3244149+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=1 duration=1.7046ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.5239065+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=1 duration=1.994ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.5243151+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=1 duration=1.7662ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.7091342+09:00 level=info msg="Request Completed" method=GET path=/public/build/runtime~app.132e58313220364105ba.js status=404 remote_addr=[::1] time_ms=1 duration=1.8262ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:47:37.7097053+09:00 level=info msg="Request Completed" method=GET path=/public/build/app.546aa1d5146dbd0a0bf0.js status=404 remote_addr=[::1] time_ms=1 duration=1.8064ms size=43210 referer=http://localhost:3000/ handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:56:39.9803685+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=9 duration=9.2506ms size=0 referer= handler=/api/live/ws
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:56:45.7096894+09:00 level=info msg="Request Completed" method=GET path=/test/admin status=404 remote_addr=[::1] time_ms=2 duration=2.1041ms size=43210 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T13:56:46.0589144+09:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=0 duration=581.6µs size=0 referer= handler=/api/live/ws
+logger=cleanup t=2024-06-27T13:56:49.7646215+09:00 level=info msg="Completed cleanup jobs" duration=4.7715ms
+logger=grafana.update.checker t=2024-06-27T13:56:49.8516559+09:00 level=info msg="Update check succeeded" duration=16.2376ms
+logger=plugins.update.checker t=2024-06-27T13:56:50.2104808+09:00 level=info msg="Update check succeeded" duration=195.4944ms
+logger=cleanup t=2024-06-27T14:06:49.7693733+09:00 level=info msg="Completed cleanup jobs" duration=10.0908ms
+logger=grafana.update.checker t=2024-06-27T14:06:49.8576852+09:00 level=info msg="Update check succeeded" duration=22.1095ms
+logger=plugins.update.checker t=2024-06-27T14:06:50.2068697+09:00 level=info msg="Update check succeeded" duration=190.7991ms
+logger=cleanup t=2024-06-27T14:16:49.7829749+09:00 level=info msg="Completed cleanup jobs" duration=24.4046ms
+logger=grafana.update.checker t=2024-06-27T14:16:49.8516659+09:00 level=info msg="Update check succeeded" duration=14.6985ms
+logger=plugins.update.checker t=2024-06-27T14:16:50.268356+09:00 level=info msg="Update check succeeded" duration=252.6798ms
+logger=cleanup t=2024-06-27T14:26:49.782526+09:00 level=info msg="Completed cleanup jobs" duration=22.6252ms
+logger=grafana.update.checker t=2024-06-27T14:26:49.8536779+09:00 level=info msg="Update check succeeded" duration=16.4036ms
+logger=plugins.update.checker t=2024-06-27T14:26:50.2090189+09:00 level=info msg="Update check succeeded" duration=194.0754ms
+logger=cleanup t=2024-06-27T14:36:49.7885217+09:00 level=info msg="Completed cleanup jobs" duration=28.8302ms
+logger=grafana.update.checker t=2024-06-27T14:36:49.85184+09:00 level=info msg="Update check succeeded" duration=15.2366ms
+logger=plugins.update.checker t=2024-06-27T14:36:50.2144883+09:00 level=info msg="Update check succeeded" duration=198.1068ms
+logger=cleanup t=2024-06-27T14:46:49.7901421+09:00 level=info msg="Completed cleanup jobs" duration=31.4502ms
+logger=grafana.update.checker t=2024-06-27T14:46:49.8524529+09:00 level=info msg="Update check succeeded" duration=16.8096ms
+logger=plugins.update.checker t=2024-06-27T14:46:50.2136306+09:00 level=info msg="Update check succeeded" duration=198.8474ms
+logger=cleanup t=2024-06-27T14:56:49.7878479+09:00 level=info msg="Completed cleanup jobs" duration=27.8032ms
+logger=grafana.update.checker t=2024-06-27T14:56:49.8516573+09:00 level=info msg="Update check succeeded" duration=15.2074ms
+logger=plugins.update.checker t=2024-06-27T14:56:50.2117796+09:00 level=info msg="Update check succeeded" duration=195.6176ms
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T15:05:45.1793626+09:00 level=info msg="Request Completed" method=POST path=/api/folders status=400 remote_addr=[::1] time_ms=16 duration=16.1154ms size=42 referer=http://localhost:3000/test/admin handler=/api/folders/
+logger=context userId=1 orgId=1 uname=admin t=2024-06-27T15:05:51.2862718+09:00 level=info msg="Request Completed" method=POST path=/api/folders status=400 remote_addr=[::1] time_ms=8 duration=8.7819ms size=42 referer=http://localhost:3000/test/admin handler=/api/folders/
+logger=server t=2024-06-27T15:06:19.36907+09:00 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-06-27T15:06:19.3695301+09:00 level=info msg="Closing tracing"
+logger=ticker t=2024-06-27T15:06:19.3696328+09:00 level=info msg=stopped last_tick=2024-06-27T15:06:10+09:00

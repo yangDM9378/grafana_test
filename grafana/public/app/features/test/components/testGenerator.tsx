@@ -113,10 +113,6 @@ export default function testGenerator({ selectedRack }:TestGeneratorProps) {
           <input type="text" name='servername' value={formData.servername} onChange={handleFormDataChange} />
         </label>
         <br />
-        <label>자산명 입력:
-          <input type="text" name='assetNum' value={formData.assetNum} onChange={handleFormDataChange} />
-        </label>
-        <br />
         <label>OS Template 선택:
           <button type="button" name='os' value='window' onClick={handleTemplateDataChange}>Window</button>
           <button type="button" name='os' value='linux' onClick={handleTemplateDataChange}>Linux</button>
