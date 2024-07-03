@@ -56,22 +56,36 @@ export default function TestAdmin() {
       console.error(error)
     }
   } 
-  
+
+  const delRack = async (rackId: number) => {
+    try {
+      await axios.delete(`http://127.0.0.1:5000/racks/${rackId}/delete`);
+      fetchRackData();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
   const selectRack = (rackId: number) => {
     setSelectedRack(rackId);
   }
 
   const fetchRackServer = async () => {
-    try {
-      const rackServerRes = await axios.get(`http://127.0.0.1:5000/racks/${selectedRack}/servers`)
-      const serversData = [];
-      for (const server_uid of rackServerRes.data) {
-        const serverDataRes = await axios.get(`http://localhost:3000/api/dashboards/uid/${server_uid}`);
-        serversData.push(serverDataRes.data);
+    if (selectedRack !== -1) {
+      try {
+        const rackServerRes = await axios.get(`http://127.0.0.1:5000/racks/${selectedRack}/servers`)
+        const serversData = [];
+        console.log(rackServerRes.data)
+        for (const server_uid of rackServerRes.data) {
+          console.log(server_uid.uid)
+          const serverDataRes = await axios.get(`http://localhost:3000/api/dashboards/uid/${server_uid.uid}`);
+          serversData.push(serverDataRes.data);
+        }
+        setRackServerData(serversData)
+      } catch (error) {
+        console.error(error);
       }
-      setRackServerData(serversData)
-    } catch (error) {
-      console.log()
     }
   }
 
@@ -102,7 +116,10 @@ export default function TestAdmin() {
       <div style={{height: '800px', border: "3px solid #ffffff", position: 'relative' }}>
         <p>Admin Page</p>
         {rackData.map((rack:Rack) => (
-          <li key={rack.id} onClick={() => selectRack(rack.id)}>{rack.id}번째 랙입니다.</li>
+          <div key={rack.id}>
+            <li onClick={() => selectRack(rack.id)}>{rack.id}번째 랙입니다.</li>
+            <button onClick={() => delRack(rack.id)}>rack 삭제</button>
+          </div>
         ))}
         <button onClick={createRack}>Rack 생성</button>
         <div style={{ position: 'absolute', top: '0', right: '0', border: '3px solid yellow', display:'flex' }}>
@@ -113,11 +130,11 @@ export default function TestAdmin() {
               <div>{selectedRack}번째 Rack</div>
               {rackServerData.map((rackServer:any, index:number) => (
                 <div key={index} style={{border: '3px solid blue'}} onClick={() => handleServerClick(rackServer.dashboard.uid,rackServer.meta.folderUid)}>
-                  <div>dashboard uid{rackServer.dashboard.uid}</div>
-                  <div>dashboard title{rackServer.dashboard.title}</div>
-                  <div>folder title{rackServer.meta.folderTitle}</div>
-                  <div>folder uid {rackServer.meta.folderUid}</div>
-                  <div>url{rackServer.meta.url}</div>
+                  <div>dashboard uid : {rackServer.dashboard.uid}</div>
+                  <div>dashboard title : {rackServer.dashboard.title}</div>
+                  <div>folder title : {rackServer.meta.folderTitle}</div>
+                  <div>folder uid : {rackServer.meta.folderUid}</div>
+                  <div>url :{rackServer.meta.url}</div>
                   {dashboardStatusMap[rackServer.dashboard.uid] === true ? (
                       <div>Alerting</div>
                     ) : (

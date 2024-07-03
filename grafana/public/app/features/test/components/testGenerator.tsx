@@ -67,18 +67,18 @@ export default function testGenerator({ selectedRack }:TestGeneratorProps) {
       const promethuesDatasourceRes = await axios.post('http://localhost:3000/api/datasources/', newPromethuesDatasource)
       console.log(promethuesDatasourceRes)
       
-      // zabbix data source 생성
-      const newZabbixDatasource = {
-        ...datasourceTest.zabbix,
-        name: `${formData.ip}-zabbix`,
-        url: `http://${formData.ip}/${datasourceTest.zabbix.url}`,
-        jsonData: {
-          username: 'Admin',
-          password: 'zabbix'
-        },
-      };
-      const zabbixDatasourceRes = await axios.post('http://localhost:3000/api/datasources/', newZabbixDatasource)
-      console.log(zabbixDatasourceRes)
+      // // zabbix data source 생성
+      // const newZabbixDatasource = {
+      //   ...datasourceTest.zabbix,
+      //   name: `${formData.ip}-zabbix`,
+      //   url: `http://${formData.ip}/${datasourceTest.zabbix.url}`,
+      //   jsonData: {
+      //     username: 'Admin',
+      //     password: 'zabbix'
+      //   },
+      // };
+      // const zabbixDatasourceRes = await axios.post('http://localhost:3000/api/datasources/', newZabbixDatasource)
+      // console.log(zabbixDatasourceRes)
 
 
       // dashboard Import
@@ -86,17 +86,21 @@ export default function testGenerator({ selectedRack }:TestGeneratorProps) {
       const dashboardData = { ...dashboardImportTest, folderUid: folderCreateResponse.uid }
       const dashboardCreateResponse = await axios.post('http://localhost:3000/api/dashboards/import', dashboardData)
       console.log(dashboardCreateResponse)
-      const newDashboardUId = dashboardCreateResponse.data.uid
-      addServer(selectedRack, newDashboardUId) 
+      // const newDashboardUId = dashboardCreateResponse.data.uid
+      // addServer(selectedRack, newDashboardUId) 
+      console.log(dashboardCreateResponse)
+      const newDashboardId = dashboardCreateResponse.data.dashboardId
+      addServer(selectedRack, newDashboardId) 
     } catch (error) {
       console.error('Error createing folder', error);
     }
   }
 
-  const addServer = async (selectedRack: number, newDashboardUId:string) => {
+  const addServer = async (selectedRack: number, newDashboardId:number) => {
     try {
+      console.log('--------------',newDashboardId)
       await axios.post(`http://127.0.0.1:5000/racks/${selectedRack}/servers`, {
-        newDashboardUId});
+        newDashboardId});
     } catch (error) {
       console.error(error);
     }

@@ -2,8 +2,9 @@
 
 - 해당 repo는 Grafana를 Custom test를 진행해보기 위한 test repo이다.
 - test 개발 예정 페이지 정보
-  - Test1. 전체 Alarm에 대한 발생 정보를 제공하는 page
-  - Test2. 서버 연결 및 연결 확인 가능한 Admin page 개발
+  - Test1. 전체 발생한 Alarm에 대한 발생 정보를 제공하는 Alert History Page
+  - Test2. 서버 연결 가능한 Admin page 개발
+  - Test3. 서버 연결 정보 확인 가능한 Main page 개발
 
 ## 버전 정보
 
@@ -138,7 +139,7 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 - grafana/public/app/routes.tsx에서 경로를 통해 tsx 또는 jsx 파일 import하여 적용
 - 백엔드 프론트엔드 재빌드시 적용
 
-# Custom Test 1. Alert History Page
+# Custom Test 1. 전체 발생한 Alarm에 대한 발생 정보를 제공하는 Alert History Page
 
 - /grafana/public/features/test/testAlertHistory.tsx 개발
 
@@ -186,7 +187,7 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 - 기존 Alert History Page와 동일
 
-# Custom Test 2. 서버 연결 및 연결 확인 가능한 Admin page 개발
+# Custom Test 2. 서버 연결 가능한 Admin page 개발
 
 ## 개요
 
@@ -205,3 +206,16 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 - 서버를 담는 Rack 생성 버튼 클릭 시 빈 Rack 생성
 - Rack 클릭 시 Rack에 생성한 서버 리스트 전시
 - 서버 추가 버튼 클릭 시 iP주소 / 서버 명 / Template 선택 하여 datasource와 dashboard 생성
+
+# Custom Test 2-1. Rack 및 Dashboard DB 설계 수정
+
+## 개요
+
+- 초기 Rack과 Dashboard(서버) DB 설계에 오류 발견
+- 기존 설계의 경우 Rack에서 Dashboard의 전체 uid를 리스트 형태로 가지고 있어 Dashboard를 삭제 시 Rack에 Dashboard 정보를 지워야 하는 문제 발생
+- 해당 문제를 Dashboard 테이블에 rack_id column을 만들어 문제 개선
+
+## 개발 방향성
+
+- 기존 flask 로직을 개선하고 Rack 테이블의 Dashboard 정보를 저장하는 필드를 삭제
+- Dashboard 테이블에 rack_id 필드를 추가하여 rack의 고유 id를 저장하게 변경

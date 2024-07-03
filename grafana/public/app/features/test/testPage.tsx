@@ -2,6 +2,7 @@ import React from 'react'
 import TestAlertHisory from './testAlertHistory'
 import RefactoringAlertHistory from './refactoringTestAlertHistory'
 import TestAdmin from './testAdmin'
+import TestMain from './TestMain';
 
 export default function TestPage() {
   const param = window.location.pathname;
@@ -12,6 +13,7 @@ export default function TestPage() {
       {(child === 'alarmhistory' && (<TestAlertHisory />))}
       {(child === 'refactoringalerthistory' && (<RefactoringAlertHistory />))}
       {(child === 'admin' && (<TestAdmin />))}
+      {(child === 'main' && (<TestMain />))}
     </div>
   )
 }
