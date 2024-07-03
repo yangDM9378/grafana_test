@@ -76,7 +76,6 @@ export default function TestAdmin() {
       try {
         const rackServerRes = await axios.get(`http://127.0.0.1:5000/racks/${selectedRack}/servers`)
         const serversData = [];
-        console.log(rackServerRes.data)
         for (const server_uid of rackServerRes.data) {
           console.log(server_uid.uid)
           const serverDataRes = await axios.get(`http://localhost:3000/api/dashboards/uid/${server_uid.uid}`);

@@ -2,7 +2,7 @@ import React from 'react'
 import TestAlertHisory from './testAlertHistory'
 import RefactoringAlertHistory from './refactoringTestAlertHistory'
 import TestAdmin from './testAdmin'
-import TestMain from './TestMain';
+import TestMain from './testMain';
 
 export default function TestPage() {
   const param = window.location.pathname;
